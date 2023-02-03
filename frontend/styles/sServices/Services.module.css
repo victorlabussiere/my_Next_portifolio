@@ -1,0 +1,53 @@
+.servicesContainer {
+  background-color: #FA9156;
+  color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.servicesContainer header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.servicesContainer header h3 {
+  color: #2d5a3f;
+  padding-top: 3rem;
+}
+.servicesContainer header p {
+  width: 60%;
+  padding-top: 1rem;
+}
+.servicesContainer .servicesContent {
+  display: flex;
+  justify-content: center;
+  padding: 56px;
+  gap: 56px;
+  width: 100%;
+  background: #F2F2F2;
+  color: #222222;
+  box-shadow: 8px 8px 24px rgba(0, 0, 0, 0.4);
+}
+.servicesContainer .servicesContent .columnS {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0px;
+  gap: 2rem;
+  width: 45%;
+  height: 100%;
+}
+.servicesContainer .servicesContent .columnS h3 {
+  color: #2B5B3E;
+}
+.servicesContainer .servicesContent .columnS p {
+  padding-top: 1rem;
+}
+.servicesContainer .servicesContent span {
+  width: 1px;
+  background-color: #BEBEBE;
+}
+
+/*# sourceMappingURL=Services.module.css.map */

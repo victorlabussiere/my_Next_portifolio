@@ -1,0 +1,73 @@
+.container {
+  background: #f9f9f9;
+}
+
+.contentArea {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 56px;
+}
+.contentArea header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #444444;
+}
+.contentArea header h2 {
+  color: #FA9156;
+}
+.contentArea header h3 {
+  color: #2d5a3f;
+  padding-top: 3rem;
+}
+.contentArea header p {
+  width: 60%;
+  padding-top: 1rem;
+}
+.contentArea .cardsArea {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+}
+.contentArea .cardsArea .card {
+  flex: 0 0 calc(33.3333333333% - 112px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 100%;
+}
+.contentArea .cardsArea .card header {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0.8rem;
+  width: 100%;
+}
+.contentArea .cardsArea .card header .logoIcon {
+  border-radius: 0.5rem;
+  transition: ease-in-out 0.2s all;
+}
+.contentArea .cardsArea .card header .logoIcon:hover {
+  cursor: default;
+  transform: scale(1.03);
+  filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.3));
+}
+.contentArea .cardsArea .card header span {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #444444;
+}
+.contentArea .cardsArea .card p {
+  width: 100%;
+}
+.contentArea .cardsArea .card p:nth-child(2) {
+  color: #FA9156;
+}
+
+/*# sourceMappingURL=Habilidades.module.css.map */

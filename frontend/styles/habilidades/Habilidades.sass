@@ -1,0 +1,69 @@
+@import '../mixins'
+.container
+    background: $gray100
+
+.contentArea
+    display: flex
+    flex-direction: column
+    width: 100%
+    gap: 56px
+
+    header
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        color: $gray500
+
+        h2
+            color: $orange600
+
+        h3
+            color: $green900
+            padding-top: 3rem
+        p
+            width: 60%
+            padding-top: 1rem
+
+    .cardsArea
+        display: flex
+        flex-flow: row wrap
+        justify-content: center
+        align-items: center
+        justify-content: space-between
+        gap: 4rem
+
+        .card
+            flex: 0 0 calc( 100% / 3 - 56px * 2)
+
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            gap: 1rem
+
+            width: 100%
+
+            header
+                display: flex
+                flex-direction: row
+                align-items: flex-start
+                gap: .8rem
+                width: 100%
+                .logoIcon
+                    border-radius: .5rem
+                    transition: $transition2ms
+
+                    &:hover
+                        cursor: default
+                        transform: scale(1.03)
+                        filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.3))
+
+                span
+                    width: 56px
+                    height: 56px
+                    border-radius: 50%
+                    background: $gray500
+
+            p
+                width: 100%
+                &:nth-child(2)
+                    color: $orange600

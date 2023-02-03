@@ -1,0 +1,52 @@
+@import '../mixins'
+.servicesContainer
+    background-color: $orange600
+    color: $gray100
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    header
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+
+        h3
+            color: $green900
+            padding-top: 3rem
+        p
+            width: 60%
+            padding-top: 1rem
+
+    .servicesContent
+        display: flex
+        justify-content: center
+        padding: 56px
+        gap: 56px
+
+        width: 100%
+
+        background: #F2F2F2
+        color: $gray700
+        box-shadow: 8px 8px 24px rgba(0, 0, 0, 0.4)
+
+        .columnS
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            justify-content: flex-start
+            padding: 0px
+            gap: 2rem
+            width: 45%
+            height: 100%
+
+            h3
+                color: $green800
+
+            p
+                padding-top: 1rem
+
+        span
+            width: 1px
+            background-color: $gray300

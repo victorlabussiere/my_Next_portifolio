@@ -1,0 +1,86 @@
+// Colors
+$orange900: #E85401
+$orange600: #FA9156
+$orange200: #F5D6C4
+
+$green900: #2d5a3f // active state
+$green800: #2B5B3E // primary state
+$green700: #32774d // hover state
+$green600: #668F76
+$green200: #b8d2c2
+
+$gray900: #0D0D0D
+$gray700: #222222
+$gray500: #444444
+$gray300: #BEBEBE
+$gray100: #f9f9f9
+
+// Font styles
+@mixin --h1-jost-bold()
+    font-family: 'Jost'
+    font-style: normal
+    font-weight: 700
+    font-size: 104px
+    line-height: 150px
+
+@mixin --h2-jost-bold()
+    font-family: 'Jost'
+    font-style: normal
+    font-weight: 700
+    font-size: 72px
+    line-height: 104px
+
+@mixin --h3-large()
+    font-family: 'Jost'
+    font-style: normal
+    font-weight: 500
+    font-size: 32px
+    line-height: 35px
+
+@mixin --h3-medium()
+    font-family: 'Jost'
+    font-style: normal
+    font-weight: 700
+    font-size: 32px
+    line-height: 23px
+
+@mixin --h3-small()
+    font-family: 'Jost'
+    font-style: normal
+    font-weight: 500
+    font-size: 24px
+    line-height: 35px
+
+@mixin --p-large()
+    font-family: 'Jost'
+    font-style: normal
+    font-weight: 700
+    font-size: 32px
+    line-height: 26px
+
+@mixin --p-medium()
+    font-family: 'Jost'
+    font-style: normal
+    font-weight: 400
+    font-size: 24px
+    line-height: 23px
+
+@mixin --p-small()
+    font-family: 'Jost'
+    font-style: normal
+    font-weight: 400
+    font-size: 24px
+    line-height: 20px
+
+// Shadows
+@mixin pShadow()
+    box-shadow: 8px 8px 24px rgba(0, 0, 0, 0.4)
+
+@mixin sShadow ()
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.04)
+
+@mixin tShadow ()
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.16)
+
+// transitions
+$transition2ms: ease-in-out .2s all

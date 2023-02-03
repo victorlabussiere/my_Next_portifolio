@@ -1,0 +1,36 @@
+@import '../mixins'
+@import 'navMixins'
+
+.navContainer
+    display: flex
+    align-content: center
+    justify-content: space-between
+    padding: 1rem 2.5rem
+    background-color: white
+    @include sShadow ()
+
+    position: fixed
+    top: 0
+    left: 0
+
+    width: 100%
+    z-index: 999999
+
+    .navHeader
+        h3
+            color: $orange900
+            @include linkHover ()
+            &:hover
+                cursor: pointer
+                transform: scale(1.02)
+                text-decoration: underline $orange900
+            &:active
+                transform: scale(1.01)
+            span
+                color: $green900
+    .navUl
+        display: flex
+        gap: 4rem
+        @include --p-medium()
+        align-content: center
+        justify-content: flex-end

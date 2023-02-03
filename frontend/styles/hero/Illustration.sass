@@ -1,0 +1,30 @@
+@import '../mixins'
+.ilContainer
+    width: 100%
+    height: 100%
+    background: $gray100
+    background: linear-gradient(0deg, $orange600 50%,$gray100 50%)
+
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    gap: 2rem
+
+    .features
+        display: flex
+        gap: 2rem
+        color: $gray500
+
+        li
+            color: $green800
+            transition: $transition2ms
+            &:hover
+                cursor: default
+                color: $green700
+                text-decoration: underline $orange600
+
+    .picture
+        filter: drop-shadow(8px 8px 24px rgba(0, 0, 0, 0.4))
+        border-radius: 8px
+        z-index: 5

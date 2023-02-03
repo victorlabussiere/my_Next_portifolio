@@ -1,0 +1,45 @@
+.navContainer {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  padding: 1rem 2.5rem;
+  background-color: white;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.04);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999999;
+}
+.navContainer .navHeader h3 {
+  color: #E85401;
+  transition: 0.2s ease-in-out all;
+}
+.navContainer .navHeader h3:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+}
+.navContainer .navHeader h3:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+  text-decoration: underline #E85401;
+}
+.navContainer .navHeader h3:active {
+  transform: scale(1.01);
+}
+.navContainer .navHeader h3 span {
+  color: #2d5a3f;
+}
+.navContainer .navUl {
+  display: flex;
+  gap: 4rem;
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 23px;
+  align-content: center;
+  justify-content: flex-end;
+}
+
+/*# sourceMappingURL=Navbar.module.css.map */

@@ -1,0 +1,32 @@
+.ilContainer {
+  width: 100%;
+  height: 100%;
+  background: #f9f9f9;
+  background: linear-gradient(0deg, #FA9156 50%, #f9f9f9 50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.ilContainer .features {
+  display: flex;
+  gap: 2rem;
+  color: #444444;
+}
+.ilContainer .features li {
+  color: #2B5B3E;
+  transition: ease-in-out 0.2s all;
+}
+.ilContainer .features li:hover {
+  cursor: default;
+  color: #32774d;
+  text-decoration: underline #FA9156;
+}
+.ilContainer .picture {
+  filter: drop-shadow(8px 8px 24px rgba(0, 0, 0, 0.4));
+  border-radius: 8px;
+  z-index: 5;
+}
+
+/*# sourceMappingURL=Illustration.module.css.map */

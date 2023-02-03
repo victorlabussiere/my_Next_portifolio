@@ -1,0 +1,147 @@
+@import url("/fonts/*.ttf");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Jost;
+  list-style: none;
+  font-style: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100%;
+  background: #f9f9f9;
+  overflow-x: hidden;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15rem 24rem;
+  gap: 141px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 104px;
+  line-height: 150px;
+}
+
+h2 {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 104px;
+  transition: ease-in-out 0.2s all;
+}
+h2:hover {
+  cursor: default;
+  text-decoration: underline #668F76;
+}
+
+h3 {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 35px;
+}
+
+.h3M {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 23px;
+}
+
+.h3S {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 35px;
+}
+
+.pL {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 26px;
+}
+
+.pM {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 23px;
+}
+
+.pS {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 20px;
+}
+
+.primaryButton {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 35px;
+  color: #f9f9f9;
+  padding: 1rem 4rem;
+  background-color: #2B5B3E;
+  border: none;
+  border-radius: 1rem;
+  transition: ease-in-out 0.2s all;
+}
+.primaryButton:hover {
+  background-color: #32774d;
+  cursor: pointer;
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.16);
+  transform: scale(1.02);
+}
+.primaryButton:active {
+  background-color: #2d5a3f;
+  transform: scale(1.01);
+}
+
+.tertiaryButton {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 23px;
+  color: #444444;
+  transition: ease-in-out 0.2s all;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+}
+.tertiaryButton:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+  text-decoration: underline #FA9156;
+  color: #2B5B3E;
+}
+.tertiaryButton:active {
+  transform: scale(1.01);
+}
+
+/*# sourceMappingURL=globals.css.map */

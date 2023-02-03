@@ -1,0 +1,92 @@
+@import url('/fonts/*.ttf')
+@import 'mixins'
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: Jost
+    list-style: none
+    font-style: none
+
+body
+    display: flex
+    flex-direction: column
+    width: 100vw
+    height: 100%
+    background: $gray100
+    overflow-x: hidden
+
+section
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: 15rem 24rem
+    gap: 141px
+    width: 100%
+    height: 100%
+
+    position: relative
+    z-index: 1
+h1
+    @include --h1-jost-bold
+h2
+    @include --h2-jost-bold
+    transition: $transition2ms
+    &:hover
+        cursor: default
+        text-decoration: underline $green600
+h3
+    @include --h3-large
+
+.h3M
+    @include --h3-medium
+
+.h3S
+    @include --h3-small
+
+.pL
+    @include --p-large
+
+.pM
+    @include --p-medium
+
+.pS
+    @include --p-small
+
+// buttons
+
+.primaryButton
+    @include --h3-large()
+
+    color: $gray100
+    padding: 1rem 4rem
+    background-color: $green800
+    border: none
+    border-radius: 1rem
+    transition: $transition2ms
+
+    &:hover
+        background-color: $green700
+        cursor: pointer
+        @include tShadow()
+        transform: scale(1.02)
+    &:active
+        background-color: $green900
+        transform: scale(1.01)
+
+.tertiaryButton
+    @include --p-medium()
+    color: $gray500
+    transition: $transition2ms
+    vertical-align: middle
+    display: flex
+    align-items: center
+    &:hover
+        cursor: pointer
+        transform: scale(1.02)
+        text-decoration: underline $orange600
+        color: $green800
+
+    &:active
+        transform: scale(1.01)

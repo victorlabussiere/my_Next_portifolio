@@ -1,0 +1,85 @@
+@import '../mixins'
+.heroContainer
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 141px
+    width: 100%
+    height: fit-content
+
+    position: relative
+    z-index: 9
+
+    padding-bottom: 5rem
+
+    .heroContent
+        display: flex
+        flex-direction: column
+        gap: 5rem
+
+        header
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            gap: 1rem
+            color: $gray500
+
+            &:hover
+                cursor: default
+
+            h1
+                color: $green900
+                transition: $transition2ms
+                &:hover
+                    transform: scale(1.02)
+
+                span
+                    &:nth-child(1)
+                        color: $orange600
+                    &:nth-child(2)
+                        color: $orange900
+
+            h3
+                width: 70%
+                text-align: center
+                span
+                    &:nth-child(1)
+                        color: $orange600
+                    &:nth-child(2)
+                        color: $green700
+
+        .ctaBtns
+            display: flex
+            flex-direction: column
+            align-items: center
+            gap: 1rem
+
+    .illustrationDiv
+        display: flex
+        flex-direction: column
+        gap: 2rem
+        position: absolute
+        top: 85%
+
+        .features
+            width: 100%
+            display: flex
+            align-content: center
+            justify-content: center
+            ul
+                display: flex
+                gap: 2.5rem
+                @include --p-medium()
+                font-weight: bold
+                color: $gray500
+
+                li
+                    transition: .2s all ease-in-out
+                    &:hover
+                        font-weight: bold
+                        cursor: default
+                        transform: scale(1.02)
+
+        .illustrationPic
+            filter: drop-shadow(8px 8px 24px rgba(0, 0, 0, 0.4))
