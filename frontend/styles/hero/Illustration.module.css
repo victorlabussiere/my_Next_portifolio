@@ -11,16 +11,17 @@
 }
 .ilContainer .features {
   display: flex;
-  gap: 2rem;
+  gap: 5rem;
   color: #444444;
 }
 .ilContainer .features li {
-  color: #2B5B3E;
+  color: #2d5a3f;
   transition: ease-in-out 0.2s all;
 }
 .ilContainer .features li:hover {
+  transform: scale(1.02);
   cursor: default;
-  color: #32774d;
+  color: #668F76;
   text-decoration: underline #FA9156;
 }
 .ilContainer .picture {

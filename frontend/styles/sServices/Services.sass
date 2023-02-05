@@ -1,51 +1,45 @@
 @import '../mixins'
-.servicesContainer
+.section
     background-color: $orange600
     color: $gray100
-    display: flex
-    flex-direction: column
-    justify-content: center
-    align-items: center
+    gap: 4rem
 
     header
         display: flex
         flex-direction: column
-        align-items: flex-start
-
+        gap: 4rem
         h3
-            color: $green900
-            padding-top: 3rem
+            color: $green800
         p
             width: 60%
-            padding-top: 1rem
 
-    .servicesContent
+    .container
         display: flex
-        justify-content: center
+        flex-wrap: wrap
+        justify-content: space-between
         padding: 56px
         gap: 56px
-
         width: 100%
 
         background: #F2F2F2
         color: $gray700
-        box-shadow: 8px 8px 24px rgba(0, 0, 0, 0.4)
+        @include pShadow
 
         .columnS
+            flex: 0 0 calc( 100% /2 - 7%)
             display: flex
             flex-direction: column
             align-items: flex-start
             justify-content: flex-start
-            padding: 0px
             gap: 2rem
-            width: 45%
             height: 100%
 
             h3
-                color: $green800
+                color: $green700
 
             p
                 padding-top: 1rem
+                color: $gray500
 
         span
             width: 1px

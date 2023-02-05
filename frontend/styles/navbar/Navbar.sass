@@ -1,36 +1,56 @@
 @import '../mixins'
-@import 'navMixins'
 
-.navContainer
+.nav
     display: flex
     align-content: center
     justify-content: space-between
-    padding: 1rem 2.5rem
+    padding: .6rem 5%
     background-color: white
-    @include sShadow ()
+    @include tShadow ()
 
     position: fixed
     top: 0
     left: 0
 
     width: 100%
-    z-index: 999999
+    z-index: 10
+
+    &:hover .li
+        cursor: pointer
+        color: $green600
 
     .navHeader
-        h3
-            color: $orange900
-            @include linkHover ()
-            &:hover
-                cursor: pointer
-                transform: scale(1.02)
-                text-decoration: underline $orange900
+
+        color: $orange900
+        transition: $transition2ms
+        a
+            &:nth-child(1)
+                color: $green900
+            &:nth-child(2)
+                color: $orange600
+
+        &:hover
+            cursor: pointer
+            transform: scale(1.02)
             &:active
                 transform: scale(1.01)
-            span
-                color: $green900
+
     .navUl
         display: flex
         gap: 4rem
         @include --p-medium()
         align-content: center
         justify-content: flex-end
+
+        li
+            vertical-align: middle
+            display: flex
+            align-items: center
+            color: $gray300
+            a
+                transition: $transition2ms
+                &:hover
+                    transform: scale(1.01)
+                    color: $green900
+                    text-decoration: underline $orange600
+                    cursor: pointer

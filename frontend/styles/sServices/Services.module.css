@@ -1,51 +1,47 @@
-.servicesContainer {
+.section {
   background-color: #FA9156;
   color: #f9f9f9;
+  gap: 4rem;
+}
+.section header {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  gap: 4rem;
 }
-.servicesContainer header {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+.section header h3 {
+  color: #2B5B3E;
 }
-.servicesContainer header h3 {
-  color: #2d5a3f;
-  padding-top: 3rem;
-}
-.servicesContainer header p {
+.section header p {
   width: 60%;
-  padding-top: 1rem;
 }
-.servicesContainer .servicesContent {
+.section .container {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
   padding: 56px;
   gap: 56px;
   width: 100%;
   background: #F2F2F2;
   color: #222222;
-  box-shadow: 8px 8px 24px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.4);
 }
-.servicesContainer .servicesContent .columnS {
+.section .container .columnS {
+  flex: 0 0 43%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: 0px;
   gap: 2rem;
-  width: 45%;
   height: 100%;
 }
-.servicesContainer .servicesContent .columnS h3 {
-  color: #2B5B3E;
+.section .container .columnS h3 {
+  color: #32774d;
 }
-.servicesContainer .servicesContent .columnS p {
+.section .container .columnS p {
   padding-top: 1rem;
+  color: #444444;
 }
-.servicesContainer .servicesContent span {
+.section .container span {
   width: 1px;
   background-color: #BEBEBE;
 }

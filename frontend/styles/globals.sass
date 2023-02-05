@@ -9,34 +9,62 @@
     list-style: none
     font-style: none
 
+a
+    text-decoration: none
+    font-style: none
+    color: unset
+
+html
+    scroll-behavior: smooth
+
 body
     display: flex
     flex-direction: column
+
     width: 100vw
     height: 100%
+
     background: $gray100
     overflow-x: hidden
 
 section
     display: flex
     flex-direction: column
-    align-items: center
-    padding: 15rem 24rem
-    gap: 141px
+    align-items: flex-start
+    justify-content: flex-start
+    gap: 4rem
+
     width: 100%
-    height: 100%
+    min-height: 100vh
+    padding: 8rem 24rem
 
     position: relative
     z-index: 1
+
+    header
+        width: 100%
+        display: flex
+        justify-content: flex-start
+        hgroup
+            width: 100%
+            display: flex
+            flex-direction: column
+            gap: 1rem
+        h3
+            width: 60%
+
 h1
     @include --h1-jost-bold
+    width: 100%
+    text-align: center
 h2
     @include --h2-jost-bold
     transition: $transition2ms
     &:hover
         cursor: default
         text-decoration: underline $green600
-h3
+
+h3, .h3L
     @include --h3-large
 
 .h3M
@@ -57,19 +85,23 @@ h3
 // buttons
 
 .primaryButton
-    @include --h3-large()
-
-    color: $gray100
+    @include --h3-small()
     padding: 1rem 4rem
+    color: $gray100
     background-color: $green800
+
     border: none
-    border-radius: 1rem
+    border-radius: .5rem
+
     transition: $transition2ms
+
+    text-align: center
+    vertical-align: middle
 
     &:hover
         background-color: $green700
         cursor: pointer
-        @include tShadow()
+        @include sShadow()
         transform: scale(1.02)
     &:active
         background-color: $green900

@@ -1,0 +1,48 @@
+.section {
+  background: #222222;
+  color: #f9f9f9;
+}
+.section .container {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+.section .container .textsArea {
+  flex: 0 0 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.section .container .textsArea h3 {
+  color: #FA9156;
+}
+.section .container .pictureArea {
+  flex: 0 0 calc(50% - 5rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section .container .pictureArea .profilePic {
+  display: flex;
+  border-radius: 50%;
+  width: 400px;
+  height: 400px;
+  box-sizing: border-box;
+  border: 2px solid #BEBEBE;
+  transition: ease-in-out 0.2s all;
+}
+.section .container .pictureArea .profilePic:hover {
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.4);
+  transform: scale(1.02);
+}
+.section .container .btnArea {
+  width: 100%;
+  display: flex;
+  gap: 4rem;
+}
+.section .container .btnArea div {
+  width: 100%;
+}
+
+/*# sourceMappingURL=Sobre.module.css.map */

@@ -1,0 +1,108 @@
+@import ../mixins
+
+@mixin  flexColumn()
+    display: flex
+    flex-direction: column
+@mixin  flexRow()
+    display: flex
+
+.section
+    background-color: $gray500
+    color: $gray100
+
+    header
+        width: 100%
+
+    .container
+        width: 100%
+        display: flex
+        gap: 2rem
+        flex-wrap: wrap
+        align-content: center
+        justify-content: space-between
+
+        hgroup
+            flex: 0 0 100%
+            width: 100%
+            @include flexColumn()
+            h3
+                color: $orange600
+
+        form
+            background-color: $gray100
+            @include flexColumn()
+            @include pShadow()
+            padding: 2rem 1.5rem
+            gap: 2rem
+            justify-content: space-evenly
+            width: 100%
+
+            flex: 0 0 calc( 100% / 2)
+
+            h3
+                color: $green800
+
+            label
+                color: $gray500
+                @include flexColumn()
+                gap: .5rem
+
+            input, textarea
+                display: flex
+                flex-direction: row
+                align-items: center
+                padding: 1rem 1.5rem
+                gap: .5rem
+
+                width: 100%
+                border: 1px solid $gray300
+
+                transition: $transition2ms
+                &:hover
+                    transform: scale(1.005)
+                    cursor: text
+                    @include sShadow ()
+
+        .instrucoesArea
+            width: 100%
+            flex: 0 0 calc( 100% /2 - 4rem)
+
+            @include flexColumn()
+            // justify-content: space-around
+            align-content: flex-start
+            gap: 2rem
+
+            h3
+                color: $orange600
+
+            .ins
+                margin-bottom: auto
+
+            .btnArea
+                width: 100%
+                @include flexRow
+                align-content: center
+                justify-content: center
+                flex-wrap: wrap
+                gap: 2rem
+                margin-top: auto
+                p
+                    width: 100%
+                    text-align: center
+                a
+                    flex: 0 0 calc( 100% / 2 - 100% )
+
+                    min-width: 56px
+                    min-height: 56px
+                    color: $gray100
+
+                    @include flexRow
+                    align-content: center
+                    justify-content: center
+
+                    border-radius: 50%
+                    background: #161695
+                    transition: $transition2ms
+                    &:hover
+                        transform: scale(1.01)
+                        @include sShadow ()

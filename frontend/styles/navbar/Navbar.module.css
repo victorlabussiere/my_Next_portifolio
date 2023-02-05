@@ -1,45 +1,61 @@
-.navContainer {
+.nav {
   display: flex;
   align-content: center;
   justify-content: space-between;
-  padding: 1rem 2.5rem;
+  padding: 0.6rem 5%;
   background-color: white;
-  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.04);
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.2);
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 999999;
+  z-index: 10;
 }
-.navContainer .navHeader h3 {
+.nav:hover .li {
+  cursor: pointer;
+  color: #668F76;
+}
+.nav .navHeader {
   color: #E85401;
-  transition: 0.2s ease-in-out all;
+  transition: ease-in-out 0.2s all;
 }
-.navContainer .navHeader h3:hover {
-  cursor: pointer;
-  transform: scale(1.02);
-}
-.navContainer .navHeader h3:hover {
-  cursor: pointer;
-  transform: scale(1.02);
-  text-decoration: underline #E85401;
-}
-.navContainer .navHeader h3:active {
-  transform: scale(1.01);
-}
-.navContainer .navHeader h3 span {
+.nav .navHeader a:nth-child(1) {
   color: #2d5a3f;
 }
-.navContainer .navUl {
+.nav .navHeader a:nth-child(2) {
+  color: #FA9156;
+}
+.nav .navHeader:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+}
+.nav .navHeader:hover:active {
+  transform: scale(1.01);
+}
+.nav .navUl {
   display: flex;
   gap: 4rem;
   font-family: "Jost";
   font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 23px;
+  font-weight: 600;
+  font-size: 16px;
   align-content: center;
   justify-content: flex-end;
+}
+.nav .navUl li {
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  color: #BEBEBE;
+}
+.nav .navUl li a {
+  transition: ease-in-out 0.2s all;
+}
+.nav .navUl li a:hover {
+  transform: scale(1.01);
+  color: #2d5a3f;
+  text-decoration: underline #FA9156;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=Navbar.module.css.map */

@@ -1,0 +1,76 @@
+@import ../mixins
+
+.section
+    background-color: $orange600
+    color: $gray100
+    gap: 4rem
+
+    .container
+        width: 100%
+        @include pShadow()
+
+        .cardsContainer
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            padding: 56px
+            gap: 40px
+
+            color: $green700
+            background-color: $gray100
+
+            .cardsContainer_title
+                display: flex
+                flex-direction: column
+                align-items: flex-start
+                gap: 1rem
+                h3
+                    width: 100%
+                    padding-bottom: 1rem
+                p
+                    line-height: 120%
+                    width: 80%
+                    color: $gray500
+
+            .cardsArea
+                display: flex
+                padding: 1rem 0
+                width: 100%
+                justify-content: space-evenly
+
+                .card
+                    display: flex
+                    flex-direction: column
+                    justify-content: flex-start
+                    align-items: flex-start
+                    padding: 0px 0px 24px
+                    gap: 1.5rem
+                    width: 100%
+                    flex: 0 0 calc( 100% / 4 - 3rem )
+                    transition: $transition2ms
+                    @include sShadow
+
+                    &:hover
+                        cursor: pointer
+                        transform: scale(1.02)
+                        @include tShadow
+
+                    &:active
+                        transform: scale(1.01)
+
+                    span
+                        width: 100%
+                        background-color: $gray300
+                        height: 240px
+                    p
+                        padding-left: 2rem
+
+            a
+                color: $green700
+                text-decoration: none
+                text-align: center
+                transition: $transition2ms
+                margin: 0 auto
+                &:hover
+                    text-decoration: underline
+                    transform: scale(1.02)

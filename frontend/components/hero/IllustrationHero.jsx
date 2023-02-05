@@ -13,7 +13,7 @@ export default function IllustrationHero() {
                 <li className='h3S'>Node JS</li>
                 <li className='h3S'>GIT Bash & Github</li>
             </ul>
-            <Image src='/images/hero-i.png' width={1200} height={785} className={styles.picture} />
+            <Image src='/images/hero-i.png' width={852} height={557} alt='Illustração de um IDE' className={styles.picture} />
         </div>
     )
 }

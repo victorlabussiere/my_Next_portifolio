@@ -1,0 +1,80 @@
+.section {
+  background-color: #FA9156;
+  color: #f9f9f9;
+  gap: 4rem;
+}
+.section .container {
+  width: 100%;
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.4);
+}
+.section .container .cardsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 56px;
+  gap: 40px;
+  color: #32774d;
+  background-color: #f9f9f9;
+}
+.section .container .cardsContainer .cardsContainer_title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.section .container .cardsContainer .cardsContainer_title h3 {
+  width: 100%;
+  padding-bottom: 1rem;
+}
+.section .container .cardsContainer .cardsContainer_title p {
+  line-height: 120%;
+  width: 80%;
+  color: #444444;
+}
+.section .container .cardsContainer .cardsArea {
+  display: flex;
+  padding: 1rem 0;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.section .container .cardsContainer .cardsArea .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0px 0px 24px;
+  gap: 1.5rem;
+  width: 100%;
+  flex: 0 0 calc(25% - 3rem);
+  transition: ease-in-out 0.2s all;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+}
+.section .container .cardsContainer .cardsArea .card:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.2);
+}
+.section .container .cardsContainer .cardsArea .card:active {
+  transform: scale(1.01);
+}
+.section .container .cardsContainer .cardsArea .card span {
+  width: 100%;
+  background-color: #BEBEBE;
+  height: 240px;
+}
+.section .container .cardsContainer .cardsArea .card p {
+  padding-left: 2rem;
+}
+.section .container .cardsContainer a {
+  color: #32774d;
+  text-decoration: none;
+  text-align: center;
+  transition: ease-in-out 0.2s all;
+  margin: 0 auto;
+}
+.section .container .cardsContainer a:hover {
+  text-decoration: underline;
+  transform: scale(1.02);
+}
+
+/*# sourceMappingURL=Repositorios.module.css.map */

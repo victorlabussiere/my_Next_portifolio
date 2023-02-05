@@ -3,26 +3,26 @@ import Image from 'next/image'
 
 export default function Habilidades() {
     return (
-        <section className={styles.container}>
-            <div className={styles.contentArea}>
-                <header>
-                    <h2>Habilidades</h2>
-                    <h3>
+        <section className={styles.section} id='habilidades'>
+            <h2>Habilidades</h2>
+            <div className={styles.container}>
+                <hgroup>
+                    <h3 className='h3L'>
                         Conheça as tecnologias presentes em meu Stack
                     </h3>
-                    <p className='pM'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste nemo libero vitae dolor laborum itaque ducimus quod doloremque, nam, error, at necessitatibus amet quia culpa recusandae numquam facere modi delectus?</p>
-                </header>
+                    <p className='pS'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste nemo libero vitae dolor laborum itaque ducimus quod doloremque, nam, error, at necessitatibus amet quia culpa recusandae numquam facere modi delectus?</p>
+                </hgroup>
 
                 <div className={styles.cardsArea} >
 
-                    <div className={styles.card}> {/* Js e Ts Card  */}
+                    <div className={styles.card}>
                         <header>
                             <Image src='/logos/jsLogo.png' width={56} height={56} className={styles.logoIcon} alt='Javascript Logo' />
                             <Image src='/logos/tsLogo.png' width={56} height={56} className={styles.logoIcon} alt='Typescript Logo' />
                         </header>
                         <p className='pM'>Javascript & Typescript</p>
 
-                        <p className='pP'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique praesentium nulla, consequatur tenetur nobis autem? Totam aspernatur, accusamus nemo a, magnam tenetur debitis vel nisi deserunt necessitatibus at odit expedita.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique praesentium nulla, consequatur tenetur nobis autem? Totam aspernatur, accusamus nemo a, magnam tenetur debitis vel nisi deserunt necessitatibus at odit expedita.</p>
 
                     </div>
 
@@ -33,7 +33,7 @@ export default function Habilidades() {
                         </header>
                         <p className='pM'>React & Next JS</p>
 
-                        <p className='pP'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique praesentium nulla, consequatur tenetur nobis autem? Totam aspernatur, accusamus nemo a, magnam tenetur debitis vel nisi deserunt necessitatibus at odit expedita.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique praesentium nulla, consequatur tenetur nobis autem? Totam aspernatur, accusamus nemo a, magnam tenetur debitis vel nisi deserunt necessitatibus at odit expedita.</p>
 
                     </div>
 
@@ -43,7 +43,7 @@ export default function Habilidades() {
                         </header>
                         <p className='pM'>Node JS</p>
 
-                        <p className='pP'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique praesentium nulla, consequatur tenetur nobis autem? Totam aspernatur, accusamus nemo a, magnam tenetur debitis vel nisi deserunt necessitatibus at odit expedita.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique praesentium nulla, consequatur tenetur nobis autem? Totam aspernatur, accusamus nemo a, magnam tenetur debitis vel nisi deserunt necessitatibus at odit expedita.</p>
 
                     </div>
 
@@ -55,7 +55,7 @@ export default function Habilidades() {
                         </header>
                         <p className='pM'>HTML5, CSS3 & SASS</p>
 
-                        <p className='pP'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique praesentium nulla, consequatur tenetur nobis autem? Totam aspernatur, accusamus nemo a, magnam tenetur debitis vel nisi deserunt necessitatibus at odit expedita.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique praesentium nulla, consequatur tenetur nobis autem? Totam aspernatur, accusamus nemo a, magnam tenetur debitis vel nisi deserunt necessitatibus at odit expedita.</p>
 
                     </div>
 
@@ -66,7 +66,7 @@ export default function Habilidades() {
                         </header>
                         <p className='pM'>GIT Bash & GitHub</p>
 
-                        <p className='pP'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique praesentium nulla, consequatur tenetur nobis autem? Totam aspernatur, accusamus nemo a, magnam tenetur debitis vel nisi deserunt necessitatibus at odit expedita.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique praesentium nulla, consequatur tenetur nobis autem? Totam aspernatur, accusamus nemo a, magnam tenetur debitis vel nisi deserunt necessitatibus at odit expedita.</p>
 
                     </div>
 
@@ -80,7 +80,7 @@ export default function Habilidades() {
                         </header>
                         <p className='pM'>Figma, CorelDraw, Adobe XD & Illustrator </p>
 
-                        <p className='pP'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique praesentium nulla, consequatur tenetur nobis autem? Totam aspernatur, accusamus nemo a, magnam tenetur debitis vel nisi deserunt necessitatibus at odit expedita.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique praesentium nulla, consequatur tenetur nobis autem? Totam aspernatur, accusamus nemo a, magnam tenetur debitis vel nisi deserunt necessitatibus at odit expedita.</p>
 
                     </div>
 
