@@ -66,15 +66,7 @@
   padding-left: 2rem;
 }
 .section .container .cardsContainer a {
-  color: #32774d;
-  text-decoration: none;
-  text-align: center;
-  transition: ease-in-out 0.2s all;
   margin: 0 auto;
-}
-.section .container .cardsContainer a:hover {
-  text-decoration: underline;
-  transform: scale(1.02);
 }
 
 /*# sourceMappingURL=Repositorios.module.css.map */
