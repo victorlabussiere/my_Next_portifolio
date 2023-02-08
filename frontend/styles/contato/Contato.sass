@@ -88,12 +88,11 @@
                 margin-top: auto
                 p
                     width: 100%
-                    text-align: center
                 a
-                    flex: 0 0 calc( 100% / 2 - 100% )
 
-                    min-width: 56px
-                    min-height: 56px
+                    min-width: 5rem
+                    min-height: 5rem
+                    font-size: 4rem
                     color: $gray100
 
                     @include flexRow
@@ -101,8 +100,14 @@
                     justify-content: center
 
                     border-radius: 50%
-                    background: #161695
                     transition: $transition2ms
                     &:hover
-                        transform: scale(1.01)
-                        @include sShadow ()
+                        color: $orange600
+                        transform: scale(1.05)
+                        text-shadow: 0 0 16px rgba(0, 0, 0, .5)
+                    &:active
+                        color: $orange900
+
+                    i
+                        align-self: center
+                        justify-self: center

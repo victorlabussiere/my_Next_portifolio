@@ -47,7 +47,11 @@ export default function Repositorios() {
                         </div>
 
                     </div>
-                    <a className='tertiaryButton' target='_blank' href="https://github.com/victorlabussiere">Acessar mais repositórios no github</a>
+
+                    <a className='tertiaryButton' target='_blank' href="https://github.com/victorlabussiere">
+                        <i class="devicon-github-original"></i>
+                        <p className='pM'>Acessar mais repositórios no github</p>
+                    </a>
 
 
                 </div>

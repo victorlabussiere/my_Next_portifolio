@@ -27,7 +27,11 @@ export default function Contato() {
                     <label htmlFor="mensagem"> <p className='pL'>Mensagem</p>
                         <textarea type="text" placeholder='Digite sua mensagem aqui...' /></label>
 
-                    <div role='button' className='primaryButton'>Enviar mensagem</div>
+                    <div role='button' className='h3S primaryButton'>
+                        <i className='material-icons'>mail</i>
+                        Enviar mensagem
+                    </div>
+
                 </form>
 
                 <div className={styles.instrucoesArea}>
@@ -47,8 +51,17 @@ export default function Contato() {
 
                     <div className={styles.btnArea}>
                         <p className='pS'>Também poderá me encontrar aqui:</p>
-                        <a href="https://linkdin.com/in/victorlabussiere" target="_blank">in</a>
-                        <a href="https://linkdin.com/in/victorlabussiere" target="_blank">wpp</a>
+
+                        <a href="https://linkedin.com/in/victorlabussiere" target="_blank">
+                            <i class="devicon-linkedin-plain"></i>
+                        </a>
+                        <a href='mailto:victor.labussiere95@gmail.com' target="_blank">
+                            <i class="devicon-google-plain"></i>
+                        </a>
+                        <a href="https://github.com/victorlabussiere" target="_blank">
+                            <i class="devicon-github-plain"></i>
+                        </a>
+
                     </div>
 
                 </div>

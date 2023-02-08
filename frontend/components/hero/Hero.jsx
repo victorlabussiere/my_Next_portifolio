@@ -1,4 +1,5 @@
 import styles from '../../styles/hero/Hero.module.css'
+import Link from 'next/link'
 
 export default function Hero() {
     return (
@@ -10,12 +11,18 @@ export default function Hero() {
             </header>
 
             <div className={styles.ctaBtns}>
-                <div
-                    tabIndex={1}
-                    role='button'
-                    className='primaryButton'>Trabalhe comigo agora!</div>
-
-                <a className='tertiaryButton'>Faça um download do meu currículo</a>
+                <h3 className='h3S primaryButton'>
+                    <i className='material-icons'>phone</i>
+                    Trabalhe comigo agora!
+                </h3>
+                <Link
+                    href='/static/resume.pdf'
+                    download
+                    className='tertiaryButton'
+                >
+                    <i className='material-icons'>description</i>
+                    <p className='pS'>Faça um download do meu currículo</p>
+                </Link>
             </div>
 
         </div>

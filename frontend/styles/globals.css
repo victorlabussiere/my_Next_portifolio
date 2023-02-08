@@ -118,14 +118,13 @@ h3, .h3L {
 }
 
 .primaryButton {
-  font-family: "Jost";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
   padding: 1rem 4rem;
   color: #f9f9f9;
   background-color: #2B5B3E;
-  border: none;
   border-radius: 0.5rem;
   transition: ease-in-out 0.2s all;
   text-align: center;
@@ -143,24 +142,27 @@ h3, .h3L {
 }
 
 .tertiaryButton {
-  font-family: "Jost";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  color: #444444;
-  transition: ease-in-out 0.2s all;
-  vertical-align: middle;
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #444444;
+  transition: ease-in-out 0.2s all;
+}
+.tertiaryButton i {
+  font-size: 120%;
 }
 .tertiaryButton:hover {
-  cursor: pointer;
   transform: scale(1.02);
-  text-decoration: underline #FA9156;
-  color: #2B5B3E;
+  color: #FA9156;
 }
-.tertiaryButton:active {
-  transform: scale(1.01);
+.tertiaryButton:hover p {
+  cursor: pointer;
+  color: #FA9156;
+  text-decoration: underline #668F76;
+}
+.tertiaryButton:hover i {
+  color: #32774d;
 }
 
 /*# sourceMappingURL=globals.css.map */

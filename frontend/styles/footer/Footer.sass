@@ -10,3 +10,31 @@
     align-items: center
     padding: 90px 240px
     gap: 80px
+
+    h3
+        a
+            color: $gray300
+            transition: $transition2ms
+            &:hover
+                color: $orange200
+                font-size: 105%
+            &:active
+                color: $orange600
+
+    .iconsArea
+        display: flex
+        gap: 1rem
+        align-items: center
+        justify-content: space-evenly
+        width: 20%
+        a
+            box-sizing: border-box
+            font-size: 2rem
+            transition: $transition2ms
+            text-align: center
+            vertical-align: middle
+            &:hover
+                color: $orange200
+                transform: scale(1.02)
+            &:active
+                color: $orange600

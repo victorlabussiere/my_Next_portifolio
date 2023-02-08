@@ -28,12 +28,14 @@ export default function Sobre() {
                 </div>
 
                 <div className={styles.btnArea}>
-                    <div role="button" className='primaryButton' >
-                        <a href="https://linkedin.com/in/victorlabussiere" target='_blank'>
-                            Linkedin
-                        </a>
-                    </div>
-                    <div role="button" className='primaryButton'>Currículo</div>
+                    <a href="https://linkedin.com/in/victorlabussiere" target='_blank' className='primaryButton h3S'>
+                        <i class="devicon-linkedin-plain"></i>
+                        Linkedin
+                    </a>
+
+                    <a role="button" className='primaryButton h3S'>
+                        <i className='material-icons'>cloud_download</i>
+                        Currículo</a>
                 </div>
 
             </div>

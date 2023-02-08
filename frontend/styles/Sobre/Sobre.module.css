@@ -39,9 +39,9 @@
 .section .container .btnArea {
   width: 100%;
   display: flex;
-  gap: 4rem;
+  gap: 2rem;
 }
-.section .container .btnArea div {
+.section .container .btnArea a {
   width: 100%;
 }
 

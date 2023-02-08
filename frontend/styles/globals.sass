@@ -85,12 +85,16 @@ h3, .h3L
 // buttons
 
 .primaryButton
-    @include --h3-small()
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 1rem
+
     padding: 1rem 4rem
+
     color: $gray100
     background-color: $green800
 
-    border: none
     border-radius: .5rem
 
     transition: $transition2ms
@@ -108,17 +112,25 @@ h3, .h3L
         transform: scale(1.01)
 
 .tertiaryButton
-    @include --p-medium()
-    color: $gray500
-    transition: $transition2ms
-    vertical-align: middle
     display: flex
     align-items: center
-    &:hover
-        cursor: pointer
-        transform: scale(1.02)
-        text-decoration: underline $orange600
-        color: $green800
+    justify-content: center
+    gap: .5rem
 
-    &:active
-        transform: scale(1.01)
+    color: $gray500
+    transition: $transition2ms
+
+    i
+        font-size: 120%
+
+    &:hover
+        transform: scale(1.02)
+        color: $orange600
+
+    &:hover p
+        cursor: pointer
+        color: $orange600
+        text-decoration: underline $green600
+
+    &:hover i
+        color: $green700
