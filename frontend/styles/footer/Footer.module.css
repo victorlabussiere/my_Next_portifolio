@@ -40,5 +40,18 @@
 .footer .iconsArea a:active {
   color: #FA9156;
 }
+@media screen and (max-width: 425px) {
+  .footer {
+    max-width: 100vw;
+    padding: 2rem 1rem;
+    gap: 0;
+  }
+  .footer .iconsArea a i {
+    display: none;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+}
 
 /*# sourceMappingURL=Footer.module.css.map */

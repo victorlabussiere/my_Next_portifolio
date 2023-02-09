@@ -5,7 +5,7 @@ export default function Services() {
         <section className={styles.section} id='servicos'>
 
             <h2>Serviços</h2>
-            <header>
+            <header className={styles.header}>
                 <hgroup>
                     <h3>Encontre o dev frontend que você procura!</h3>
                     <p className="pS">

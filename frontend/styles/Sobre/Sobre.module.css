@@ -36,13 +36,37 @@
   box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.4);
   transform: scale(1.02);
 }
+@media screen and (max-width: 425px) {
+  .section .container .pictureArea .profilePic {
+    display: none;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+}
 .section .container .btnArea {
-  width: 100%;
   display: flex;
+  width: 100%;
   gap: 2rem;
 }
 .section .container .btnArea a {
   width: 100%;
+}
+@media screen and (max-width: 425px) {
+  .section {
+    padding: 4rem 2rem;
+  }
+  .section .container {
+    gap: 2rem;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 425px) and (max-width: 425px) {
+  .section .container .btnArea {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
 }
 
 /*# sourceMappingURL=Sobre.module.css.map */

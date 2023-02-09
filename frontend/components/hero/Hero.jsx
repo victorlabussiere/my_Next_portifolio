@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function Hero() {
     return (
-        <div className={styles.heroContainer} id='hero'>
+        <section className={styles.heroContainer} id='hero'>
 
             <header>
                 <h1>Dev <span>Java</span><span>Script</span></h1>
@@ -15,16 +15,15 @@ export default function Hero() {
                     <i className='material-icons'>phone</i>
                     Trabalhe comigo agora!
                 </h3>
-                <Link
-                    href='/static/resume.pdf'
+                <a href='/static/resume.pdf'
                     download
-                    className='tertiaryButton'
-                >
+                    className='tertiaryButton'>
+
                     <i className='material-icons'>description</i>
                     <p className='pS'>Faça um download do meu currículo</p>
-                </Link>
+                </a>
             </div>
 
-        </div>
+        </section>
     )
 }

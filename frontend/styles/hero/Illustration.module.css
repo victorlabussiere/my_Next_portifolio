@@ -30,4 +30,13 @@
   z-index: 5;
 }
 
+@media (max-width: 425px) {
+  .ilContainer, .picture {
+    display: none;
+    visibility: hidden;
+    max-width: 0;
+    max-height: 0;
+  }
+}
+
 /*# sourceMappingURL=Illustration.module.css.map */

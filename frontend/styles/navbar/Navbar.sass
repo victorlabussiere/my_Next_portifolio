@@ -14,6 +14,10 @@
 
     width: 100%
     z-index: 10
+    transition: $transition2ms
+
+    &:hover
+        transform: scale(1.02)
 
     &:hover .li
         cursor: pointer
@@ -54,3 +58,10 @@
                     color: $green900
                     text-decoration: underline $orange600
                     cursor: pointer
+
+    @media screen
+        @media ( max-width: 425px )
+            display: none
+            visibility: hidden
+            width: 0
+            height: 0

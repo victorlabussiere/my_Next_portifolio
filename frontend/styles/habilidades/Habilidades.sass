@@ -19,20 +19,18 @@
     .cardsArea
         display: flex
         flex-flow: row wrap
-        justify-content: center
         align-items: center
         justify-content: space-between
-        gap: 4rem
+        gap: 10%
 
         .card
-            flex: 0 0 calc( 100% / 3 - 56px * 2)
+            max-width: calc( 100vw/3 - 30%)
 
             display: flex
             flex-direction: column
             align-items: flex-start
             gap: 1rem
-
-            width: 100%
+            padding-bottom: 3rem
 
             header
                 display: flex
@@ -59,3 +57,20 @@
                 width: 100%
                 &:nth-child(2)
                     color: $orange600
+
+    @media only screen and (max-width: 600px)
+        padding: 4rem 2rem
+
+        hgroup
+            display: none
+            visibility: hidden
+            width: 0
+            height: 0
+        .cardsArea
+            flex-direction: column
+            width: 100%
+            padding: 0
+            gap: 3rem
+            .card
+                padding: 0
+                min-width: 100%

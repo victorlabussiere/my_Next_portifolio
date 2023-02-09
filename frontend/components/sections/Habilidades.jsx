@@ -5,6 +5,7 @@ export default function Habilidades() {
     return (
         <section className={styles.section} id='habilidades'>
             <h2>Habilidades</h2>
+
             <div className={styles.container}>
                 <hgroup>
                     <h3 className='h3L'>

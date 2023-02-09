@@ -106,5 +106,17 @@
   align-self: center;
   justify-self: center;
 }
+@media screen and (max-width: 425px) {
+  .section {
+    padding: 4rem 2rem;
+  }
+  .section .container {
+    flex-direction: column;
+  }
+  .section .container form {
+    box-shadow: none;
+    padding: 2rem 1rem;
+  }
+}
 
 /*# sourceMappingURL=Contato.module.css.map */

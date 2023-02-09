@@ -37,11 +37,28 @@
                 &:hover
                     @include pShadow()
                     transform: scale(1.02)
+                @media screen and ( max-width: 425px )
+                    display: none
+                    visibility: hidden
+                    width: 0
+                    height: 0
 
         .btnArea
-            width: 100%
             display: flex
+            width: 100%
             gap: 2rem
 
             a
                 width: 100%
+
+    @media screen and ( max-width: 425px )
+        padding: 4rem 2rem
+        .container
+            gap: 2rem
+            flex-direction: column
+
+            .btnArea
+                @media screen and ( max-width: 425px )
+                    flex-direction: column
+                    gap: 1.5rem
+                    padding: 0 1rem

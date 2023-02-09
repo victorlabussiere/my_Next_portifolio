@@ -15,7 +15,7 @@
 
     .container
         display: flex
-        flex-wrap: wrap
+        flex-flow: row wrap
         justify-content: space-between
         padding: 56px
         gap: 56px
@@ -26,7 +26,7 @@
         @include pShadow
 
         .columnS
-            flex: 0 0 calc( 100% /2 - 7%)
+            flex: 0 0 calc( 100% / 2 - 10%)
             display: flex
             flex-direction: column
             align-items: flex-start
@@ -38,9 +38,35 @@
                 color: $green700
 
             p
-                padding-top: 1rem
                 color: $gray500
 
         span
             width: 1px
+            min-height: 100%
             background-color: $gray300
+
+    @media screen and ( max-width: 425px )
+        padding: 4rem 2rem
+        gap: 2rem
+        h2
+        header
+
+            display: none
+            visibility: hidden
+            max-width: 0
+            max-height: 0
+
+        .container
+            background-color: $orange600
+            padding: 0
+            flex-direction: column
+            gap: 2rem
+            box-shadow: none
+            span
+                height: 1px
+                width: 100%
+                background-color: $gray100
+
+            .columnS
+                p
+                    color: $gray100

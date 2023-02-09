@@ -68,5 +68,49 @@
 .section .container .cardsContainer a {
   margin: 0 auto;
 }
+@media screen and (max-width: 425px) {
+  .section {
+    background-color: #222222;
+    padding: 4rem 2rem;
+    gap: 1rem;
+  }
+  .section .container {
+    padding: 0;
+    box-shadow: none;
+  }
+  .section .container .cardsContainer {
+    color: #f9f9f9;
+    background-color: #222222;
+    padding: 0;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .section .container .cardsContainer header {
+    color: #f9f9f9;
+  }
+  .section .container .cardsContainer header p {
+    display: none;
+    visibility: hidden;
+  }
+  .section .container .cardsContainer .cardsArea {
+    flex-direction: column;
+    justify-content: flex-start;
+    max-height: 50vh;
+    overflow-y: scroll;
+    gap: 2rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.4);
+  }
+  .section .container .cardsContainer .cardsArea .card {
+    box-shadow: none;
+    background-color: #f9f9f9;
+    color: #222222;
+  }
+  .section .container .cardsContainer a {
+    color: #f9f9f9;
+  }
+}
 
 /*# sourceMappingURL=Repositorios.module.css.map */
