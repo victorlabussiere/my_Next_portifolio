@@ -1,5 +1,4 @@
-import Hero from "../components/hero/Hero"
-import IllustrationHero from "../components/hero/IllustrationHero"
+import Hero from "../components/sections/hero/Hero"
 import Services from "../components/sections/Services"
 import Habilidades from "../components/sections/Habilidades"
 import Repositorios from "../components/sections/Repositorios"
@@ -10,7 +9,6 @@ export default function Home() {
   return (
     <main id='top'>
       <Hero />
-      <IllustrationHero />
       <Services />
       <Habilidades />
       <Repositorios />
