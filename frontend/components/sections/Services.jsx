@@ -1,11 +1,11 @@
-import styles from '../../styles/sServices/Services.module.css'
+import styles from '../../styles/stylesModules/stylesModules.module.css'
 
 export default function Services() {
     return (
-        <section className={styles.section} id='servicos'>
+        <section className={styles.services} id='servicos'>
 
             <h2>Serviços</h2>
-            <header className={styles.header}>
+            <header>
                 <hgroup>
                     <h3>Encontre o dev frontend que você procura!</h3>
                     <p className="pS">
@@ -15,24 +15,24 @@ export default function Services() {
             </header>
 
 
-            <div className={styles.container}>
+            <div className={styles.services_container}>
 
-                <div className={styles.columnS}>
+                <aside>
                     <h3 className="h3M">Web Designer</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque soluta consectetur ad dolorem atque tenetur rerum velit illum tempore dolor rem delectus, quo quam impedit exercitationem ullam et maiores sequi!</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque soluta consectetur ad dolorem atque tenetur rerum velit illum tempore dolor rem delectus, quo quam impedit exercitationem ullam et maiores sequi!</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque soluta consectetur ad dolorem atque tenetur rerum velit illum tempore dolor rem delectus, quo quam impedit exercitationem ullam et maiores sequi!</p>
-                </div>
+                </aside>
 
                 <span />
 
-                <div className={styles.columnS}>
+                <aside>
 
                     <h3 className="h3M">Frontend Dev</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque soluta consectetur ad dolorem atque tenetur rerum velit illum tempore dolor rem delectus, quo quam impedit exercitationem ullam et maiores sequi!</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque soluta consectetur ad dolorem atque tenetur rerum velit illum tempore dolor rem delectus, quo quam impedit exercitationem ullam et maiores sequi!</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque soluta consectetur ad dolorem atque tenetur rerum velit illum tempore dolor rem delectus, quo quam impedit exercitationem ullam et maiores sequi!</p>
-                </div>
+                </aside>
             </div>
 
         </section>

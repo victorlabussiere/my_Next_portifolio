@@ -1,12 +1,12 @@
-import styles from '../../styles/repositorios/Repositorios.module.css'
+import styles from '../../styles/stylesModules/stylesModules.module.css'
 
 export default function Repositorios() {
     return (
-        <section className={styles.section} id='repositorios'>
+        <section className={styles.repositorios} id='repositorios'>
 
             <h2>Repositórios</h2>
 
-            <div className={styles.container} >
+            <div className={styles.repositorios_container} >
 
                 <div className={styles.cardsContainer}>
 
@@ -49,7 +49,7 @@ export default function Repositorios() {
                     </div>
 
                     <a className='tertiaryButton' target='_blank' href="https://github.com/victorlabussiere">
-                        <i class="devicon-github-original"></i>
+                        <i className="devicon-github-original"></i>
                         <p className='pM'>Acessar mais repositórios no github</p>
                     </a>
 

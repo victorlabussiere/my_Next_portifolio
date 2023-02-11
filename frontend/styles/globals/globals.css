@@ -8,12 +8,6 @@
   font-style: none;
 }
 
-a {
-  text-decoration: none;
-  font-style: none;
-  color: unset;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -32,6 +26,78 @@ body {
     margin: 0;
     width: 100vw;
     height: 100%;
+  }
+}
+
+nav {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  padding: 0.6rem 5%;
+  background-color: white;
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  transition: ease-in-out 0.2s all;
+}
+nav:hover {
+  transform: scale(1.02);
+}
+nav:hover li {
+  cursor: pointer;
+  color: #b8d2c2;
+}
+nav h3 {
+  color: #E85401;
+  transition: ease-in-out 0.2s all;
+}
+nav h3 a:nth-child(1) {
+  color: #2d5a3f;
+}
+nav h3 a:nth-child(2) {
+  color: #FA9156;
+}
+nav h3:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+}
+nav h3:hover:active {
+  transform: scale(1.01);
+}
+nav ul {
+  display: flex;
+  gap: 4rem;
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  align-content: center;
+  justify-content: flex-end;
+}
+nav ul li {
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  color: #BEBEBE;
+}
+nav ul li a {
+  transition: ease-in-out 0.2s all;
+}
+nav ul li a:hover {
+  transform: scale(1.01);
+  color: #32774d;
+  text-decoration: underline #FA9156;
+  cursor: pointer;
+}
+@media screen and (max-width: 425px) {
+  nav {
+    display: none;
+    visibility: hidden;
+    width: 0;
+    height: 0;
   }
 }
 
@@ -78,6 +144,62 @@ section {
   }
   section header h3 {
     width: 60%;
+  }
+}
+
+footer {
+  background-color: #0D0D0D;
+  color: #f9f9f9;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 90px 240px;
+  gap: 80px;
+}
+footer h3 a {
+  color: #BEBEBE;
+  transition: ease-in-out 0.2s all;
+}
+footer h3 a:hover {
+  color: #F5D6C4;
+  font-size: 105%;
+}
+footer h3 a:active {
+  color: #FA9156;
+}
+footer div {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 20%;
+}
+footer div a {
+  box-sizing: border-box;
+  font-size: 2rem;
+  transition: ease-in-out 0.2s all;
+  text-align: center;
+  vertical-align: middle;
+}
+footer div a:hover {
+  color: #F5D6C4;
+  transform: scale(1.02);
+}
+footer div a:active {
+  color: #FA9156;
+}
+@media screen and (max-width: 425px) {
+  footer {
+    max-width: 100vw;
+    padding: 2rem 1rem;
+    gap: 0;
+  }
+  footer div a i {
+    display: none;
+    visibility: hidden;
+    width: 0;
+    height: 0;
   }
 }
 
@@ -159,6 +281,12 @@ h3, .h3L {
   .pL, .pM, .pS, p {
     font-size: 12px;
   }
+}
+
+a {
+  text-decoration: none;
+  font-style: none;
+  color: unset;
 }
 
 .primaryButton {

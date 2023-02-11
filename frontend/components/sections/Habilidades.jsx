@@ -1,12 +1,12 @@
-import styles from '../../styles/habilidades/Habilidades.module.css'
+import styles from '../../styles/stylesModules/stylesModules.module.css'
 import Image from 'next/image'
 
 export default function Habilidades() {
     return (
-        <section className={styles.section} id='habilidades'>
+        <section className={styles.habilidades} id='habilidades'>
             <h2>Habilidades</h2>
 
-            <div className={styles.container}>
+            <div className={styles.habilidades_container}>
                 <hgroup>
                     <h3 className='h3L'>
                         Conheça as tecnologias presentes em meu Stack

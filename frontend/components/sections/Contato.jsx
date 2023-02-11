@@ -1,10 +1,10 @@
-import styles from '../../styles/contato/Contato.module.css'
+import styles from '../../styles/stylesModules/stylesModules.module.css'
 
 export default function Contato() {
     return (
-        <section className={styles.section} id='contato'>
+        <section className={styles.contato} id='contato'>
 
-            <div className={styles.container}>
+            <div className={styles.contato_container}>
 
                 <header>
                     <h2>Contato</h2>
@@ -53,13 +53,13 @@ export default function Contato() {
                         <p className='pS'>Também poderá me encontrar aqui:</p>
 
                         <a href="https://linkedin.com/in/victorlabussiere" target="_blank">
-                            <i class="devicon-linkedin-plain"></i>
+                            <i className="devicon-linkedin-plain"></i>
                         </a>
                         <a href='mailto:victor.labussiere95@gmail.com' target="_blank">
-                            <i class="devicon-google-plain"></i>
+                            <i className="devicon-google-plain"></i>
                         </a>
                         <a href="https://github.com/victorlabussiere" target="_blank">
-                            <i class="devicon-github-plain"></i>
+                            <i className="devicon-github-plain"></i>
                         </a>
 
                     </div>

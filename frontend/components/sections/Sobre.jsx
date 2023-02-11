@@ -1,13 +1,13 @@
-import styles from '../../styles/Sobre/Sobre.module.css'
+import styles from '../../styles/stylesModules/stylesModules.module.css'
 import Image from 'next/image'
 
 export default function Sobre() {
     return (
-        <section className={styles.section} id='sobre'>
+        <section className={styles.sobre} id='sobre'>
 
             <h2>Sobre mim</h2>
 
-            <div className={styles.container}>
+            <div className={styles.sobre_container}>
 
                 <div className={styles.textsArea}>
                     <h3 className="h3L">Muito prazer,</h3>
@@ -29,7 +29,7 @@ export default function Sobre() {
 
                 <div className={styles.btnArea}>
                     <a href="https://linkedin.com/in/victorlabussiere" target='_blank' className='primaryButton h3S'>
-                        <i class="devicon-linkedin-plain"></i>
+                        <i className="devicon-linkedin-plain"></i>
                         Linkedin
                     </a>
 

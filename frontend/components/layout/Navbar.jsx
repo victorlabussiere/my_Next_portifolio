@@ -1,4 +1,4 @@
-import styles from '../../styles/navbar/Navbar.module.css'
+import Link from "next/link"
 
 export default function Navbar() {
 
@@ -18,8 +18,8 @@ export default function Navbar() {
     }
 
     return (
-        <nav className={styles.nav}>
-            <h3 className={styles.navHeader}>
+        <nav    >
+            <h3>
                 <a href='#top' onClick={(e) => scrollSuave(e)} >
                     Victor
                 </a>
@@ -30,24 +30,24 @@ export default function Navbar() {
             </h3>
 
 
-            <ul className={styles.navUl}>
-                <li className={styles.li}>
-                    <a href="#top" onClick={(e) => scrollSuave(e)}>voltar ao topo</a>
+            <ul>
+                <li>
+                    <Link href="#top" onClick={(e) => scrollSuave(e)}>voltar ao topo</Link>
                 </li>
-                <li className={styles.li}>
-                    <a href="#servicos" onClick={(e) => scrollSuave(e)}>serviços</a>
+                <li>
+                    <Link href="#servicos" onClick={(e) => scrollSuave(e)}>serviços</Link>
                 </li>
-                <li className={styles.li}>
-                    <a href="#habilidades" onClick={(e) => scrollSuave(e)} >habilidades</a>
+                <li>
+                    <Link href="#habilidades" onClick={(e) => scrollSuave(e)} >habilidades</Link>
                 </li>
-                <li className={styles.li}>
-                    <a href="#repositorios" onClick={(e) => scrollSuave(e)} s>repositorios</a>
+                <li>
+                    <Link href="#repositorios" onClick={(e) => scrollSuave(e)}>repositorios</Link>
                 </li>
-                <li className={styles.li}>
-                    <a href="#contato" onClick={(e) => scrollSuave(e)}>contato</a>
+                <li>
+                    <Link href="#contato" onClick={(e) => scrollSuave(e)}>contato</Link>
                 </li>
-                <li className={styles.li}>
-                    <a href="#sobre" onClick={(e) => scrollSuave(e)}>sobre mim</a>
+                <li>
+                    <Link href="#sobre" onClick={(e) => scrollSuave(e)}>sobre mim</Link>
                 </li>
             </ul>
         </nav >
