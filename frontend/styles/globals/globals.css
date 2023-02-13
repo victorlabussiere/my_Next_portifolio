@@ -39,9 +39,6 @@ nav {
   z-index: 10;
   transition: ease-in-out 0.2s all;
 }
-nav:hover {
-  transform: scale(1.02);
-}
 nav:hover li {
   cursor: pointer;
   color: #b8d2c2;
