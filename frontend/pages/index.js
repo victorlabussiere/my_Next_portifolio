@@ -1,4 +1,4 @@
-import Hero from "../components/sections/hero/Hero"
+import Hero from "../components/sections/Hero"
 import Services from "../components/sections/Services"
 import Habilidades from "../components/sections/Habilidades"
 import Repositorios from "../components/sections/Repositorios"
