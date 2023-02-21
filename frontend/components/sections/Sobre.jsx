@@ -1,4 +1,4 @@
-import styles from '../../styles/stylesModules/stylesModules.module.css'
+import styles from '../../styles/stylesModules/styles.module.css'
 import Image from 'next/image'
 
 export default function Sobre() {

@@ -1,4 +1,4 @@
-import styles from '../../styles/stylesModules/stylesModules.module.css'
+import styles from '../../styles/stylesModules/styles.module.css'
 import Image from 'next/image'
 
 export default function Habilidades() {
@@ -79,7 +79,7 @@ export default function Habilidades() {
                             <Image src='/logos/illustratorLogo.png' width={56} height={56} className={styles.logoIcon} alt='Adobe Illustrator Logo' />
 
                         </header>
-                        <p className='pM'>Figma, CorelDraw, Adobe XD & Illustrator </p>
+                        <p className='pM'>Web Design Tools </p>
 
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique praesentium nulla, consequatur tenetur nobis autem? Totam aspernatur, accusamus nemo a, magnam tenetur debitis vel nisi deserunt necessitatibus at odit expedita.</p>
 

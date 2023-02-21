@@ -57,7 +57,6 @@
 
     .ilContainer
         width: 100vw
-        padding: 2rem 0
 
         background: $gray100
         background: linear-gradient(0deg, $orange600 50%,$gray100 50%)
@@ -73,6 +72,8 @@
             display: flex
             gap: 5rem
             color: $gray500
+            width: 100%
+            justify-content: center
 
             li
                 color: $green900
@@ -88,7 +89,7 @@
             border-radius: 8px
             z-index: 5
 
-    @media (max-width: '425px')
+    @media (max-width: 600px)
         padding: 3rem 8rem
         box-sizing: border-box
         margin: 0
@@ -119,6 +120,14 @@
         .ilContainer, .features, .picture
             display: none
             visibility: hidden
+            max-width: 0
+            max-height: 0
+    @media (max-width: 768px)
+        height: 100vh
+        padding: 0
+        .ilContainer, .feature, .picture
+            display: none
+            visibility: none
             max-width: 0
             max-height: 0
 
@@ -169,7 +178,7 @@
             min-height: 100%
             background-color: $gray300
 
-    @media screen and ( max-width: 425px )
+    @media screen and ( max-width: 600px )
         padding: 4rem 2rem
         gap: 2rem
 
@@ -195,6 +204,13 @@
                 p
                     color: $gray100
 
+    @media screen and (max-width: 768px)
+        .services_container
+            flex-direction: column
+
+            span
+                width: 100%
+                height: 1px
 // Habilidades section
 .habilidades
     color: $gray500
@@ -216,6 +232,7 @@
         display: flex
         flex-flow: row wrap
         align-items: center
+        justify-content: space-between
         gap: 2rem
 
         .card
@@ -224,7 +241,6 @@
             flex-direction: column
             align-items: flex-start
             gap: 1rem
-            padding-bottom: 3rem
 
             header
                 display: flex
@@ -270,6 +286,12 @@
             .card
                 padding: 0
                 min-width: 100%
+
+    @media ( max-width: 768px )
+        .cardsArea
+            justify-content: space-evenly
+            .card
+                width: 40%
 
 // Repositorios section
 .repositorios
@@ -339,8 +361,9 @@
 
             a
                 margin: 0 auto
+                color: $gray500
 
-    @media screen and ( max-width: 425px )
+    @media screen and ( max-width: 600px )
         background-color: $gray700
         padding: 4rem 2rem
         gap: 1rem
@@ -377,6 +400,23 @@
                         color: $gray700
                 a
                     color: $gray100
+
+    @media screen and ( max-width: 768px )
+        .repositorios_container
+            .cardsContainer
+                .cardsArea
+                    background-color: $orange600
+                    overflow-x: scroll
+                    display: flex
+                    justify-content: flex-start
+
+                    box-shadow: inset 0 0 16px rgba(0, 0, 0, .4)
+                    gap: 1rem
+                    padding: 1rem
+                    border-radius: 1rem
+                    .card
+                        min-width: 38%
+                        background-color: $gray100
 
 // Contato section
 .contato
@@ -444,11 +484,9 @@
             align-content: flex-start
             gap: 2rem
 
-            h3
-                color: $orange600
-
             .ins
-                margin-bottom: auto
+                h3
+                    color: $orange600
 
             .btnArea
                 width: 100%
@@ -484,13 +522,21 @@
                         align-self: center
                         justify-self: center
 
-    @media screen and ( max-width: 425px )
+    @media screen and ( max-width: 600px )
         padding: 4rem 2rem
         .contato_container
             flex-direction: column
             form
                 box-shadow: none
                 padding: 2rem 1rem
+
+    @media screen and ( max-width: 768px)
+        .contato_container
+            flex-direction: column
+
+            .instrucoesArea
+                display: flex
+                flex-direction: column
 
 // Sobre section
 .sobre
@@ -538,11 +584,8 @@
 
         .btnArea
             display: flex
-            width: 100%
+            flex-direction: column
             gap: 2rem
-
-            a
-                width: 100%
 
     @media screen and ( max-width: 425px )
         padding: 4rem 2rem
@@ -555,3 +598,20 @@
                     flex-direction: column
                     gap: 1.5rem
                     padding: 0 1rem
+                    width: 100%
+                    a
+                        width: 100%
+
+    @media screen and ( max-width: 768px )
+        .sobre_container
+            flex-direction: column
+
+            .pictureArea
+                display: none
+                visibility: none
+                width: 0
+                height: 0
+
+                .profilePic
+                    width: 0
+                    height: 0

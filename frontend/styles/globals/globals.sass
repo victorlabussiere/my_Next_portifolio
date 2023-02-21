@@ -37,7 +37,7 @@ nav
     top: 0
     left: 0
 
-    width: 100%
+    width: 100vw
     z-index: 10
     transition: $transition2ms
 
@@ -81,12 +81,17 @@ nav
                     text-decoration: underline $orange600
                     cursor: pointer
 
-    @media screen
-        @media ( max-width: 425px )
-            display: none
-            visibility: hidden
-            width: 0
-            height: 0
+    @media ( max-width: 425px )
+        display: none
+        visibility: hidden
+        width: 0
+        height: 0
+
+    @media (max-width: 768px)
+        display: none
+        visibility: hidden
+        width: 0
+        height: 0
 
 main
     width: 100%
@@ -105,17 +110,16 @@ section
     gap: 4rem
 
     width: 100%
-    padding: 8rem 24rem
+    padding: 8vw
 
     position: relative
     z-index: 1
 
-    @media screen
-        @media(max-width: 425px)
-            padding: 0
-            margin: 0
-            min-width: 100vw
-            min-height: 100vh
+    @media(max-width: 425px)
+        padding: 0
+        margin: 0
+        min-width: 100vw
+        min-height: 100vh
         header
             width: 100%
             display: flex
@@ -129,26 +133,25 @@ section
             h3
                 width: 60%
 
+    @media screen and ( max-width: 768px )
+        padding: 4rem
+
 footer
     background-color: $gray900
-    color: $gray100
+    color: $gray300
 
     display: flex
     flex-direction: row
     justify-content: center
     align-items: center
-    padding: 90px 240px
-    gap: 80px
+    padding: 5rem
 
     h3
         a
             color: $gray300
             transition: $transition2ms
             &:hover
-                color: $orange200
-                font-size: 105%
-            &:active
-                color: $orange600
+                color: #fff
 
     div
         display: flex
@@ -163,10 +166,7 @@ footer
             text-align: center
             vertical-align: middle
             &:hover
-                color: $orange200
-                transform: scale(1.02)
-            &:active
-                color: $orange600
+                color: #fff
 
     @media screen and ( max-width: 425px )
         max-width: 100vw
@@ -179,6 +179,14 @@ footer
                     visibility: hidden
                     width: 0
                     height: 0
+
+    @media screen and ( max-width: 768px )
+        padding: 2rem
+        justify-content: space-between
+
+        div
+            justify-content: space-evenly
+            width: 40%
 
 h1
     @include --h1-jost-bold

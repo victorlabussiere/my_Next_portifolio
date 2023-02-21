@@ -35,7 +35,7 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   z-index: 10;
   transition: ease-in-out 0.2s all;
 }
@@ -85,7 +85,15 @@ nav ul li a:hover {
   text-decoration: underline #FA9156;
   cursor: pointer;
 }
-@media screen and (max-width: 425px) {
+@media (max-width: 425px) {
+  nav {
+    display: none;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+}
+@media (max-width: 768px) {
   nav {
     display: none;
     visibility: hidden;
@@ -112,19 +120,17 @@ section {
   justify-content: flex-start;
   gap: 4rem;
   width: 100%;
-  padding: 8rem 24rem;
+  padding: 8vw;
   position: relative;
   z-index: 1;
 }
-@media screen and (max-width: 425px) {
+@media (max-width: 425px) {
   section {
     padding: 0;
     margin: 0;
     min-width: 100vw;
     min-height: 100vh;
   }
-}
-@media screen {
   section header {
     width: 100%;
     display: flex;
@@ -140,27 +146,27 @@ section {
     width: 60%;
   }
 }
+@media screen and (max-width: 768px) {
+  section {
+    padding: 4rem;
+  }
+}
 
 footer {
   background-color: #0D0D0D;
-  color: #f9f9f9;
+  color: #BEBEBE;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 90px 240px;
-  gap: 80px;
+  padding: 5rem;
 }
 footer h3 a {
   color: #BEBEBE;
   transition: ease-in-out 0.2s all;
 }
 footer h3 a:hover {
-  color: #F5D6C4;
-  font-size: 105%;
-}
-footer h3 a:active {
-  color: #FA9156;
+  color: #fff;
 }
 footer div {
   display: flex;
@@ -177,11 +183,7 @@ footer div a {
   vertical-align: middle;
 }
 footer div a:hover {
-  color: #F5D6C4;
-  transform: scale(1.02);
-}
-footer div a:active {
-  color: #FA9156;
+  color: #fff;
 }
 @media screen and (max-width: 425px) {
   footer {
@@ -194,6 +196,16 @@ footer div a:active {
     visibility: hidden;
     width: 0;
     height: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  footer {
+    padding: 2rem;
+    justify-content: space-between;
+  }
+  footer div {
+    justify-content: space-evenly;
+    width: 40%;
   }
 }
 
