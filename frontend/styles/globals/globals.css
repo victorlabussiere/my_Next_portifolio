@@ -120,7 +120,7 @@ section {
   justify-content: flex-start;
   gap: 4rem;
   width: 100%;
-  padding: 8vw;
+  padding: 8vw 16vw;
   position: relative;
   z-index: 1;
 }
@@ -157,9 +157,9 @@ footer {
   color: #BEBEBE;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding: 5rem;
+  padding: 8vw 16vw;
 }
 footer h3 a {
   color: #BEBEBE;
@@ -185,13 +185,14 @@ footer div a {
 footer div a:hover {
   color: #fff;
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 600px) {
   footer {
-    max-width: 100vw;
-    padding: 2rem 1rem;
-    gap: 0;
+    width: 100vw;
   }
-  footer div a i {
+  footer h3 a {
+    font-size: 18px;
+  }
+  footer div {
     display: none;
     visibility: hidden;
     width: 0;
@@ -217,6 +218,11 @@ h1 {
   width: 100%;
   text-align: center;
 }
+@media screen and (max-width: 1024px) {
+  h1 {
+    font-size: 64px;
+  }
+}
 
 h2 {
   font-family: "Jost";
@@ -229,9 +235,14 @@ h2:hover {
   cursor: default;
   text-decoration: underline #668F76;
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 600px) {
   h2 {
     font-size: 40px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  h2 {
+    font-size: 56px;
   }
 }
 
@@ -256,9 +267,14 @@ h3, .h3L {
   font-size: 24px;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 600px) {
   h3, .h3L, .h3M, .h3S {
-    font-size: 16px;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  h3, .h3L, .h3M, .h3S {
+    font-size: 18px;
   }
 }
 
@@ -284,8 +300,13 @@ h3, .h3L {
 }
 
 @media screen and (max-width: 425px) {
-  .pL, .pM, .pS, p {
+  .pL, .pM, .pS, p, a {
     font-size: 12px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .pL, .pM, .pS, p, a {
+    font-size: 14px;
   }
 }
 
