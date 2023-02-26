@@ -64,7 +64,6 @@ nav h3:hover:active {
 nav ul {
   display: flex;
   gap: 4rem;
-  font-family: "Jost";
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -212,7 +211,6 @@ footer div a:hover {
 }
 
 h1 {
-  font-family: "Jost";
   font-style: normal;
   font-weight: 700;
   font-size: 84px;
@@ -226,7 +224,6 @@ h1 {
 }
 
 h2 {
-  font-family: "Jost";
   font-style: normal;
   font-weight: 700;
   font-size: 64px;
@@ -248,21 +245,18 @@ h2:hover {
 }
 
 h3, .h3L {
-  font-family: "Jost";
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
 }
 
 .h3M {
-  font-family: "Jost";
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
 }
 
 .h3S {
-  font-family: "Jost";
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -280,21 +274,18 @@ h3, .h3L {
 }
 
 .pL {
-  font-family: "Jost";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
 }
 
 .pM {
-  font-family: "Jost";
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
 }
 
 .pS {
-  font-family: "Jost";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;

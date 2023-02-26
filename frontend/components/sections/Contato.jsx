@@ -6,10 +6,8 @@ export default function Contato() {
 
             <div className={styles.contato_container}>
 
-                <header>
-                    <h2>Contato</h2>
-                </header>
 
+                <h2>Contato</h2>
                 <hgroup>
                     <h3 className='h3L'>Utilize esse espaço para iniciar um primeiro contato</h3>
                     <p className='pS'> Preencha o formulário com suas informações e envie uma mensagem. A sua mensagem será enviada ao meu e-mail.</p>
