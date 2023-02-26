@@ -9,7 +9,7 @@ export default function Habilidades() {
             <div className={styles.habilidades_container}>
                 <hgroup>
                     <h3 className='h3L'>
-                        As habilidades que eu ofereço para colaborar com seu ambiente
+                        Saiba como eu posso ser útil,
                     </h3>
                     <p className='pS'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste nemo libero vitae dolor laborum itaque ducimus quod doloremque, nam, error, at necessitatibus amet quia culpa recusandae numquam facere modi delectus?</p>
                 </hgroup>
