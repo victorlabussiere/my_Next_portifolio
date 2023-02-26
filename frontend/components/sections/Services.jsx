@@ -2,7 +2,7 @@ import styles from '../../styles/stylesModules/styles.module.css'
 
 export default function Services() {
     return (
-        <section className={styles.services} id='servicos'>
+        <section className={styles.services} id='services'>
 
             <h2>Serviços</h2>
             <header>

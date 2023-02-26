@@ -78,7 +78,6 @@
   text-decoration: underline #FA9156;
 }
 .heroContainer .ilContainer .picture {
-  filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.5));
   border-radius: 8px;
   z-index: 5;
   width: 50vw;
@@ -397,7 +396,7 @@
 }
 .repositorios .repositorios_container .cardsContainer a {
   margin: 0 auto;
-  color: #444444;
+  color: #32774d;
 }
 @media screen and (max-width: 600px) {
   .repositorios {
@@ -639,8 +638,8 @@
 .sobre .sobre_container .pictureArea .profilePic {
   display: flex;
   border-radius: 50%;
-  width: 400px;
-  height: 400px;
+  width: 16vw;
+  height: 16vw;
   box-sizing: border-box;
   border: 2px solid #BEBEBE;
   transition: ease-in-out 0.2s all;
@@ -699,12 +698,14 @@
   }
 }
 @media screen and (max-width: 1024px) {
-  .sobre .sobre_container .pictureArea {
-    width: 40%;
+  .sobre .sobre_container {
+    flex-direction: column;
   }
-  .sobre .sobre_container .pictureArea .profilePic {
-    width: 24vw;
-    height: 24vw;
+  .sobre .sobre_container .textsArea {
+    width: 100%;
+  }
+  .sobre .sobre_container .pictureArea {
+    order: -1;
   }
   .sobre .sobre_container .btnArea {
     width: 100%;

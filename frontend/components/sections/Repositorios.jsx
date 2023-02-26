@@ -2,7 +2,7 @@ import styles from '../../styles/stylesModules/styles.module.css'
 
 export default function Repositorios() {
     return (
-        <section className={styles.repositorios} id='repositorios'>
+        <section className={styles.repositorios} id='repositorios' >
 
             <h2>Repositórios</h2>
 

@@ -4,7 +4,7 @@ import Image from 'next/image'
 export default function Hero() {
     return (
         <>
-            <section className={styles.heroContainer} id='hero'>
+            <section className={styles.heroContainer} >
 
                 <header>
                     <h1>Dev <strong>Java</strong><strong>Script</strong></h1>

@@ -35,7 +35,7 @@ export default function Navbar() {
                     <Link href="#top" onClick={(e) => scrollSuave(e)}>voltar ao topo</Link>
                 </li>
                 <li>
-                    <Link href="#servicos" onClick={(e) => scrollSuave(e)}>serviços</Link>
+                    <Link href="#services" onClick={(e) => scrollSuave(e)}>serviços</Link>
                 </li>
                 <li>
                     <Link href="#habilidades" onClick={(e) => scrollSuave(e)} >habilidades</Link>
