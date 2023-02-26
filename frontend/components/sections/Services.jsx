@@ -5,15 +5,13 @@ export default function Services() {
         <section className={styles.services} id='services'>
 
             <h2>Serviços</h2>
-            <header>
-                <hgroup>
-                    <h3>Encontre o dev frontend que você procura!</h3>
-                    <p className="pS">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum odit consectetur pariatur quibusdam explicabo similique modi inventore dolorem, non harum aliquid? Fugit perspiciatis fugiat officia repudiandae quod dolorem, corporis et!
-                    </p>
-                </hgroup>
-            </header>
 
+            <hgroup>
+                <h3>Encontre o dev frontend que você procura!</h3>
+                <p className="pS">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum odit consectetur pariatur quibusdam explicabo similique modi inventore dolorem, non harum aliquid? Fugit perspiciatis fugiat officia repudiandae quod dolorem, corporis et!
+                </p>
+            </hgroup>
 
             <div className={styles.services_container}>
 

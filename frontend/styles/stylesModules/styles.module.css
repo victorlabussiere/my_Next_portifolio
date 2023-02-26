@@ -138,18 +138,12 @@
 .services {
   background-color: #FA9156;
   color: #f9f9f9;
-  gap: 4rem;
 }
-.services header {
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
+.services hgroup h3 {
+  color: #32774d;
 }
-.services header h3 {
-  color: #2B5B3E;
-}
-.services header p {
-  width: 60%;
+.services hgroup p {
+  width: 80%;
 }
 .services .services_container {
   display: flex;
@@ -183,11 +177,7 @@
   background-color: #BEBEBE;
 }
 @media screen and (max-width: 600px) {
-  .services {
-    padding: 4rem 2rem;
-    gap: 2rem;
-  }
-  .services header {
+  .services hgroup {
     display: none;
     visibility: hidden;
     max-width: 0;
@@ -231,19 +221,13 @@
 .habilidades {
   color: #444444;
 }
+.habilidades h2 {
+  color: #FA9156;
+}
 .habilidades .habilidades_container {
   display: flex;
   flex-direction: column;
   gap: 4.5rem;
-}
-.habilidades h2 {
-  color: #FA9156;
-}
-.habilidades hgroup h3 {
-  color: #2d5a3f;
-}
-.habilidades hgroup p {
-  width: 60%;
 }
 .habilidades .cardsArea {
   display: flex;
@@ -284,9 +268,6 @@
   color: #FA9156;
 }
 @media only screen and (max-width: 600px) {
-  .habilidades {
-    padding: 4rem 2rem;
-  }
   .habilidades hgroup {
     display: none;
     visibility: hidden;
@@ -328,7 +309,6 @@
 .repositorios {
   background-color: #FA9156;
   color: #f9f9f9;
-  gap: 4rem;
 }
 .repositorios .repositorios_container {
   width: 100%;
@@ -401,8 +381,6 @@
 @media screen and (max-width: 600px) {
   .repositorios {
     background-color: #222222;
-    padding: 4rem 2rem;
-    gap: 1rem;
   }
   .repositorios .repositorios_container {
     padding: 0;
@@ -584,15 +562,14 @@
   justify-self: center;
 }
 @media screen and (max-width: 600px) {
-  .contato {
-    padding: 4rem 2rem;
-  }
   .contato .contato_container {
     flex-direction: column;
   }
   .contato .contato_container form {
     box-shadow: none;
-    padding: 2rem 1rem;
+  }
+  .contato .contato_container form div {
+    width: 100%;
   }
 }
 @media screen and (max-width: 768px) {
@@ -665,9 +642,6 @@
   width: 100%;
 }
 @media screen and (max-width: 600px) {
-  .sobre {
-    padding: 4rem 2rem;
-  }
   .sobre .sobre_container {
     gap: 2rem;
     flex-direction: column;
