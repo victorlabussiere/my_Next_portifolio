@@ -22,7 +22,7 @@ export default function Services() {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque soluta consectetur ad dolorem atque tenetur rerum velit illum tempore dolor rem delectus, quo quam impedit exercitationem ullam et maiores sequi!</p>
                 </aside>
 
-                <span />
+                <hr />
 
                 <aside>
 

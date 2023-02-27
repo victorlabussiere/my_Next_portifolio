@@ -145,10 +145,8 @@
     .services_container
         display: flex
         flex-flow: row wrap
-        justify-content: space-between
         padding: 56px
         gap: 56px
-        width: 100%
 
         background: #F2F2F2
         color: $gray700
@@ -169,12 +167,12 @@
             p
                 color: $gray500
 
-        span
-            width: 1px
-            min-height: 100%
-            background-color: $gray300
+        hr
+            border: none
+            border-top: 1px solid $gray300
+            border-left: 1px solid $gray300
 
-    @media screen and ( max-width: 600px )
+    @media screen and ( max-width: 768px )
         hgroup
             display: none
             visibility: hidden
@@ -187,30 +185,16 @@
             flex-direction: column
             gap: 2rem
             box-shadow: none
-            span
-                height: 1px
-                width: 100%
-                background-color: $gray100
 
             aside
                 p
                     color: $gray100
+            hr
+                border-color: $gray100
 
-    @media screen and (max-width: 768px)
+    @media screen and (max-width: 1024px)
         .services_container
             flex-direction: column
-
-            span
-                width: 100%
-                height: 1px
-
-    @media screen and ( max-width: 1024px )
-        .services_container
-            flex-direction: column
-
-            span
-                width: 100%
-                height: 1px
 
 // Habilidades section
 .habilidades
@@ -218,6 +202,10 @@
 
     h2
         color: $orange600
+
+    hgroup
+        h3
+            color: $green700
 
     .habilidades_container
         display: flex
@@ -438,6 +426,7 @@
                 .cardsArea
                     .card
                         height: 50%
+
 // Contato section
 .contato
     background-color: $gray500
@@ -501,7 +490,7 @@
             flex: 0 0 calc( 100% /2 - 4rem)
 
             @include flexColumn()
-            align-content: flex-start
+            align-content: center
             gap: 2rem
 
             .ins
@@ -518,6 +507,7 @@
                 margin-top: auto
                 p
                     width: 100%
+                    text-align: center
                 a
 
                     min-width: 5rem
@@ -547,6 +537,7 @@
             flex-direction: column
             form
                 box-shadow: none
+                width: 100%
 
                 div
                     width: 100%
@@ -588,7 +579,6 @@
             display: flex
             justify-content: center
             align-items: center
-
             .profilePic
                 display: flex
                 border-radius: 50%

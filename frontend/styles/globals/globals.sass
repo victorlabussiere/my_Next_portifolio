@@ -20,7 +20,7 @@ body
     overflow-x: hidden
 
     @media screen
-        @media(max-width: 425px)
+        @media(max-width: 768px)
             padding: 0
             margin: 0
             width: 100vw
@@ -82,7 +82,7 @@ nav
                     text-decoration: underline $orange600
                     cursor: pointer
 
-    @media ( max-width: 425px )
+    @media ( max-width: 768px )
         display: none
         visibility: hidden
         width: 0
@@ -98,10 +98,10 @@ main
     width: 100%
     height: 100%
 
-    @media screen
-        @media(max-width: 425px)
-            margin: 0
-            width: 100vw
+    @media(max-width: 768px)
+        margin: 0
+        width: 100vw
+        padding: 0
 
 section
     display: flex
@@ -120,12 +120,11 @@ section
         p
             width: 80%
 
-    @media(max-width: 600px)
-        padding: 4rem 2rem
-        gap: 2rem
+    @media screen and (max-width: 1024px)
+        padding: 8vw
         margin: 0
-        min-width: 100vw
-        min-height: 100vh
+        gap: 2rem
+        width: 100%
 
         h2
             font-size: 48px
@@ -136,25 +135,25 @@ section
             flex-direction: column
             gap: 1rem
 
-    @media screen and ( max-width: 768px )
-        padding: 4rem
+    @media screen and ( max-width: 1440px )
+        padding: 8vw 16vw
 
 footer
     background-color: $gray900
     color: $gray300
 
     display: flex
-    flex-direction: row
+    flex-direction: column
+    gap: 1.5rem
     justify-content: space-between
     align-items: center
-    padding: 2vw 8vw
+    padding: 2vw 24vw
 
-    h3
-        a
-            color: $gray300
-            transition: $transition2ms
-            &:hover
-                color: #fff
+    a
+        color: $gray300
+        transition: $transition2ms
+        &:hover
+            color: #fff
 
     div
         display: flex
@@ -164,15 +163,18 @@ footer
         width: 20%
         a
             box-sizing: border-box
-            font-size: 2rem
+            font-size: 1rem
             transition: $transition2ms
             text-align: center
             vertical-align: middle
             &:hover
                 color: #fff
 
-    @media screen and ( max-width: 600px )
+    @media screen and ( max-width: 768px )
         width: 100vw
+        flex-direction: column
+        align-items: center
+        justify-content: center
         h3
             a
                 font-size: 18px
@@ -196,7 +198,7 @@ h1
     width: 100%
     text-align: center
 
-    @media screen and ( max-width: 1024px )
+    @media screen and ( max-width: 1440px )
         font-size: 64px
 
 h2
@@ -206,9 +208,9 @@ h2
         cursor: default
         text-decoration: underline $green600
 
-    @media screen and ( max-width: 600px )
+    @media screen and ( max-width: 768px )
         font-size: 40px
-    @media screen and ( max-width: 1024px )
+    @media screen and ( max-width: 1440px )
         font-size: 56px
 
 h3, .h3L
@@ -221,10 +223,10 @@ h3, .h3L
     @include --h3-small
 
 h3, .h3L, .h3M, .h3S
-    @media screen and ( max-width: 600px  )
+    @media screen and ( max-width: 768px  )
         font-size: 14px
 
-    @media screen and ( max-width: 1024px )
+    @media screen and ( max-width: 1440px )
         font-size: 18px
 .pL
     @include --p-large
@@ -236,10 +238,10 @@ h3, .h3L, .h3M, .h3S
     @include --p-small
 
 .pL, .pM, .pS, p, a
-    @media screen and ( max-width: 425px )
+    @media screen and ( max-width: 768px )
         font-size: 12px
 
-    @media screen and ( max-width: 1024px )
+    @media screen and ( max-width: 1440px )
         font-size: 14px
 
 a
@@ -265,7 +267,7 @@ a
     text-align: center
     vertical-align: middle
 
-    @media(max-width: 600px)
+    @media(max-width: 768px)
         width: 100%
         font-size: 16px
         padding: 1rem
