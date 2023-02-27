@@ -1,6 +1,23 @@
+import { useEffect, useState } from 'react'
 import styles from '../../styles/stylesModules/styles.module.css'
+import Image from 'next/image'
 
 export default function Repositorios() {
+
+    const [repos, setRepos] = useState([])
+
+    useEffect(() => {
+        fetch('https://api.github.com/users/victorlabussiere/repos')
+            .then(res => res.json())
+            .then(data => setRepos(data))
+            .catch(err => console.error('Erro com a requisição à API do github', err))
+    }, [])
+
+    // draggable scroll info
+    let isDragging = false;
+    let startPosition = 0;
+    let startScrollPosition = 0;
+
     return (
         <section className={styles.repositorios} id='repositorios' >
 
@@ -24,27 +41,23 @@ export default function Repositorios() {
 
                     <h3 className='h3S'>Projetos destacados:</h3>
 
-                    <div className={styles.cardsArea}>
+                    <div
+                        className={styles.cardsArea}
+                        id='cardsArea'
+                    >
 
-                        <div className={styles.card}>
-                            <span></span>
-                            <p className='pL'>Card Name</p>
-                        </div>
+                        {repos.map(i => {
+                            if (!i.description) return
 
-                        <div className={styles.card}>
-                            <span></span>
-                            <p className='pL'>Card Name</p>
-                        </div>
+                            return <div key={i.id} className={styles.card}>
+                                <a href={i.html_url} target='_blank' className='pL'>{
+                                    <p>
+                                        {i.description}
 
-                        <div className={styles.card}>
-                            <span></span>
-                            <p className='pL'>Card Name</p>
-                        </div>
-
-                        <div className={styles.card}>
-                            <span></span>
-                            <p className='pL'>Card Name</p>
-                        </div>
+                                    </p>
+                                }</a>
+                            </div>
+                        })}
 
                     </div>
 
