@@ -1,7 +1,7 @@
 export default function Footer() {
     return (
         <footer>
-
+            <a ta='true' href="https://github.com/victorlabussiere" target='_blank'>Victor Labussiere | Frontend Developer </a>
             <div>
                 <a s='true' href="https://linkedin.com/in/victorlabussiere"
                     target='_blank'
@@ -21,7 +21,6 @@ export default function Footer() {
                     <i className="devicon-twitter-plain"></i>
                 </a>
             </div>
-            <a ta='true' href="https://github.com/victorlabussiere" target='_blank'>Victor Labussiere | Frontend Developer </a>
         </footer >
     )
 }

@@ -141,19 +141,20 @@ section
 footer
     background-color: $gray900
     color: $gray300
+    font-size: 1.2rem
 
     display: flex
     flex-direction: column
     gap: 1.5rem
     justify-content: space-between
     align-items: center
-    padding: 2vw 24vw
+    padding: 2vw
 
     a
         color: $gray300
         transition: $transition2ms
         &:hover
-            color: #fff
+            color: $gray100
 
     div
         display: flex
@@ -163,12 +164,9 @@ footer
         width: 20%
         a
             box-sizing: border-box
-            font-size: 1rem
             transition: $transition2ms
-            text-align: center
-            vertical-align: middle
             &:hover
-                color: #fff
+                color: $gray100
 
     @media screen and ( max-width: 768px )
         width: 100vw

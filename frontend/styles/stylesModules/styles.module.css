@@ -541,7 +541,7 @@
   min-width: 5rem;
   min-height: 5rem;
   font-size: 4rem;
-  color: #f9f9f9;
+  color: #BEBEBE;
   display: flex;
   align-content: center;
   justify-content: center;
@@ -549,9 +549,7 @@
   transition: ease-in-out 0.2s all;
 }
 .contato .contato_container .instrucoesArea .btnArea a:hover {
-  color: #FA9156;
-  transform: scale(1.05);
-  text-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+  color: #f9f9f9;
 }
 .contato .contato_container .instrucoesArea .btnArea a:active {
   color: #E85401;
@@ -598,35 +596,37 @@
   gap: 4rem;
 }
 .sobre .sobre_container .textsArea {
-  flex: 0 0 50%;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2vw;
 }
 .sobre .sobre_container .textsArea h3 {
   color: #FA9156;
+  width: 100%;
 }
-.sobre .sobre_container .pictureArea {
-  flex: 0 0 calc(50% - 5rem);
+.sobre .sobre_container .textsArea .texts {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  gap: 2rem;
+  flex-direction: column;
+  width: calc(50% - 1vw);
 }
-.sobre .sobre_container .pictureArea .profilePic {
-  display: flex;
-  border-radius: 50%;
-  width: 16vw;
+.sobre .sobre_container .textsArea .profilePic {
   height: 16vw;
-  box-sizing: border-box;
+  width: 16vw;
+  border-radius: 50%;
   border: 2px solid #BEBEBE;
+  object-fit: fill;
+  margin-left: auto;
+  margin-right: auto;
+}
+.sobre .sobre_container .textsArea .profilePic:hover {
   transition: ease-in-out 0.2s all;
+  border-color: #f9f9f9;
 }
-.sobre .sobre_container .pictureArea .profilePic:hover {
-  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.4);
-  transform: scale(1.02);
-}
-@media screen and (max-width: 425px) {
-  .sobre .sobre_container .pictureArea .profilePic {
+@media screen and (max-width: 768px) {
+  .sobre .sobre_container .textsArea .profilePic {
     display: none;
     visibility: hidden;
     width: 0;
@@ -641,34 +641,42 @@
 .sobre .sobre_container .btnArea a {
   width: 100%;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .sobre .sobre_container {
     gap: 2rem;
     flex-direction: column;
   }
+  .sobre .sobre_container .textsArea {
+    flex-direction: column;
+  }
+  .sobre .sobre_container .textsArea .texts {
+    width: 100%;
+  }
+  .sobre .sobre_container .textsArea .texts p {
+    width: 100%;
+  }
   .sobre .sobre_container .btnArea {
     flex-direction: column;
     gap: 1.5rem;
-    padding: 0 1rem;
     width: 100%;
   }
   .sobre .sobre_container .btnArea a {
     width: 100%;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .sobre .sobre_container {
     flex-direction: column;
   }
-  .sobre .sobre_container .pictureArea {
-    display: none;
-    visibility: none;
-    width: 0;
-    height: 0;
+  .sobre .sobre_container .textsArea {
+    flex-direction: column;
+    align-items: center;
   }
-  .sobre .sobre_container .pictureArea .profilePic {
-    width: 0;
-    height: 0;
+  .sobre .sobre_container .textsArea .texts {
+    width: 100%;
+  }
+  .sobre .sobre_container .textsArea .profilePic {
+    order: -1;
   }
 }
 @media screen and (max-width: 1024px) {

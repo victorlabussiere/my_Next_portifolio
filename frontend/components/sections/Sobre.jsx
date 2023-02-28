@@ -1,7 +1,19 @@
 import styles from '../../styles/stylesModules/styles.module.css'
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
 
 export default function Sobre() {
+
+    const [picture, setPicture] = useState()
+
+    useEffect(() => {
+        fetch('https://api.github.com/users/victorlabussiere')
+            .then(res => res.json())
+            .then(dt => dt.avatar_url)
+            .then(res => setPicture(prev => prev = res))
+            .catch(err => 'Erro na requisição de avatar do Github.' + err)
+    }, [])
+
     return (
         <section className={styles.sobre} id='sobre'>
 
@@ -12,19 +24,18 @@ export default function Sobre() {
                 <div className={styles.textsArea}>
                     <h3 className="h3L">Muito prazer,</h3>
 
-                    <p className="pS">
-                        Eu me chamo Victor Labussiere, estudo Análise e Desenvolvimento de Sistemas  e sou um Dev. em busca de uma oportunidade. Tenho paixão por tecnologia e estou sempre atento nas novas tendências do mercado, tanto do design quanto da programação.
-                    </p>
-                    <p className="pS">
-                        Desenvolvi esse projeto pensando em oferecer soluções para alguns obstáculos que venho enfrentando ao tentar ingressar no mercado como, por exemplo, mostrar que a falta de experiência não quer dizer, necessáriamente, dispensabilidade.
-                    </p>
-                    <p className="pS">
-                        O foco desse projeto é mostrar o meu potêncial e o quanto eu posso agregar em um time de pessoas desenvolvedoras, tanto com meu stack de hard skills quanto com minhas habilidades em integrar um ambiente social.
-                    </p>
-                </div>
-
-                <div className={styles.pictureArea}>
-                    <Image className={styles.profilePic} width={240} height={240} src='/images/profile.jpeg' alt='Foto de Victor Labussiere' />
+                    <div className={styles.texts}>
+                        <p className="pS">
+                            Eu me chamo Victor Labussiere, estudo Análise e Desenvolvimento de Sistemas  e sou um Dev. em busca de uma oportunidade. Tenho paixão por tecnologia e estou sempre atento nas novas tendências do mercado, tanto do design quanto da programação.
+                        </p>
+                        <p className="pS">
+                            Desenvolvi esse projeto pensando em oferecer soluções para alguns obstáculos que venho enfrentando ao tentar ingressar no mercado como, por exemplo, mostrar que a falta de experiência não quer dizer, necessáriamente, dispensabilidade.
+                        </p>
+                        <p className="pS">
+                            O foco desse projeto é mostrar o meu potêncial e o quanto eu posso agregar em um time de pessoas desenvolvedoras, tanto com meu stack de hard skills quanto com minhas habilidades em integrar um ambiente social.
+                        </p>
+                    </div>
+                    <img loading='lazy' decoding='async' src={picture} className={styles.profilePic} alt="Meu avatar no github" />
                 </div>
 
                 <div className={styles.btnArea}>

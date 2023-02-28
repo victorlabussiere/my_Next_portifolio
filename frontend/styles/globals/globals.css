@@ -153,19 +153,20 @@ section hgroup p {
 footer {
   background-color: #0D0D0D;
   color: #BEBEBE;
+  font-size: 1.2rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   justify-content: space-between;
   align-items: center;
-  padding: 2vw 24vw;
+  padding: 2vw;
 }
 footer a {
   color: #BEBEBE;
   transition: ease-in-out 0.2s all;
 }
 footer a:hover {
-  color: #fff;
+  color: #f9f9f9;
 }
 footer div {
   display: flex;
@@ -176,13 +177,10 @@ footer div {
 }
 footer div a {
   box-sizing: border-box;
-  font-size: 1rem;
   transition: ease-in-out 0.2s all;
-  text-align: center;
-  vertical-align: middle;
 }
 footer div a:hover {
-  color: #fff;
+  color: #f9f9f9;
 }
 @media screen and (max-width: 768px) {
   footer {

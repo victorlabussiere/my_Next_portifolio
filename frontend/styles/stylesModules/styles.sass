@@ -527,7 +527,7 @@
                     min-width: 5rem
                     min-height: 5rem
                     font-size: 4rem
-                    color: $gray100
+                    color: $gray300
 
                     @include flexRow
                     align-content: center
@@ -536,9 +536,7 @@
                     border-radius: 50%
                     transition: $transition2ms
                     &:hover
-                        color: $orange600
-                        transform: scale(1.05)
-                        text-shadow: 0 0 16px rgba(0, 0, 0, .5)
+                        color: $gray100
                     &:active
                         color: $orange900
 
@@ -580,32 +578,36 @@
         gap: 4rem
 
         .textsArea
-            flex: 0 0 calc( 100% / 2)
+            width: 100%
             display: flex
-            flex-direction: column
-            gap: 2rem
+            flex-wrap: wrap
+            justify-content: space-between
+            gap: 2vw
 
             h3
                 color: $orange600
-
-        .pictureArea
-            flex: 0 0 calc( 100% / 2 - 5rem)
-            display: flex
-            justify-content: center
-            align-items: center
-            .profilePic
+                width: 100%
+            .texts
                 display: flex
-                border-radius: 50%
-                width: 16vw
+                gap: 2rem
+                flex-direction: column
+                width: calc( 100% /2 - 1vw )
+                p
+            .profilePic
+
                 height: 16vw
-                box-sizing: border-box
+                width: 16vw
+                border-radius: 50%
                 border: 2px solid $gray300
-                transition: $transition2ms
+                object-fit: fill
+
+                margin-left: auto
+                margin-right: auto
 
                 &:hover
-                    @include pShadow()
-                    transform: scale(1.02)
-                @media screen and ( max-width: 425px )
+                    transition: $transition2ms
+                    border-color: $gray100
+                @media screen and ( max-width: 768px )
                     display: none
                     visibility: hidden
                     width: 0
@@ -618,32 +620,37 @@
             a
                 width: 100%
 
-    @media screen and ( max-width: 600px )
+    @media screen and ( max-width: 768px )
 
         .sobre_container
             gap: 2rem
             flex-direction: column
 
+            .textsArea
+                flex-direction: column
+                .texts
+                    width: 100%
+                    p
+                        width: 100%
+
             .btnArea
                 flex-direction: column
                 gap: 1.5rem
-                padding: 0 1rem
                 width: 100%
+
                 a
                     width: 100%
 
-    @media screen and ( max-width: 768px )
+    @media screen and ( max-width: 1024px )
         .sobre_container
             flex-direction: column
-            .pictureArea
-                display: none
-                visibility: none
-                width: 0
-                height: 0
-
+            .textsArea
+                flex-direction: column
+                align-items: center
+                .texts
+                    width: 100%
                 .profilePic
-                    width: 0
-                    height: 0
+                    order: -1
 
     @media screen and ( max-width: 1024px )
         .sobre_container
