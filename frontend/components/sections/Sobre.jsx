@@ -1,5 +1,5 @@
 import styles from '../../styles/stylesModules/styles.module.css'
-import Image from 'next/image'
+import HandleDownload from '../../../backend/Services/Curriculo'
 import { useEffect, useState } from 'react'
 
 export default function Sobre() {
@@ -44,9 +44,10 @@ export default function Sobre() {
                         Linkedin
                     </a>
 
-                    <a role="button" className='primaryButton h3S'>
+                    <a role="button" className='primaryButton h3S' onClick={HandleDownload}>
                         <i className='material-icons'>cloud_download</i>
-                        Currículo</a>
+                        Currículo
+                    </a>
                 </div>
 
             </div>

@@ -1,5 +1,6 @@
 import styles from '../../styles/stylesModules/styles.module.css'
 import Image from 'next/image'
+import HandleDownload from '../../../backend/Services/Curriculo'
 
 export default function Hero() {
     return (
@@ -21,13 +22,14 @@ export default function Hero() {
                         <i className='material-icons'>phone</i>
                         Trabalhe comigo agora!
                     </h3>
-                    <a href='/static/resume.pdf'
-                        download
-                        className='tertiaryButton'>
-
+                    <div
+                        className='tertiaryButton'
+                        role='button'
+                        onClick={HandleDownload}
+                    >
                         <i className='material-icons'>description</i>
                         <p className='pS'>Faça um download do meu currículo</p>
-                    </a>
+                    </div>
                 </div>
 
                 <div className={styles.ilContainer}>
