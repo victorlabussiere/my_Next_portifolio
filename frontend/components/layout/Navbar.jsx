@@ -1,5 +1,3 @@
-import Link from "next/link"
-
 export default function Navbar() {
 
     function scrollSuave(e) {
@@ -32,22 +30,22 @@ export default function Navbar() {
 
             <ul>
                 <li>
-                    <Link href="#top" onClick={(e) => scrollSuave(e)}>voltar ao topo</Link>
+                    <a href="#top" onClick={(e) => scrollSuave(e)}>voltar ao topo</a>
                 </li>
                 <li>
-                    <Link href="#services" onClick={(e) => scrollSuave(e)}>serviços</Link>
+                    <a href="#services" onClick={(e) => scrollSuave(e)}>serviços</a>
                 </li>
                 <li>
-                    <Link href="#habilidades" onClick={(e) => scrollSuave(e)} >habilidades</Link>
+                    <a href="#habilidades" onClick={(e) => scrollSuave(e)} >habilidades</a>
                 </li>
                 <li>
-                    <Link href="#repositorios" onClick={(e) => scrollSuave(e)}>repositorios</Link>
+                    <a href="#repositorios" onClick={(e) => scrollSuave(e)}>repositorios</a>
                 </li>
                 <li>
-                    <Link href="#contato" onClick={(e) => scrollSuave(e)}>contato</Link>
+                    <a href="#contato" onClick={(e) => scrollSuave(e)}>contato</a>
                 </li>
                 <li>
-                    <Link href="#sobre" onClick={(e) => scrollSuave(e)}>sobre mim</Link>
+                    <a href="#sobre" onClick={(e) => scrollSuave(e)}>sobre mim</a>
                 </li>
             </ul>
         </nav >

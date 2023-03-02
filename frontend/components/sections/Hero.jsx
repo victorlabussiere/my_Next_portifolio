@@ -1,8 +1,9 @@
 import styles from '../../styles/stylesModules/styles.module.css'
 import Image from 'next/image'
-import HandleDownload from '../../../backend/Services/Curriculo'
+import handleDownload from '../../Services/DownloadResume'
 
 export default function Hero() {
+
     return (
         <>
             <section className={styles.heroContainer} >
@@ -22,14 +23,15 @@ export default function Hero() {
                         <i className='material-icons'>phone</i>
                         Trabalhe comigo agora!
                     </h3>
-                    <div
+                    <a
                         className='tertiaryButton'
                         role='button'
-                        onClick={HandleDownload}
+                        onClick={handleDownload}
                     >
                         <i className='material-icons'>description</i>
-                        <p className='pS'>Faça um download do meu currículo</p>
-                    </div>
+                        <p className='pS'
+                        >Faça um download do meu currículo</p>
+                    </a>
                 </div>
 
                 <div className={styles.ilContainer}>
