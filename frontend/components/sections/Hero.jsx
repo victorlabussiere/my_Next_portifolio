@@ -1,6 +1,5 @@
 import styles from '../../styles/stylesModules/styles.module.css'
 import Image from 'next/image'
-import handleDownload from '../../Services/DownloadResume'
 
 export default function Hero() {
 
@@ -26,7 +25,8 @@ export default function Hero() {
                     <a
                         className='tertiaryButton'
                         role='button'
-                        onClick={handleDownload}
+                        href='/curriculo.pdf'
+                        target='_blank'
                     >
                         <i className='material-icons'>description</i>
                         <p className='pS'

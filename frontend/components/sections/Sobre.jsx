@@ -1,5 +1,3 @@
-import handleDownload from '../../Services/DownloadResume'
-
 import styles from '../../styles/stylesModules/styles.module.css'
 import { useEffect, useState } from 'react'
 
@@ -48,7 +46,8 @@ export default function Sobre() {
                     <a
                         role="button"
                         className='primaryButton h3S'
-                        onClick={handleDownload}
+                        href='/curriculo.pdf'
+                        target='_blank'
                     >
                         <i className='material-icons'>cloud_download</i>
                         Currículo
