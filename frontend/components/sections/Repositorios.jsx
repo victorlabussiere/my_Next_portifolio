@@ -1,22 +1,15 @@
 import { useEffect, useState } from 'react'
 import styles from '../../styles/stylesModules/styles.module.css'
-import Image from 'next/image'
 
 export default function Repositorios() {
 
     const [repos, setRepos] = useState([])
-
     useEffect(() => {
-        fetch('https://api.github.com/users/victorlabussiere/repos')
+        fetch(`${process.env.BASE_URL}users/${process.env.BASE_USER}/repos`)
             .then(res => res.json())
             .then(data => setRepos(data))
-            .catch(err => console.error('Erro com a requisição à API do github', err))
+            .catch(err => console.error('Erro ao consultar a lista de repositórios no GitHub', err.message))
     }, [])
-
-    // draggable scroll info
-    let isDragging = false;
-    let startPosition = 0;
-    let startScrollPosition = 0;
 
     return (
         <section className={styles.repositorios} id='repositorios' >

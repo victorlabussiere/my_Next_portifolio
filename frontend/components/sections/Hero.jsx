@@ -1,6 +1,9 @@
 import styles from '../../styles/stylesModules/styles.module.css'
 import Image from 'next/image'
 
+// microservices
+import DownloadResume from '../../Services/DownloadResume'
+
 export default function Hero() {
 
     return (
@@ -25,8 +28,7 @@ export default function Hero() {
                     <a
                         className='tertiaryButton'
                         role='button'
-                        href='/curriculo.pdf'
-                        target='_blank'
+                        onClick={DownloadResume}
                     >
                         <i className='material-icons'>description</i>
                         <p className='pS'
