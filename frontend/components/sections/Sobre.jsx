@@ -1,5 +1,6 @@
 import styles from '../../styles/stylesModules/styles.module.css'
 import { useEffect, useState } from 'react'
+import DownloadResume from '../../Services/DownloadResume'
 
 export default function Sobre() {
 
@@ -46,8 +47,7 @@ export default function Sobre() {
                     <a
                         role="button"
                         className='primaryButton h3S'
-                        href='/curriculo.pdf'
-                        target='_blank'
+                        onClick={DownloadResume}
                     >
                         <i className='material-icons'>cloud_download</i>
                         Currículo
