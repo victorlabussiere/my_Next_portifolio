@@ -1,10 +1,18 @@
 import styles from '../../styles/stylesModules/styles.module.css'
-import Image from 'next/image'
 
-// microservices
-import DownloadResume from '../../Services/DownloadResume'
+import axios from 'axios'
+import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Hero() {
+
+    async function handleDownload() {
+        const link = document.createElement('a')
+        link.href = process.env.DOWNLOAD_API
+        link.setAttribute('download', 'curriculo-victor.pdf')
+
+        return link.click()
+    }
 
     return (
         <>
@@ -28,7 +36,7 @@ export default function Hero() {
                     <a
                         className='tertiaryButton'
                         role='button'
-                        onClick={DownloadResume}
+                        onClick={handleDownload}
                     >
                         <i className='material-icons'>description</i>
                         <p className='pS'

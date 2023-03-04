@@ -1,11 +1,12 @@
 import styles from '../../styles/stylesModules/styles.module.css'
 import { useEffect, useState } from 'react'
-import DownloadResume from '../../Services/DownloadResume.js'
+import Link from 'next/link'
 
 export default function Sobre() {
 
     const [picture, setPicture] = useState()
 
+    // Micro Services
     useEffect(() => {
         fetch('https://api.github.com/users/victorlabussiere')
             .then(res => res.json())
@@ -13,6 +14,14 @@ export default function Sobre() {
             .then(res => setPicture(prev => prev = res))
             .catch(err => 'Erro na requisição de avatar do Github.' + err)
     }, [])
+
+    async function handleDownload() {
+        const link = document.createElement('a')
+        link.href = process.env.DOWNLOAD_API
+        link.setAttribute('download', 'curriculo-victor.pdf')
+
+        return link.click()
+    }
 
     return (
         <section className={styles.sobre} id='sobre'>
@@ -47,7 +56,7 @@ export default function Sobre() {
                     <a
                         role="button"
                         className='primaryButton h3S'
-                        onClick={DownloadResume}
+                        onClick={handleDownload}
                     >
                         <i className='material-icons'>cloud_download</i>
                         Currículo
