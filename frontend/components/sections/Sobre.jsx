@@ -1,6 +1,6 @@
 import styles from '../../styles/stylesModules/styles.module.css'
 import { useEffect, useState } from 'react'
-import DownloadResume from '../../Services/DownloadResume'
+import DownloadResume from '../../Services/DownloadResume.js'
 
 export default function Sobre() {
 

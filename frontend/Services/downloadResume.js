@@ -1,5 +1,5 @@
 import axios from 'axios'
-export default async function DownloadResume() {
+module.exports = async function DownloadResume() {
     const baseUrl = process.env.DOWNLOAD_API
 
     try {
