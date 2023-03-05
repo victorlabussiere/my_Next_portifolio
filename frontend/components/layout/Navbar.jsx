@@ -2,7 +2,7 @@ export default function Navbar() {
 
     function scrollSuave(e) {
         e.preventDefault()
-        if (e.target.tagName === 'A' && e.target.hash != '') {
+        if (e.target.tagName === 'A' && e.target.hash) {
 
             let targetPosition = document.querySelector(e.target.hash).offsetTop
             if (targetPosition <= 190) targetPosition = 0
@@ -21,17 +21,13 @@ export default function Navbar() {
                 <a href='#top' onClick={(e) => scrollSuave(e)} >
                     Victor
                 </a>
-                {' '} {/* divisão de palavras */}
+                &nbsp;
                 <a href='#top' onClick={(e) => scrollSuave(e)} >
                     Labussiere
                 </a>
             </h3>
 
-
             <ul>
-                <li>
-                    <a href="#top" onClick={(e) => scrollSuave(e)}>voltar ao topo</a>
-                </li>
                 <li>
                     <a href="#services" onClick={(e) => scrollSuave(e)}>serviços</a>
                 </li>

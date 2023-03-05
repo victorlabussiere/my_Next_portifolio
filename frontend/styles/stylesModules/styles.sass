@@ -212,41 +212,13 @@
         flex-direction: column
         gap: 4.5rem
 
-    .cardsArea
+    .skillCardsArea
         display: flex
         flex-flow: row wrap
         align-items: center
         justify-content: space-between
         gap: 2rem
-
-        .card
-            width: 30%
-            display: flex
-            flex-direction: column
-            align-items: flex-start
-            gap: 1rem
-
-            header
-                display: flex
-                flex-direction: row
-                align-items: flex-start
-                gap: .8rem
-                width: 100%
-                .logoIcon
-                    border-radius: .5rem
-                    transition: $transition2ms
-
-                    &:hover
-                        cursor: default
-                        transform: scale(1.03)
-                        filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.3))
-
-            p
-                width: 100%
-                &:nth-child(2)
-                    width: 100%
-                    white-space: nowrap
-                    color: $orange600
+        z-index: 9999
 
     @media only screen and (max-width: 600px)
         hgroup
@@ -254,26 +226,26 @@
             visibility: hidden
             width: 0
             height: 0
-        .cardsArea
+        .skillCardsArea
             flex-direction: column
             width: 100%
             padding: 0
             gap: 3rem
-            .card
+            .skillCard
                 padding: 0
                 min-width: 100%
 
     @media ( max-width: 768px )
-        .cardsArea
+        .skillCardsArea
             justify-content: space-evenly
-            .card
+            .skillCard
                 width: 40%
 
     @media screen and ( max-width: 1024px )
-        .cardsArea
+        .skillCardsArea
             justify-content: flex-start
 
-            .card
+            .skillCard
                 width: calc( 50% - 1rem )
 
         .logoIcon
@@ -592,7 +564,7 @@
                 gap: 2rem
                 flex-direction: column
                 width: calc( 100% /2 - 1vw )
-                p
+
             .profilePic
 
                 height: 16vw

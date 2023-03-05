@@ -29,7 +29,7 @@ nav {
   display: flex;
   align-content: center;
   justify-content: space-between;
-  padding: 0.6rem 5%;
+  padding: 0.6rem 5vw;
   background-color: white;
   box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.2);
   position: fixed;
@@ -367,6 +367,38 @@ a {
     width: max-content;
     font-size: 16px;
   }
+}
+
+.openModal {
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%);
+  padding: 2rem;
+  border-radius: 1rem;
+  z-index: 9;
+  transition: ease-in-out 0.2s all;
+  background-color: #f9f9f9;
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.2);
+}
+.openModal .closeButton {
+  order: -1;
+  background-color: #f9f9f9;
+  color: #668F76;
+  font-weight: 600;
+  align-self: flex-end;
+  justify-self: flex-end;
+  text-align: end;
+  padding: 0.4rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: ease-in-out 0.2s all;
+}
+.openModal .closeButton:hover {
+  color: #2B5B3E;
 }
 
 /*# sourceMappingURL=globals.css.map */
