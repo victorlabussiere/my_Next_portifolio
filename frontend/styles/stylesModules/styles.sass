@@ -283,54 +283,6 @@
                     width: 80%
                     color: $gray500
 
-            .cardsArea
-                display: flex
-                flex-direction: column
-                padding: 1rem 0
-                width: 100%
-                height: 16rem
-
-                overflow-x: auto
-                justify-content: flex-start
-                box-shadow: inset 0 0 16px rgba(0, 0, 0, .1)
-                gap: 1rem
-                padding: 1rem
-                border-radius: 1rem
-
-                isolation: isolate
-
-                &::-webkit-scrollbar
-                    width: 0
-                    height: 0
-
-                .card
-                    vertical-align: middle
-                    text-align: center
-                    padding: 1rem
-                    border-radius: 1rem
-
-                    flex: 0 0 calc( 100% / 4 - 3rem )
-                    transition: $transition2ms
-                    @include sShadow
-
-                    &:hover
-                        transform: scale(1.02)
-                        @include tShadow
-
-                    &:active
-                        transform: scale(1.01)
-
-                    a
-                        p
-                            text-align: start
-                            max-width: 90%
-                            white-space: nowrap
-                            overflow: hidden
-                            text-overflow: ellipsis
-
-                        &:hover
-                            cursor: pointer
-
             a
                 margin: 0 auto
                 color: $green700

@@ -223,55 +223,6 @@
   gap: 2rem;
   z-index: 9999;
 }
-.habilidades .skillCardsArea .skillCard {
-  min-width: 30%;
-  max-width: 30%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1rem;
-  transition: ease-in-out 0.2s all;
-}
-.habilidades .skillCardsArea .skillCard header {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 0.8rem;
-  width: 100%;
-}
-.habilidades .skillCardsArea .skillCard header .logoIcon {
-  border-radius: 0.5rem;
-  transition: ease-in-out 0.2s all;
-}
-.habilidades .skillCardsArea .skillCard header .logoIcon:hover {
-  cursor: default;
-  transform: scale(1.03);
-  filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.3));
-}
-.habilidades .skillCardsArea .skillCard p {
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.habilidades .skillCardsArea .skillCard p:nth-child(2) {
-  width: 100%;
-  white-space: nowrap;
-  color: #FA9156;
-}
-.habilidades .skillCardsArea .skillCard .readMore {
-  color: #FA9156;
-  width: 100%;
-  text-align: center;
-  align-self: center;
-  padding: 0.4rem;
-  background-color: #F5D6C4;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  transition: ease-in-out 0.2s all;
-}
-.habilidades .skillCardsArea .skillCard .readMore:hover {
-  background-color: #FA9156;
-  color: #f9f9f9;
-}
 @media only screen and (max-width: 600px) {
   .habilidades hgroup {
     display: none;
@@ -342,50 +293,6 @@
   line-height: 120%;
   width: 80%;
   color: #444444;
-}
-.repositorios .repositorios_container .cardsContainer .cardsArea {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem 0;
-  width: 100%;
-  height: 16rem;
-  overflow-x: auto;
-  justify-content: flex-start;
-  box-shadow: inset 0 0 16px rgba(0, 0, 0, 0.1);
-  gap: 1rem;
-  padding: 1rem;
-  border-radius: 1rem;
-  isolation: isolate;
-}
-.repositorios .repositorios_container .cardsContainer .cardsArea::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-}
-.repositorios .repositorios_container .cardsContainer .cardsArea .card {
-  vertical-align: middle;
-  text-align: center;
-  padding: 1rem;
-  border-radius: 1rem;
-  flex: 0 0 calc(25% - 3rem);
-  transition: ease-in-out 0.2s all;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
-}
-.repositorios .repositorios_container .cardsContainer .cardsArea .card:hover {
-  transform: scale(1.02);
-  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.2);
-}
-.repositorios .repositorios_container .cardsContainer .cardsArea .card:active {
-  transform: scale(1.01);
-}
-.repositorios .repositorios_container .cardsContainer .cardsArea .card a p {
-  text-align: start;
-  max-width: 90%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.repositorios .repositorios_container .cardsContainer .cardsArea .card a:hover {
-  cursor: pointer;
 }
 .repositorios .repositorios_container .cardsContainer a {
   margin: 0 auto;

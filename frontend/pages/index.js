@@ -4,6 +4,7 @@ import Image from "next/image"
 import { useState, useEffect } from "react"
 import Card from '../components/ui/Card/Card'
 import Logos from '../components/ui/Card/cardData'
+import RepoList from '../components/ui/Repositorios/RepoList'
 
 export default function Home() {
 
@@ -44,6 +45,8 @@ export default function Home() {
       .then(data => setRepos(data))
       .catch(err => console.error('Não foi possível consultar os repositórios através de uma requisição À API do github', err.message))
 
+    // Refresh modalState on Loading
+    window.localStorage.removeItem('modalState')
     return void (0)
   }, [])
 
@@ -174,24 +177,7 @@ export default function Home() {
 
             <h3 className='h3S'>Projetos destacados:</h3>
 
-            <div className={styles.cardsArea} id='cardsArea'>
-
-              {
-                repos.map(i => {
-                  if (!i.description) return
-
-                  return <div key={i.id} className={styles.card}>
-                    <a href={i.html_url} target='_blank' className='pL'>{
-                      <p>
-                        {i.description}
-
-                      </p>
-                    }</a>
-                  </div>
-                })
-              }
-
-            </div>
+            <RepoList repoList={repos} />
 
             <a className='tertiaryButton' target='_blank' href="https://github.com/victorlabussiere">
               <i className="devicon-github-original"></i>

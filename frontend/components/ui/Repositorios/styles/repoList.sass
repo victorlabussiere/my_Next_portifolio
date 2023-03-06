@@ -1,0 +1,81 @@
+@import '../../../../styles/globals/mixins'
+
+.cardsArea
+    display: flex
+    flex-direction: column
+    padding: 1rem 0
+    width: 100%
+    height: 16rem
+
+    overflow-x: auto
+    justify-content: flex-start
+    box-shadow: inset 0 0 16px rgba(0, 0, 0, .1)
+    gap: 1rem
+    padding: 1rem
+    border-radius: 1rem
+
+    isolation: isolate
+
+    &::-webkit-scrollbar
+        width: 0
+        height: 0
+
+    .card
+        display: flex
+        justify-content: space-between
+
+        padding: 1rem
+        border-radius: 1rem
+
+        flex: 0 0 calc( 100% / 4 - 3rem )
+        transition: $transition2ms
+        @include sShadow
+
+        .cardButton
+            cursor: pointer
+            transition: $transition2ms
+            &:hover
+                color: $orange600
+body
+    .modal
+        position: fixed
+        top: 20%
+        left: 50%
+        transform: translate(-50%)
+        z-index: 999
+
+        width: 60vw
+        padding: 2rem
+        border-radius: 1rem
+
+        display: flex
+        flex-direction: column
+        gap: 1rem
+
+        background-color: $gray100
+        @include tShadow ()
+        animation: showModal .2s ease-in-out
+
+        .modalTitle
+            color: $orange600
+
+        .actionModal
+            display: flex
+            width: 100%
+            justify-content: space-between
+
+            .visitButton
+                color: $green700
+                &:hover
+                    transform: scale(1.1)
+            .closeButton
+                cursor: pointer
+                color: $orange600
+                &:hover
+                    transform: scale(1.1)
+
+@keyframes showModal
+    0%
+        opacity: 0
+    100%
+        opacity: 1
