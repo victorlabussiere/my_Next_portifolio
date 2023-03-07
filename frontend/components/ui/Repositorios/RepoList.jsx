@@ -22,7 +22,7 @@ export default function RepoList({ repoList }) {
                             <div
                                 className={styles.cardButton}
                                 role='button'
-                                onClick={() => openModal(i)}>+ Detalhes</div>
+                                onClick={() => openModal(i)}>+</div>
                         </li>
                     )
                 })

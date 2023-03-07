@@ -34,11 +34,11 @@
 }
 .skillCard .readMore, .openModal .readMore {
   color: #FA9156;
+  border: 1px solid #FA9156;
   width: 100%;
   text-align: center;
   align-self: center;
   padding: 0.4rem;
-  background-color: #F5D6C4;
   border-radius: 0.5rem;
   cursor: pointer;
   transition: ease-in-out 0.2s all;

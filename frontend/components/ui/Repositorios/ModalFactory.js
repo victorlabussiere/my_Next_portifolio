@@ -7,18 +7,16 @@ module.exports = class ModalFactory {
         this.url = obj.html_url
     }
 
-    _setTitle() {
-        const content = document.createElement('h3')
-        content.innerHTML = this.title
-        content.classList = 'h3S ' + `${styles.modalTitle}`
-        return content
-    }
+    _setTexts() {
+        const title = document.createElement('h3')
+        title.innerHTML = this.title
+        title.classList = 'h3S ' + `${styles.modalTitle}`
 
-    _setText() {
-        const content = document.createElement('p')
-        content.innerHTML = this.description
-        content.classList = `${styles.modalText}`
-        return content
+        const text = document.createElement('p')
+        text.innerHTML = this.description
+        text.classList = `${styles.modalText}`
+
+        return [title, text]
     }
 
     _setButtons() {
@@ -26,55 +24,50 @@ module.exports = class ModalFactory {
         content.classList = `${styles.actionModal}`
 
         const visit = document.createElement('a')
-        visit.href = this.url
         visit.setAttribute('target', '_blank')
-        visit.classList = `${styles.visitButton} `
+        visit.className = `${styles.visitButton}`
         visit.innerHTML = 'Visitar repositório'
+        visit.href = this.url
 
         const close = document.createElement('div')
-        close.classList = `${styles.closeButton}`
+        close.setAttribute('role', 'button')
+        close.className = `${styles.closeButton}`
         close.innerHTML = 'Fechar'
         close.addEventListener('click', (e) => this._closeModal(e))
 
-        content.appendChild(visit)
-        content.appendChild(close)
-
+        content.append(close, visit)
         return content
     }
 
-    _setModal() {
+    _setModal(texts, buttonsArea) {
         const content = document.createElement('div')
-        const title = this._setTitle()
-        const text = this._setText()
-        const buttonsArea = this._setButtons()
-
         content.classList = `${styles.modal}`
 
-        content.appendChild(title)
-        content.appendChild(text)
-        content.appendChild(buttonsArea)
+        content.append(...texts, buttonsArea)
         return content
+    }
+
+    getOpenModal() {
+        const texts = this._setTexts()
+        const buttons = this._setButtons()
+        const modal = this._setModal(texts, buttons)
+
+        const modalState = window.localStorage.getItem('modalState')
+        if (modalState === 'true') return
+        else document.body.appendChild(modal)
+
+        return this._setModalState(true)
     }
 
     _closeModal(e) {
         const modal = e.target.parentNode.parentNode
         modal.remove()
-        this.setModalState(false)
+        this._setModalState(false)
         window.localStorage.removeItem('modalState')
         return void (0)
     }
 
-    getOpenModal() {
-        const modal = this._setModal()
-        const modalState = window.localStorage.getItem('modalState')
-
-        if (modalState === 'true') return
-
-        document.body.appendChild(modal)
-        return this.setModalState(true)
-    }
-
-    setModalState(state) {
+    _setModalState(state) {
         window.localStorage.setItem('modalState', state.toString())
         return void (0)
     }

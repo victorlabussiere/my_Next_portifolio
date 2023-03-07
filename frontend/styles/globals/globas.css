@@ -1,0 +1,390 @@
+@import url("/fonts/*.ttf");
+* {
+  font-family: Jost, Arial, Helvetica, sans-serif;
+  font-style: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100%;
+  background: #f9f9f9;
+  overflow-x: hidden;
+}
+@media screen and (max-width: 768px) {
+  body {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100%;
+  }
+}
+
+nav {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  padding: 0.6rem 5vw;
+  background-color: white;
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 10;
+  transition: ease-in-out 0.2s all;
+}
+nav:hover li {
+  cursor: pointer;
+  color: #b8d2c2;
+}
+nav h3 {
+  color: #E85401;
+  transition: ease-in-out 0.2s all;
+}
+nav h3 a:nth-child(1) {
+  color: #2d5a3f;
+}
+nav h3 a:nth-child(2) {
+  color: #FA9156;
+}
+nav h3:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+}
+nav h3:hover:active {
+  transform: scale(1.01);
+}
+nav ul {
+  display: flex;
+  gap: 4rem;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  align-content: center;
+  justify-content: flex-end;
+}
+nav ul li {
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  color: #BEBEBE;
+}
+nav ul li a {
+  transition: ease-in-out 0.2s all;
+}
+nav ul li a:hover {
+  transform: scale(1.01);
+  color: #32774d;
+  text-decoration: underline #FA9156;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+}
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+}
+
+main {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 768px) {
+  main {
+    margin: 0;
+    width: 100vw;
+    padding: 0;
+  }
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 4rem;
+  width: 100%;
+  padding: 8vw 24vw;
+  position: relative;
+  z-index: 1;
+}
+section hgroup p {
+  width: 80%;
+}
+@media screen and (max-width: 1024px) {
+  section {
+    padding: 8vw;
+    margin: 0;
+    gap: 2rem;
+    width: 100%;
+  }
+  section h2 {
+    font-size: 48px;
+  }
+  section hgroup {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 1440px) {
+  section {
+    padding: 8vw 16vw;
+  }
+}
+
+footer {
+  background-color: #0D0D0D;
+  color: #BEBEBE;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vw;
+}
+footer a {
+  color: #BEBEBE;
+  transition: ease-in-out 0.2s all;
+}
+footer a:hover {
+  color: #f9f9f9;
+}
+footer div {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 20%;
+}
+footer div a {
+  box-sizing: border-box;
+  transition: ease-in-out 0.2s all;
+}
+footer div a:hover {
+  color: #f9f9f9;
+}
+@media screen and (max-width: 768px) {
+  footer {
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  footer h3 a {
+    font-size: 18px;
+  }
+  footer div {
+    display: none;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  footer {
+    padding: 2rem;
+    justify-content: space-between;
+  }
+  footer div {
+    justify-content: space-evenly;
+    width: 40%;
+  }
+}
+
+h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 84px;
+  width: 100%;
+  text-align: center;
+}
+@media screen and (max-width: 1440px) {
+  h1 {
+    font-size: 64px;
+  }
+}
+
+h2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  transition: ease-in-out 0.2s all;
+}
+h2:hover {
+  cursor: default;
+  text-decoration: underline #668F76;
+}
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  h2 {
+    font-size: 56px;
+  }
+}
+
+h3, .h3L {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.h3M {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.h3S {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  h3, .h3L, .h3M, .h3S {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  h3, .h3L, .h3M, .h3S {
+    font-size: 18px;
+  }
+}
+
+.pL {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.pM {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.pS {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .pL, .pM, .pS, p, a {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .pL, .pM, .pS, p, a {
+    font-size: 14px;
+  }
+}
+
+a {
+  text-decoration: none;
+  font-style: none;
+  color: unset;
+}
+
+.primaryButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 4rem;
+  color: #f9f9f9;
+  background-color: #2B5B3E;
+  border-radius: 0.5rem;
+  transition: ease-in-out 0.2s all;
+  text-align: center;
+  vertical-align: middle;
+}
+@media (max-width: 768px) {
+  .primaryButton {
+    width: 100%;
+    font-size: 16px;
+    padding: 1rem;
+  }
+}
+.primaryButton:hover {
+  background-color: #32774d;
+  cursor: pointer;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+}
+.primaryButton:active {
+  background-color: #2d5a3f;
+  transform: scale(1.01);
+}
+
+.secundaryButton {
+  display: flex;
+  align-items: center;
+  color: #FA9156;
+  border-radius: 0.5rem;
+  border: 1px solid #FA9156;
+  height: min-content;
+  padding: 0.5rem 1rem;
+  transition: ease-in-out 0.2s all;
+}
+.secundaryButton:hover {
+  background-color: #FA9156;
+  color: #f9f9f9;
+}
+.secundaryButton:active {
+  background-color: #E85401;
+}
+
+.tertiaryButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #444444;
+  transition: ease-in-out 0.2s all;
+}
+.tertiaryButton i {
+  font-size: 120%;
+}
+.tertiaryButton:hover {
+  transform: scale(1.02);
+  color: #FA9156;
+}
+.tertiaryButton:hover p {
+  cursor: pointer;
+  color: #FA9156;
+  text-decoration: underline #668F76;
+}
+.tertiaryButton:hover i {
+  color: #32774d;
+}
+@media screen and (max-width: 425px) {
+  .tertiaryButton {
+    width: max-content;
+    font-size: 16px;
+  }
+}
+
+/*# sourceMappingURL=globas.css.map */
