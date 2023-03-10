@@ -17,6 +17,7 @@ export class MailController {
         const loadingMessage = toastyFactory.setToasty('loading', 'Enviando mensagem...')
         const errorMissMessage = toastyFactory.setToasty('error', 'Algum campo não foi preenchido.')
         const errorMessage = toastyFactory.setToasty('error', 'Erro durante o envio da mensagem.')
+
         const loadingToastId = toast.info('Enviando', { ...loadingMessage, position: 'bottom-center', autoClose: 900 })
 
         try {
@@ -25,16 +26,13 @@ export class MailController {
             const response = await axios.post(this.mail, this.obj)
                 .then((res) => {
                     if (res.status !== 200) throw new Error('Erro de envio');
-                    else {
-                        setTimeout(() => {
-                            toast.update(loadingToastId, sucessMessage)
-                        }, 3000);
-                        toast.update(loadingToastId, loadingMessage)
-                    }
+
+                    toast.update(loadingToastId, sucessMessage)
                     return res
                 })
 
             return response
+
         } catch (err) {
 
             if (err.message === 'incomplete') {

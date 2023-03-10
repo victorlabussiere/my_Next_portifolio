@@ -22,11 +22,11 @@ export default function Form() {
         const mail = new MailController(process.env.MAIL_API, formData)
         const response = await mail.sendForm()
             .then(res => {
-                if (res.status === 200)
-                    setTimeout(() => {
-                        setFormData({ name: '', email: '', message: '' })
-                    }, 1500);
-            })
+                if (res.status != 200) throw new Error()
+                else setFormData({ name: '', email: '', message: '' })
+
+                return res
+            }).catch(err => console.error('Erro durante o envio do formulário', err))
 
         return response
     }
