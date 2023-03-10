@@ -16,17 +16,17 @@ export default function Form() {
         })
     }
 
-    async function handleSubmit(event) {
-        event.preventDefault()
-
+    async function handleSubmit() {
         const mail = new MailController(process.env.MAIL_API, formData)
+
         const response = await mail.sendForm()
             .then(res => {
                 if (res.status != 200) throw new Error()
                 else setFormData({ name: '', email: '', message: '' })
 
                 return res
-            }).catch(err => console.error('Erro durante o envio do formulário', err))
+            })
+            .catch(err => console.error('Erro durante o envio do formulário', err))
 
         return response
     }

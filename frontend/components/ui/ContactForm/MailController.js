@@ -1,8 +1,7 @@
 import axios from 'axios'
-
-import { toast } from 'react-toastify';
+import { toast, ProgressBar } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-const ToastFactory = require('./ToastFactory')
+import { setToasty } from './ToastFactory'
 
 export class MailController {
     constructor(mail, objForm) {
@@ -11,46 +10,41 @@ export class MailController {
     }
 
     async sendForm() {
-        const toastyFactory = new ToastFactory()
-
-        const sucessMessage = toastyFactory.setToasty('sucess', 'Mensagem enviada!')
-        const loadingMessage = toastyFactory.setToasty('loading', 'Enviando mensagem...')
-        const errorMissMessage = toastyFactory.setToasty('error', 'Algum campo não foi preenchido.')
-        const errorMessage = toastyFactory.setToasty('error', 'Erro durante o envio da mensagem.')
-
-        const loadingToastId = toast.info('Enviando', { ...loadingMessage, position: 'bottom-center', autoClose: 900 })
+        const loadingToastId = toast('Enviando', { ...setToasty('loading', 'Enviando mensagem...'), position: 'bottom-center', autoClose: 900 })
 
         try {
             if (!this.obj.name || !this.obj.email || !this.obj.message) throw new Error('incomplete')
+            let setProgress = 0
+            const response = await axios.post(this.mail, { ...this.obj, pending: 'Enviando...', sucess: 'Mensagem enviada!', error: 'Erro no envio.' }, {
+                onUploadProgress: (progress) => {
+                    const percent = Math.round((progress.loaded * 100) / progress.total);
+                    setProgress = percent
 
-            const response = await axios.post(this.mail, this.obj)
-                .then((res) => {
-                    if (res.status !== 200) throw new Error('Erro de envio');
+                    toast.update(loadingToastId, {
+                        ...setToasty('info', 'Enviando...'),
+                        progress: percent
+                    })
 
-                    toast.update(loadingToastId, sucessMessage)
-                    return res
-                })
+
+                    if (percent === 100) return toast.update(loadingToastId, setToasty('sucess', 'Mensagem enviada!'))
+                }
+            })
 
             return response
 
         } catch (err) {
 
             if (err.message === 'incomplete') {
-                toast.update(loadingToastId, errorMissMessage)
+                toast.update(loadingToastId, setToasty('error', 'Algum campo não foi preenchido.'))
                 return { message: err.message, error: err }
             }
 
             if (err.message === 'Erro de envio') {
-                toast.update(loadingToastId, errorMessage)
+                toast.update(loadingToastId, setToasty('error', 'Erro durante o envio da mensagem.'))
                 return { message: err.mesasge, error: err }
             }
 
             return { message: err.mesasge, error: err }
-
-        } finally {
-            setTimeout(() => {
-                toast.dismiss();
-            }, 3000);
         }
     }
 }

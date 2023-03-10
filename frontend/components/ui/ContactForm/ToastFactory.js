@@ -1,6 +1,6 @@
 module.exports = class ToastFactory {
     constructor() { }
-    setToasty(type, render) {
+    static setToasty(type, render) {
         let config = {}
         if (type === 'sucess') {
             return config = {
@@ -19,15 +19,16 @@ module.exports = class ToastFactory {
 
         if (type === 'info') {
             return config = {
-                render: render,
-                type: 'info',
                 position: "bottom-center",
-                autoClose: 900,
-                hideProgressBar: false,
+                autoClose: 1000,
+                hideProgressBar: true,
+                closeOnClick: true,
                 pauseOnHover: true,
                 draggable: true,
-                progress: undefined,
+                progress: false,
                 theme: "light",
+                render: render,
+                type: 'info'
             }
         }
 
@@ -39,9 +40,8 @@ module.exports = class ToastFactory {
                 autoClose: 1000,
                 hideProgressBar: false,
                 closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
+                pauseOnHover: false,
+                draggable: false,
                 theme: "light",
             }
         }
