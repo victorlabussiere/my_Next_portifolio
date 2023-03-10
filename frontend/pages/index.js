@@ -4,6 +4,7 @@ import Image from "next/image"
 import { useState, useEffect } from "react"
 import CardList from '../components/ui/Habilidades/CardsList'
 import RepoList from '../components/ui/Repositorios/RepoList'
+import Form from '../components/ui/ContactForm/Form'
 
 export default function Home() {
 
@@ -182,24 +183,7 @@ export default function Home() {
             <p className='pS'> Preencha o formulário com suas informações e envie uma mensagem. A sua mensagem será enviada ao meu e-mail.</p>
           </hgroup>
 
-          <form>
-            <h3 className='h3M'> Iniciar uma conversa</h3>
-
-            <label htmlFor="nome"><p className='pL'>Nome</p>
-              <input type="text" placeholder='Digite seu nome aqui...' /></label>
-
-            <label htmlFor="email"><p className='pL'>E-mail</p>
-              <input type="text" placeholder='Digite seu email aqui...' /></label>
-
-            <label htmlFor="mensagem"> <p className='pL'>Mensagem</p>
-              <textarea type="text" placeholder='Digite sua mensagem aqui...' /></label>
-
-            <div role='button' className='h3S primaryButton'>
-              <i className='material-icons'>mail</i>
-              Enviar mensagem
-            </div>
-
-          </form>
+          <Form />
 
           <div className={styles.instrucoesArea}>
             <div className={styles.ins}>

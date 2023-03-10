@@ -1,6 +1,7 @@
 import '../styles/globals/globals.css'
 import Head from 'next/head'
 import Layout from '../components/layout/Layout'
+import { ToastContainer } from 'react-toastify'
 
 export default function App({ Component, pageProps }) {
   return (
@@ -10,6 +11,7 @@ export default function App({ Component, pageProps }) {
       </Head>
       <Layout>
         <Component {...pageProps} />
+        <ToastContainer />
       </Layout>
     </>
   )
