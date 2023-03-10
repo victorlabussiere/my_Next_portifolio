@@ -28,7 +28,7 @@ export class MailController {
                     else {
                         setTimeout(() => {
                             toast.update(loadingToastId, sucessMessage)
-                        }, 1800);
+                        }, 3000);
                         toast.update(loadingToastId, loadingMessage)
                     }
                     return res
