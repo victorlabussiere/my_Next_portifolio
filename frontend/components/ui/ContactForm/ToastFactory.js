@@ -1,50 +1,37 @@
-module.exports = class ToastFactory {
-    constructor() { }
-    static setToasty(type, render) {
-        let config = {}
-        if (type === 'sucess') {
-            return config = {
-                position: "bottom-center",
-                autoClose: 1000,
-                hideProgressBar: true,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: false,
-                theme: "light",
-                render: render,
-                type: 'success'
-            }
-        }
-
-        if (type === 'info') {
-            return config = {
-                position: "bottom-center",
-                autoClose: 1000,
-                hideProgressBar: true,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: false,
-                theme: "light",
-                render: render,
-                type: 'info'
-            }
-        }
-
-        if (type === 'error') {
-            return config = {
-                render: render,
-                type: 'error',
-                position: "bottom-center",
-                autoClose: 1000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: false,
-                draggable: false,
-                theme: "light",
-            }
-        }
-
+module.exports = function setToasty(type, render) {
+    let config = {
+        position: "bottom-center",
+        autoClose: 1000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: false,
+        theme: "light",
+        render: render,
+        type: ''
     }
+
+    switch (type) {
+        case 'success':
+            config.type = 'success';
+            break;
+        case 'info':
+            config.type = 'info';
+            break;
+        case 'error':
+            config.type = 'error';
+            break;
+        default:
+            config.type = 'warning';
+            config.render = 'Algo inesperado ocorreu. Tente novamente mais tarde';
+            break;
+    }
+
+    return config;
 }
+
+
+
+
+

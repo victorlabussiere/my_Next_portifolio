@@ -2,48 +2,42 @@ import axios from 'axios'
 
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { setToasty } from './ToastFactory'
+import setToasty from './ToastFactory'
 
 export class MailController {
     constructor(mail) {
         this.mail = mail
     }
 
+    _validation({ email, name, message }) {
+        if (!name || !email || !message) throw new Error('incomplete')
 
-    _validaEmail(email) {
         const regex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return regex.test(email)
+        if (!regex.test(email.trim())) throw new Error('invalid-mail')
+
+        return void (0)
     }
 
-    async sendForm({ name, email, message }) {
+    async sendForm({ ...obj }) {
         const loadingToastId = toast('Enviando', { ...setToasty('info', 'Enviando mensagem...'), position: 'bottom-center', autoClose: 900 })
-
         try {
-            if (!name || !email || !message) throw new Error('incomplete')
+            this._validation({ ...obj })
 
-            const validEmail = this._validaEmail(email.trim())
-            if (!validEmail) throw new Error('invalid-mail')
-
-            let setProgress = 0
-            const response = await axios.post(this.mail, { name, email, message }, {
+            const response = await axios.post(this.mail, { ...obj }, {
                 onUploadProgress: (progress) => {
-
-                    const percent = Math.round((progress.loaded * 100) / progress.total);
-                    setProgress = percent
+                    let setProgress = Math.round((progress.loaded * 100) / progress.total);
                     return toast.update(loadingToastId, {
                         ...setToasty('info', 'Enviando...'),
-                        progress: percent
+                        progress: setProgress
                     })
-
                 }
             }).then(res => {
-                if (res.status != 200) throw new Error('send-failed')
-                if (res.status === 200) toast.update(loadingToastId, setToasty('sucess', 'Mensagem enviada!'))
 
-                return res.data = {
-                    message: res.data,
-                    status: 200
-                }
+                if (res.status != 200) throw new Error('send-failed')
+                else toast.update(loadingToastId, setToasty('success', 'Mensagem enviada!'))
+
+                return res.data = { message: res.data, status: 200 }
+
             }).catch((err) => {
                 console.log('erro', err)
                 throw new Error(err.message)
@@ -66,7 +60,7 @@ export class MailController {
                     toast.update(loadingToastId, setToasty('error', 'Erro de envio. Tenta novamente mais tarde'))
                     break;
             }
-            return { message: err.mesasge, error: err }
+            return { ...err }
         }
     }
 }
