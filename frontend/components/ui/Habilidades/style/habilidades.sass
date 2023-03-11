@@ -1,0 +1,104 @@
+@import '../../../../styles/globals/mixins'
+.habilidades_container
+    display: flex
+    flex-direction: column
+    gap: 4.5rem
+
+    .skillCardsArea
+        display: flex
+        flex-direction: row
+        flex-flow: row wrap
+        align-items: center
+        justify-content: space-between
+        gap: 2rem
+        z-index: 9999
+
+        .skillCard
+            width: 30%
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            gap: 1rem
+            transition: $transition2ms
+
+            .cardHeader
+                display: flex
+                flex-direction: row
+                align-items: flex-start
+                gap: .8rem
+                width: 100%
+                .logoIcon
+                    border-radius: .5rem
+                    transition: $transition2ms
+
+                    &:hover
+                        cursor: default
+                        transform: scale(1.03)
+                        filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.3))
+
+            .cardTitle
+                color: $orange600
+
+            .textContent
+                width: 100%
+                word-break: break-word
+                hyphenate-character: auto
+                hyphens: auto
+
+            .readMore
+                color: $green600
+                width: 100%
+                text-align: center
+                align-self: center
+                padding: .4rem
+                border-radius: .5rem
+                cursor: pointer
+
+                border: 1px solid $green600
+                transition: $transition2ms
+                &:hover
+                    background-color: $green600
+                    color: $gray100
+
+@media screen and ( max-width: 768px )
+    .habilidades_container
+        justify-content: space-evenly
+        .skillCardsArea
+            display: flex
+            flex-flow: nowrap column
+            width: 100%
+            padding: 0
+
+            .skillCard
+                padding: 0
+                min-width: 100%
+                max-width: 100%
+                width: fit-content
+
+@media screen and ( max-width: 1024px )
+    .habilidades_container
+
+        .skillCardsArea
+            flex-flow: wrap row
+            justify-content: space-evenly
+
+            .skillCard
+                min-width: 45%
+
+                .logoIcon
+                    width: 40px
+                    height: 40px
+
+@media screen and (max-width: 1440px )
+    .habilidades_container
+
+        .skillCardsArea
+            flex-flow: wrap row
+            justify-content: space-evenly
+
+            .skillCard
+                min-width: 27%
+
+                .logoIcon
+                    width: 48px
+                    height: 48px

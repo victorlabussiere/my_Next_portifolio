@@ -1,4 +1,4 @@
-import styles from '../style/card.module.css'
+import styles from '../style/habilidades.module.css'
 
 module.exports = class CloneFactory {
     constructor(obj, text) {
@@ -7,13 +7,13 @@ module.exports = class CloneFactory {
     }
 
     _setModal(modal) {
-        modal.classList = `${styles.openModal} ${styles.skillCard}`
+        modal.classList = 'skillModal'
 
         const cloneText = modal.getElementsByTagName('p')[1]
         cloneText.innerHTML = this.text
 
         const cloneButton = modal.getElementsByTagName('div')[0]
-        cloneButton.classList = `${styles.closeButton}`
+        cloneButton.classList = `closeButton`
         cloneButton.innerHTML = 'Fechar'
         cloneButton.addEventListener('click', (e) => this._closeModal(e))
 

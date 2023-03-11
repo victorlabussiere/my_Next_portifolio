@@ -1,4 +1,4 @@
-import styles from '../style/card.module.css'
+import styles from '../style/habilidades.module.css'
 import Image from 'next/image'
 
 import CloneFactory from './CloneFactory'
@@ -10,7 +10,7 @@ export default function Card({ data, cardTitle, cardText }) {
         return modal.getOpenModal()
     }
 
-    let slicedText = cardText.toString().slice(0, 130) + '...'
+    let slicedText = cardText.toString().slice(0, 110) + '...'
     return (
         <div className={styles.skillCard}>
 

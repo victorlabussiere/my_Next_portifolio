@@ -210,57 +210,6 @@
 .habilidades hgroup h3 {
   color: #32774d;
 }
-.habilidades .habilidades_container {
-  display: flex;
-  flex-direction: column;
-  gap: 4.5rem;
-}
-.habilidades .skillCardsArea {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  z-index: 9999;
-}
-@media only screen and (max-width: 600px) {
-  .habilidades hgroup {
-    display: none;
-    visibility: hidden;
-    width: 0;
-    height: 0;
-  }
-  .habilidades .skillCardsArea {
-    flex-direction: column;
-    width: 100%;
-    padding: 0;
-    gap: 3rem;
-  }
-  .habilidades .skillCardsArea .skillCard {
-    padding: 0;
-    min-width: 100%;
-  }
-}
-@media (max-width: 768px) {
-  .habilidades .skillCardsArea {
-    justify-content: space-evenly;
-  }
-  .habilidades .skillCardsArea .skillCard {
-    width: 40%;
-  }
-}
-@media screen and (max-width: 1024px) {
-  .habilidades .skillCardsArea {
-    justify-content: flex-start;
-  }
-  .habilidades .skillCardsArea .skillCard {
-    width: calc(50% - 1rem);
-  }
-  .habilidades .logoIcon {
-    width: 40px;
-    height: 40px;
-  }
-}
 
 .repositorios {
   background-color: #FA9156;

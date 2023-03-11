@@ -18,6 +18,7 @@ export class MailController {
         return void (0)
     }
 
+
     async sendForm({ ...obj }) {
         const loadingToastId = toast('Enviando', { ...setToasty('info', 'Enviando mensagem...'), position: 'bottom-center', autoClose: 900 })
         try {
@@ -26,15 +27,12 @@ export class MailController {
             const response = await axios.post(this.mail, { ...obj }, {
                 onUploadProgress: (progress) => {
                     let setProgress = Math.round((progress.loaded * 100) / progress.total);
-                    return toast.update(loadingToastId, {
-                        ...setToasty('info', 'Enviando...'),
-                        progress: setProgress
-                    })
+                    return toast.update(loadingToastId, { ...setToasty('info', 'Enviando...'), progress: setProgress })
                 }
             }).then(res => {
 
-                if (res.status != 200) throw new Error('send-failed')
-                else toast.update(loadingToastId, setToasty('success', 'Mensagem enviada!'))
+                res.status != 200 ? new Error('send-failed')
+                    : toast.update(loadingToastId, setToasty('success', 'Mensagem enviada!'))
 
                 return res.data = { message: res.data, status: 200 }
 
@@ -46,21 +44,21 @@ export class MailController {
             return response
 
         } catch (err) {
-            switch (err.message) {
-                case 'incomplete':
-                    toast.update(loadingToastId, setToasty('error', 'Preencha todos os campos para prosseguir.'))
-                    return { ...err }
-                case 'invalid-mail':
-                    toast.update(loadingToastId, setToasty('error', 'Verifique se o seu e-mail está digitado corretamente.'))
-                    return { ...err }
-                case 'send-failed':
-                    toast.update(loadingToastId, setToasty('error', 'Erro durante o envio da mensagem.'))
-                    return { ...err }
-                default:
-                    toast.update(loadingToastId, setToasty('error', 'Erro de envio. Tenta novamente mais tarde'))
-                    break;
-            }
-            return { ...err }
+            return this._errorHandler(err.message, loadingToastId)
+        }
+    }
+
+    _errorHandler(str, toastObj) {
+        switch (str) {
+            case 'incomplete':
+                return toast.update(toastObj, setToasty('error', 'Preencha todos os campos para prosseguir.'))
+            case 'invalid-mail':
+                return toast.update(toastObj, setToasty('error', 'Verifique o seu e-mail.'))
+            case 'send-failed':
+                return toast.update(toastObj, setToasty('error', 'Falha durante o envio da mensagem.'))
+            default:
+                toast.update(toastObj, setToasty('error', 'Erro de envio. Tenta novamente mais tarde'))
+                break
         }
     }
 }

@@ -1,0 +1,108 @@
+.habilidades_container {
+  display: flex;
+  flex-direction: column;
+  gap: 4.5rem;
+}
+.habilidades_container .skillCardsArea {
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  z-index: 9999;
+}
+.habilidades_container .skillCardsArea .skillCard {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  transition: ease-in-out 0.2s all;
+}
+.habilidades_container .skillCardsArea .skillCard .cardHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0.8rem;
+  width: 100%;
+}
+.habilidades_container .skillCardsArea .skillCard .cardHeader .logoIcon {
+  border-radius: 0.5rem;
+  transition: ease-in-out 0.2s all;
+}
+.habilidades_container .skillCardsArea .skillCard .cardHeader .logoIcon:hover {
+  cursor: default;
+  transform: scale(1.03);
+  filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.3));
+}
+.habilidades_container .skillCardsArea .skillCard .cardTitle {
+  color: #FA9156;
+}
+.habilidades_container .skillCardsArea .skillCard .textContent {
+  width: 100%;
+  word-break: break-word;
+  hyphenate-character: auto;
+  hyphens: auto;
+}
+.habilidades_container .skillCardsArea .skillCard .readMore {
+  color: #668F76;
+  width: 100%;
+  text-align: center;
+  align-self: center;
+  padding: 0.4rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  border: 1px solid #668F76;
+  transition: ease-in-out 0.2s all;
+}
+.habilidades_container .skillCardsArea .skillCard .readMore:hover {
+  background-color: #668F76;
+  color: #f9f9f9;
+}
+
+@media screen and (max-width: 768px) {
+  .habilidades_container {
+    justify-content: space-evenly;
+  }
+  .habilidades_container .skillCardsArea {
+    display: flex;
+    flex-flow: nowrap column;
+    width: 100%;
+    padding: 0;
+  }
+  .habilidades_container .skillCardsArea .skillCard {
+    padding: 0;
+    min-width: 100%;
+    max-width: 100%;
+    width: fit-content;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .habilidades_container .skillCardsArea {
+    flex-flow: wrap row;
+    justify-content: space-evenly;
+  }
+  .habilidades_container .skillCardsArea .skillCard {
+    min-width: 45%;
+  }
+  .habilidades_container .skillCardsArea .skillCard .logoIcon {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .habilidades_container .skillCardsArea {
+    flex-flow: wrap row;
+    justify-content: space-evenly;
+  }
+  .habilidades_container .skillCardsArea .skillCard {
+    min-width: 27%;
+  }
+  .habilidades_container .skillCardsArea .skillCard .logoIcon {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/*# sourceMappingURL=habilidades.module.css.map */

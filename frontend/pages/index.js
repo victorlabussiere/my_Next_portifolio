@@ -2,7 +2,7 @@ import styles from '../styles/stylesModules/styles.module.css'
 import Image from "next/image"
 
 import { useState, useEffect } from "react"
-import CardList from '../components/ui/Habilidades/CardsList'
+import Habilidades from '../components/ui/Habilidades/Habilidades'
 import RepoList from '../components/ui/Repositorios/RepoList'
 import Form from '../components/ui/ContactForm/Form'
 
@@ -132,7 +132,7 @@ export default function Home() {
         </hgroup>
 
         <div className={styles.habilidades_container}>
-          <CardList />
+          <Habilidades />
         </div>
 
       </section>

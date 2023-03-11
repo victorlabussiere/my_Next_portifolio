@@ -207,51 +207,6 @@
         h3
             color: $green700
 
-    .habilidades_container
-        display: flex
-        flex-direction: column
-        gap: 4.5rem
-
-    .skillCardsArea
-        display: flex
-        flex-flow: row wrap
-        align-items: center
-        justify-content: space-between
-        gap: 2rem
-        z-index: 9999
-
-    @media only screen and (max-width: 600px)
-        hgroup
-            display: none
-            visibility: hidden
-            width: 0
-            height: 0
-        .skillCardsArea
-            flex-direction: column
-            width: 100%
-            padding: 0
-            gap: 3rem
-            .skillCard
-                padding: 0
-                min-width: 100%
-
-    @media ( max-width: 768px )
-        .skillCardsArea
-            justify-content: space-evenly
-            .skillCard
-                width: 40%
-
-    @media screen and ( max-width: 1024px )
-        .skillCardsArea
-            justify-content: flex-start
-
-            .skillCard
-                width: calc( 50% - 1rem )
-
-        .logoIcon
-            width: 40px
-            height: 40px
-
 // Repositorios section
 .repositorios
     background-color: $orange600

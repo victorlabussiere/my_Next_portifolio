@@ -339,6 +339,24 @@ a {
   transform: scale(1.01);
 }
 
+.secundaryButton {
+  display: flex;
+  align-items: center;
+  color: #FA9156;
+  border-radius: 0.5rem;
+  border: 1px solid #FA9156;
+  height: min-content;
+  padding: 0.5rem 1rem;
+  transition: ease-in-out 0.2s all;
+}
+.secundaryButton:hover {
+  background-color: #FA9156;
+  color: #f9f9f9;
+}
+.secundaryButton:active {
+  background-color: #E85401;
+}
+
 .tertiaryButton {
   display: flex;
   align-items: center;
@@ -369,22 +387,32 @@ a {
   }
 }
 
-.openModal {
+.skillModal {
   isolation: isolate;
   display: flex;
   flex-direction: column;
+  gap: 1vw;
   position: fixed;
   top: 20%;
   left: 50%;
   transform: translate(-50%);
+  width: 24vw;
   padding: 2rem;
   border-radius: 1rem;
   z-index: 9;
   transition: ease-in-out 0.2s all;
   background-color: #f9f9f9;
   box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.2);
+  animation: modalOn 0.2s ease-in-out;
 }
-.openModal .closeButton {
+.skillModal hgroup {
+  display: flex;
+  gap: 1vw;
+}
+.skillModal .pL {
+  color: #FA9156;
+}
+.skillModal .closeButton {
   order: -1;
   background-color: #f9f9f9;
   color: #668F76;
@@ -397,8 +425,17 @@ a {
   cursor: pointer;
   transition: ease-in-out 0.2s all;
 }
-.openModal .closeButton:hover {
+.skillModal .closeButton:hover {
   color: #2B5B3E;
+}
+
+@keyframes modalOn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=globals.css.map */
