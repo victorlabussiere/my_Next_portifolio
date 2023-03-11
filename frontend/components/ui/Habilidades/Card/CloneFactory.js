@@ -1,5 +1,3 @@
-import styles from '../style/habilidades.module.css'
-
 module.exports = class CloneFactory {
     constructor(obj, text) {
         this.modal = obj.parentNode.cloneNode(obj)
