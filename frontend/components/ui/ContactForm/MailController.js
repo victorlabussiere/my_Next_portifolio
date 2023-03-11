@@ -1,49 +1,71 @@
 import axios from 'axios'
-import { toast, ProgressBar } from 'react-toastify';
+
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { setToasty } from './ToastFactory'
 
 export class MailController {
-    constructor(mail, objForm) {
+    constructor(mail) {
         this.mail = mail
-        this.obj = { ...objForm }
     }
 
-    async sendForm() {
-        const loadingToastId = toast('Enviando', { ...setToasty('loading', 'Enviando mensagem...'), position: 'bottom-center', autoClose: 900 })
+
+    _validaEmail(email) {
+        const regex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return regex.test(email)
+    }
+
+    async sendForm({ name, email, message }) {
+        const loadingToastId = toast('Enviando', { ...setToasty('info', 'Enviando mensagem...'), position: 'bottom-center', autoClose: 900 })
 
         try {
-            if (!this.obj.name || !this.obj.email || !this.obj.message) throw new Error('incomplete')
+            if (!name || !email || !message) throw new Error('incomplete')
+
+            const validEmail = this._validaEmail(email.trim())
+            if (!validEmail) throw new Error('invalid-mail')
+
             let setProgress = 0
-            const response = await axios.post(this.mail, { ...this.obj, pending: 'Enviando...', sucess: 'Mensagem enviada!', error: 'Erro no envio.' }, {
+            const response = await axios.post(this.mail, { name, email, message }, {
                 onUploadProgress: (progress) => {
+
                     const percent = Math.round((progress.loaded * 100) / progress.total);
                     setProgress = percent
-
-                    toast.update(loadingToastId, {
+                    return toast.update(loadingToastId, {
                         ...setToasty('info', 'Enviando...'),
                         progress: percent
                     })
 
-
-                    if (percent === 100) return toast.update(loadingToastId, setToasty('sucess', 'Mensagem enviada!'))
                 }
+            }).then(res => {
+                if (res.status != 200) throw new Error('send-failed')
+                if (res.status === 200) toast.update(loadingToastId, setToasty('sucess', 'Mensagem enviada!'))
+
+                return res.data = {
+                    message: res.data,
+                    status: 200
+                }
+            }).catch((err) => {
+                console.log('erro', err)
+                throw new Error(err.message)
             })
 
             return response
 
         } catch (err) {
-
-            if (err.message === 'incomplete') {
-                toast.update(loadingToastId, setToasty('error', 'Algum campo não foi preenchido.'))
-                return { message: err.message, error: err }
+            switch (err.message) {
+                case 'incomplete':
+                    toast.update(loadingToastId, setToasty('error', 'Preencha todos os campos para prosseguir.'))
+                    return { ...err }
+                case 'invalid-mail':
+                    toast.update(loadingToastId, setToasty('error', 'Verifique se o seu e-mail está digitado corretamente.'))
+                    return { ...err }
+                case 'send-failed':
+                    toast.update(loadingToastId, setToasty('error', 'Erro durante o envio da mensagem.'))
+                    return { ...err }
+                default:
+                    toast.update(loadingToastId, setToasty('error', 'Erro de envio. Tenta novamente mais tarde'))
+                    break;
             }
-
-            if (err.message === 'Erro de envio') {
-                toast.update(loadingToastId, setToasty('error', 'Erro durante o envio da mensagem.'))
-                return { message: err.mesasge, error: err }
-            }
-
             return { message: err.mesasge, error: err }
         }
     }

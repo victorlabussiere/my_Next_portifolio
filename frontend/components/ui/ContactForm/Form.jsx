@@ -3,6 +3,7 @@ import { MailController } from './MailController'
 
 export default function Form() {
 
+    const mailControl = new MailController(process.env.MAIL_API)
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -16,17 +17,17 @@ export default function Form() {
         })
     }
 
-    async function handleSubmit() {
-        const mail = new MailController(process.env.MAIL_API, formData)
+    async function handleSubmit(obj) {
 
-        const response = await mail.sendForm()
+        const response = await mailControl.sendForm({ ...obj })
             .then(res => {
-                if (res.status != 200) throw new Error()
-                else setFormData({ name: '', email: '', message: '' })
-
-                return res
+                return res.status != 200
+                    ? new Error()
+                    : setFormData({ name: '', email: '', message: '' })
             })
-            .catch(err => console.error('Erro durante o envio do formulário', err))
+            .catch(err => {
+                console.error('Erro', err)
+            })
 
         return response
     }
@@ -47,7 +48,7 @@ export default function Form() {
             <div
                 role='button'
                 className='h3S primaryButton'
-                onClick={handleSubmit}
+                onClick={() => handleSubmit({ ...formData })}
             >
                 <i className='material-icons'>mail</i>
                 Enviar mensagem
