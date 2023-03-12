@@ -2,11 +2,13 @@ import axios from 'axios'
 
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import setToasty from './ToastFactory'
+import ToastFactory from '../../Controller/ToastFactory'
 
 export class MailController {
     constructor(mail) {
         this.mail = mail
+        this.toastyConfig = new ToastFactory
+        this.setToasty = (type, render) => this.toastyConfig.getFormToasty(type, render)
     }
 
     _validation({ email, name, message }) {
@@ -20,19 +22,19 @@ export class MailController {
 
 
     async sendForm({ ...obj }) {
-        const loadingToastId = toast('Enviando', { ...setToasty('info', 'Enviando mensagem...'), position: 'bottom-center', autoClose: 900 })
+        const loadingToastId = toast('Enviando', { ...this.setToasty('info', 'Enviando mensagem...'), position: 'bottom-center', autoClose: 900 })
         try {
             this._validation({ ...obj })
 
             const response = await axios.post(this.mail, { ...obj }, {
                 onUploadProgress: (progress) => {
                     let setProgress = Math.round((progress.loaded * 100) / progress.total);
-                    return toast.update(loadingToastId, { ...setToasty('info', 'Enviando...'), progress: setProgress })
+                    return toast.update(loadingToastId, { ...this.setToasty('info', 'Enviando...'), progress: setProgress })
                 }
             }).then(res => {
 
                 res.status != 200 ? new Error('send-failed')
-                    : toast.update(loadingToastId, setToasty('success', 'Mensagem enviada!'))
+                    : toast.update(loadingToastId, this.setToasty('success', 'Mensagem enviada!'))
 
                 return res.data = { message: res.data, status: 200 }
 
@@ -51,13 +53,13 @@ export class MailController {
     _errorHandler(str, toastObj) {
         switch (str) {
             case 'incomplete':
-                return toast.update(toastObj, setToasty('error', 'Preencha todos os campos para prosseguir.'))
+                return toast.update(toastObj, this.setToasty('error', 'Preencha todos os campos para prosseguir.'))
             case 'invalid-mail':
-                return toast.update(toastObj, setToasty('error', 'Verifique o seu e-mail.'))
+                return toast.update(toastObj, this.setToasty('error', 'Verifique o seu e-mail.'))
             case 'send-failed':
-                return toast.update(toastObj, setToasty('error', 'Falha durante o envio da mensagem.'))
+                return toast.update(toastObj, this.setToasty('error', 'Falha durante o envio da mensagem.'))
             default:
-                toast.update(toastObj, setToasty('error', 'Erro de envio. Tenta novamente mais tarde'))
+                toast.update(toastObj, this.setToasty('error', 'Erro de envio. Tenta novamente mais tarde'))
                 break
         }
     }

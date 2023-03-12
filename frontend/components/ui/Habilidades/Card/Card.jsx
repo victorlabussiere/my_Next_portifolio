@@ -1,12 +1,12 @@
 import styles from '../style/habilidades.module.css'
 import Image from 'next/image'
 
-import CloneFactory from './CloneFactory'
+import ModalFactory from '../CardModalFactory'
 
 export default function Card({ data, cardTitle, cardText }) {
 
     function openModal(e) {
-        const modal = new CloneFactory(e.target, cardText)
+        const modal = new ModalFactory(e.target, cardText)
         return modal.getOpenModal()
     }
 

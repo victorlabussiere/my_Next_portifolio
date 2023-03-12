@@ -1,5 +1,5 @@
 import styles from './styles/repoList.module.css'
-import ModalFactory from './ModalFactory'
+import ModalFactory from './ReposModalFactory'
 import { useEffect } from 'react'
 
 export default function RepoList({ repoList }) {

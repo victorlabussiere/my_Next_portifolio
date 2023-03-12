@@ -1,4 +1,4 @@
-module.exports = class CloneFactory {
+module.exports = class ModalFactory {
     constructor(obj, text) {
         this.modal = obj.parentNode.cloneNode(obj)
         this.text = text

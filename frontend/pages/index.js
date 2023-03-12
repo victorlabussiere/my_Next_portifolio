@@ -6,17 +6,12 @@ import Habilidades from '../components/ui/Habilidades/Habilidades'
 import RepoList from '../components/ui/Repositorios/RepoList'
 import Form from '../components/ui/ContactForm/Form'
 
+import { HandlerDownload } from '../components/Controller/HandleDownload'
+
 export default function Home() {
 
   // Download service API
-  async function handleDownload() {
-    const link = document.createElement('a')
-    link.href = process.env.DOWNLOAD_API
-    link.setAttribute('download', 'curriculo-victor.pdf')
-    link.click()
-
-    return void (0)
-  }
+  const handleDownload = () => new HandlerDownload().download()
 
   // Starting Frontend Services
   const [repos, setRepos] = useState([])

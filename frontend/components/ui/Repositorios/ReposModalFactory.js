@@ -1,6 +1,6 @@
 import styles from './styles/repoList.module.css'
 
-module.exports = class ModalFactory {
+export class ModalFactory {
     constructor(obj) {
         this.title = obj.name
         this.description = obj.description
