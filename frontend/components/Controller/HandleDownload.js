@@ -4,9 +4,9 @@ import ToastFactory from './ToastFactory'
 
 export class HandlerDownload {
     constructor() {
-        this.pdfUrl = process.env.DOWNLOAD_API || 'http://localhost:3001/download'
+        this.pdfUrl = process.env.DOWNLOAD_API
         this.toastyConfig = new ToastFactory
-        this.setToast = (render) => this.toastyConfig.getDownloadToasty(render)
+        this.setToast = (type, render) => this.toastyConfig.getDownloadToasty(type, render)
     }
 
     _setLinkDownload(data) {
@@ -23,8 +23,7 @@ export class HandlerDownload {
     }
 
     async download() {
-
-        toast('Preparando seu download', { ...this.setToast('info', '') })
+        const toasty = toast.info('Preparando seu download', { ...this.setToast('info', '') })
 
         try {
             const response = await axios.get(this.pdfUrl, { responseType: 'blob' })
@@ -32,7 +31,7 @@ export class HandlerDownload {
                     if (res.status !== 200) throw new Error('no-response')
 
                     this._setLinkDownload(res.data)
-                    toast('Arquivo pronto para download!', { ...this.setToast('success') })
+                    toast.update(toasty, { ...this.setToast('success', 'Arquivo pronto para download!') })
                     return void (0)
                 })
                 .catch(err => {
@@ -42,5 +41,10 @@ export class HandlerDownload {
 
             return response
         } catch (err) { console.error('error', err) }
+        finally {
+            setTimeout(() => {
+                toast.dismiss()
+            }, 3000);
+        }
     }
 }
