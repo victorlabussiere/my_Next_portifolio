@@ -126,10 +126,7 @@ export default function Home() {
           <p className='pS'>Ao longo da minha jornada, acumulei conhecimento e domínio nas tecnologias que me foram apresentadas. E além da área de desenvolvimento web, já atuei como operador de ferramentas voltadas para o design gráfico. Conheça meu stack e veja como posso colaborar:</p>
         </hgroup>
 
-        <div className={styles.habilidades_container}>
-          <Habilidades />
-        </div>
-
+        <Habilidades />
       </section>
 
       {/* Repositorios Section */}
@@ -153,7 +150,7 @@ export default function Home() {
 
             </header>
 
-            <h3 className='h3S'>Projetos destacados:</h3>
+            <h3 className={styles.projDest}>Projetos destacados:</h3>
 
             <RepoList repoList={repos} />
 

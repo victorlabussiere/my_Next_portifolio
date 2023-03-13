@@ -30,6 +30,8 @@
 .habilidades_container .skillCardsArea .skillCard .cardHeader .logoIcon {
   border-radius: 0.5rem;
   transition: ease-in-out 0.2s all;
+  width: calc(25% - 0.4rem);
+  height: 100%;
 }
 .habilidades_container .skillCardsArea .skillCard .cardHeader .logoIcon:hover {
   cursor: default;
@@ -63,25 +65,31 @@
 
 @media screen and (max-width: 768px) {
   .habilidades_container {
-    justify-content: space-evenly;
+    width: 100%;
   }
   .habilidades_container .skillCardsArea {
+    min-width: 100%;
     display: flex;
-    flex-flow: nowrap column;
-    width: 100%;
+    flex-direction: column;
+    gap: 3rem;
     padding: 0;
   }
   .habilidades_container .skillCardsArea .skillCard {
-    padding: 0;
     min-width: 100%;
-    max-width: 100%;
-    width: fit-content;
+    width: 100%;
+    padding: 0;
+    margin: 0;
   }
 }
 @media screen and (max-width: 1024px) {
-  .habilidades_container .skillCardsArea {
-    flex-flow: wrap row;
+  .habilidades_container {
+    justify-content: space-between;
     justify-content: space-evenly;
+  }
+  .habilidades_container .skillCardsArea {
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: 2rem;
   }
   .habilidades_container .skillCardsArea .skillCard {
     min-width: 45%;
@@ -92,16 +100,62 @@
   }
 }
 @media screen and (max-width: 1440px) {
-  .habilidades_container .skillCardsArea {
-    flex-flow: wrap row;
-    justify-content: space-evenly;
-  }
-  .habilidades_container .skillCardsArea .skillCard {
-    min-width: 27%;
-  }
   .habilidades_container .skillCardsArea .skillCard .logoIcon {
     width: 48px;
     height: 48px;
+  }
+}
+body .skillModal {
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%);
+  min-width: 64vw;
+  padding: 2rem;
+  border-radius: 1rem;
+  z-index: 9;
+  transition: ease-in-out 0.2s all;
+  background-color: #f9f9f9;
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.2);
+  animation: modalOn 0.2s ease-in-out;
+}
+body .skillModal hgroup {
+  display: flex;
+  gap: 1vw;
+}
+body .skillModal .cardTitle {
+  color: #FA9156;
+}
+body .skillModal .textContent {
+  color: #222222;
+}
+body .skillModal .closeButton {
+  order: -1;
+  background-color: #f9f9f9;
+  color: #668F76;
+  font-weight: 600;
+  align-self: flex-end;
+  justify-self: flex-end;
+  text-align: end;
+  padding: 0.4rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: ease-in-out 0.2s all;
+}
+body .skillModal .closeButton:hover {
+  color: #2B5B3E;
+}
+
+@keyframes modalOn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 

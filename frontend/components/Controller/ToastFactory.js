@@ -1,4 +1,4 @@
-module.exports = class ToastFactory {
+export default class ToastFactory {
     constructor() {
         this.formConfig = {
             position: "bottom-center",

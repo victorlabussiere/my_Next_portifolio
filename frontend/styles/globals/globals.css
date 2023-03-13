@@ -127,6 +127,11 @@ section {
 section hgroup p {
   width: 80%;
 }
+@media screen and (max-width: 500px) {
+  section {
+    padding: 16px;
+  }
+}
 @media screen and (max-width: 1024px) {
   section {
     padding: 8vw;
@@ -188,9 +193,6 @@ footer div a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
-  footer h3 a {
-    font-size: 18px;
   }
   footer div {
     display: none;
@@ -293,12 +295,12 @@ h3, .h3L {
 
 @media screen and (max-width: 768px) {
   .pL, .pM, .pS, p, a {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 @media screen and (max-width: 1440px) {
   .pL, .pM, .pS, p, a {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
@@ -384,57 +386,6 @@ a {
   .tertiaryButton {
     width: max-content;
     font-size: 16px;
-  }
-}
-
-.skillModal {
-  isolation: isolate;
-  display: flex;
-  flex-direction: column;
-  gap: 1vw;
-  position: fixed;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%);
-  width: 24vw;
-  padding: 2rem;
-  border-radius: 1rem;
-  z-index: 9;
-  transition: ease-in-out 0.2s all;
-  background-color: #f9f9f9;
-  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.2);
-  animation: modalOn 0.2s ease-in-out;
-}
-.skillModal hgroup {
-  display: flex;
-  gap: 1vw;
-}
-.skillModal .pL {
-  color: #FA9156;
-}
-.skillModal .closeButton {
-  order: -1;
-  background-color: #f9f9f9;
-  color: #668F76;
-  font-weight: 600;
-  align-self: flex-end;
-  justify-self: flex-end;
-  text-align: end;
-  padding: 0.4rem;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  transition: ease-in-out 0.2s all;
-}
-.skillModal .closeButton:hover {
-  color: #2B5B3E;
-}
-
-@keyframes modalOn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
 

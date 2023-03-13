@@ -1,17 +1,19 @@
-module.exports = class ModalFactory {
+import styles from './style/habilidades.module.css'
+
+export default class ModalFactory {
     constructor(obj, text) {
         this.modal = obj.parentNode.cloneNode(obj)
         this.text = text
     }
 
     _setModal(modal) {
-        modal.classList = 'skillModal'
+        modal.classList = `${styles.skillModal}`
 
         const cloneText = modal.getElementsByTagName('p')[1]
         cloneText.innerHTML = this.text
 
         const cloneButton = modal.getElementsByTagName('div')[0]
-        cloneButton.classList = `closeButton`
+        cloneButton.classList = `${styles.closeButton}`
         cloneButton.innerHTML = 'Fechar'
         cloneButton.addEventListener('click', (e) => this._closeModal(e))
 

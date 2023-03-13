@@ -1,4 +1,4 @@
-module.exports = class Logos {
+export default class Logos {
     constructor() {
         this.jsData = {
             src: '/logos/jsLogo.png',

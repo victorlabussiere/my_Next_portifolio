@@ -1,6 +1,5 @@
 import styles from './styles/repoList.module.css'
 import ModalFactory from './ReposModalFactory'
-import { useEffect } from 'react'
 
 export default function RepoList({ repoList }) {
 
@@ -17,12 +16,16 @@ export default function RepoList({ repoList }) {
                     if (!i.description) return
                     return (
                         <li key={i.id} className={styles.card}>
-                            <p className='pL'> {i.description} </p>
+                            <p className={styles.cardTitle}> {i.description} </p>
 
                             <div
                                 className={styles.cardButton}
                                 role='button'
-                                onClick={() => openModal(i)}>+</div>
+                                onClick={() => openModal(i)}>
+                                <i className='material-icons'>
+                                    rocket_launch
+                                </i>
+                            </div>
                         </li>
                     )
                 })

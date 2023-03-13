@@ -25,20 +25,41 @@
         justify-content: space-between
         align-items: center
 
-        padding: 0 1.5rem
+        padding: 0 0 0 1.5rem
         border-radius: 1rem
 
         flex: 0 0 calc( 100% / 4 - 3rem )
         transition: $transition2ms
         @include sShadow
 
+        .cardTitle
+            white-space: nowrap
+            overflow: hidden
+            text-overflow: ellipsis
+            max-width: 60%
+            color: $green600
+            font-weight: 600
+
+            &:hover
+                text-decoration: underline $orange600
+                cursor: default
+
+        &:hover
+            transform: scale(1.005)
+            @include tShadow ()
+
         .cardButton
             cursor: pointer
             font-size: 2rem
+            padding: 0 2rem
+
             transition: $transition2ms
+            border-radius: 0 1rem 1rem 0
+
+            color: $orange600
             &:hover
-                border-radius: 50%
-                color: $orange600
+                color: $gray100
+                background-color: $orange600
 body
     .modal
         position: fixed
@@ -47,7 +68,7 @@ body
         transform: translate(-50%)
         z-index: 999
 
-        width: 30vw
+        width: 64vw
         padding: 2rem
         border-radius: 1rem
 
@@ -63,6 +84,8 @@ body
 
         .modalTitle
             color: $orange600
+            font-weight: bold
+            font-size: 1.5rem
 
         .actionModal
             display: flex
@@ -99,3 +122,66 @@ body
         opacity: 0
     100%
         opacity: 1
+
+@media screen and ( max-width: 768px )
+
+    .cardsArea
+        flex-direction: column
+        justify-content: flex-start
+        overflow-y: scroll
+        padding: 1rem
+        background-color: $orange200
+
+        box-shadow: inset 0 0 8px rgba(0, 0, 0, .5)
+
+        .card
+            background-color: $gray100
+            border-radius: 1rem
+
+            .cardTitle
+                color: $green700
+                font-weight: 500
+
+            a
+                color: $gray100
+
+@media screen and ( max-width: 1024px )
+    .repositorios_container
+        .cardsContainer
+
+            .cardsContainer_title
+                p
+                    display: none
+                    visibility: hidden
+                    max-width: 0
+                    max-height: 0
+
+                .cardsArea
+                    overflow-x: scroll
+                    display: flex
+                    justify-content: flex-start
+
+                    box-shadow: inset 0 0 16px rgba(0, 0, 0, .1)
+                    gap: 1rem
+                    padding: 1rem
+                    border-radius: 1rem
+                    .card
+                        min-width: 38%
+                        background-color: $gray100
+                        border-radius: 1rem
+
+@media screen and ( max-width: 1440px )
+    .repositorios_container
+        .cardsContainer
+            .cardsArea
+                overflow-x: scroll
+                display: flex
+                justify-content: flex-start
+
+                box-shadow: inset 0 0 16px rgba(0, 0, 0, .1)
+                gap: 1rem
+                padding: 1rem
+                .card
+                    background-color: $gray100
+                    a
+                        color: $green700

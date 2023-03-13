@@ -30,6 +30,8 @@
                 .logoIcon
                     border-radius: .5rem
                     transition: $transition2ms
+                    width: calc(25% - .4rem)
+                    height: 100%
 
                     &:hover
                         cursor: default
@@ -62,25 +64,29 @@
 
 @media screen and ( max-width: 768px )
     .habilidades_container
-        justify-content: space-evenly
+        width: 100%
         .skillCardsArea
+            min-width: 100%
             display: flex
-            flex-flow: nowrap column
-            width: 100%
-            padding: 0
+            flex-direction: column
+            gap: 3rem
 
+            padding: 0
             .skillCard
-                padding: 0
                 min-width: 100%
-                max-width: 100%
-                width: fit-content
+                width: 100%
+                padding: 0
+                margin: 0
 
 @media screen and ( max-width: 1024px )
     .habilidades_container
+        justify-content: space-between
+        justify-content: space-evenly
 
         .skillCardsArea
-            flex-flow: wrap row
-            justify-content: space-evenly
+            flex-flow: row wrap
+            justify-content: space-between
+            gap: 2rem
 
             .skillCard
                 min-width: 45%
@@ -93,12 +99,63 @@
     .habilidades_container
 
         .skillCardsArea
-            flex-flow: wrap row
-            justify-content: space-evenly
-
             .skillCard
-                min-width: 27%
-
                 .logoIcon
                     width: 48px
                     height: 48px
+
+body
+    .skillModal
+        isolation: isolate
+
+        display: flex
+        flex-direction: column
+        gap: 1vw
+
+        position: fixed
+        top: 20%
+        left: 50%
+        transform: translate(-50%)
+        min-width: 64vw
+
+        padding: 2rem
+        border-radius: 1rem
+        z-index: 9
+
+        transition: $transition2ms
+        background-color: $gray100
+        @include tShadow()
+
+        animation: modalOn .2s ease-in-out
+
+        hgroup
+            display: flex
+            gap: 1vw
+
+        .cardTitle
+            color: $orange600
+
+        .textContent
+            color: $gray700
+
+        .closeButton
+            order: -1
+            background-color: $gray100
+            color: $green600
+            font-weight: 600
+            align-self: flex-end
+            justify-self: flex-end
+            text-align: end
+            padding: .4rem
+            border-radius: .5rem
+
+            cursor: pointer
+            transition: $transition2ms
+            &:hover
+                color: $green800
+
+@keyframes modalOn
+    0%
+        opacity: 0
+    100%
+        opacity: 1
