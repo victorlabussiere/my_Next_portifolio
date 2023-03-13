@@ -34,6 +34,9 @@ export class HandlerDownload {
                     toast.update(toasty, { ...this.setToast('success', 'Arquivo pronto para download!') })
                     return void (0)
                 })
+                .then(() => {
+                    setTimeout(() => { toast.dismiss() }, 2000);
+                })
                 .catch(err => {
                     toast.update('error', 'Não foi possível realizar o download, tente novamente mais tarde.')
                     console.error('error', err)
@@ -41,10 +44,5 @@ export class HandlerDownload {
 
             return response
         } catch (err) { console.error('error', err) }
-        finally {
-            setTimeout(() => {
-                toast.dismiss()
-            }, 3000);
-        }
     }
 }

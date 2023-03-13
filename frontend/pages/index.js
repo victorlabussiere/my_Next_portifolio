@@ -16,6 +16,7 @@ export default function Home() {
   // Starting Frontend Services
   const [repos, setRepos] = useState([])
   const [picture, setPicture] = useState()
+
   useEffect(() => {
 
     // github api avatar request

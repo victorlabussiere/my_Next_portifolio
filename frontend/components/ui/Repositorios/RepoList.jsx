@@ -22,7 +22,7 @@ export default function RepoList({ repoList }) {
                                 className={styles.cardButton}
                                 role='button'
                                 onClick={() => openModal(i)}>
-                                <i className='material-icons'>
+                                <i className={`material-icons ${styles.iconButton}`}>
                                     rocket_launch
                                 </i>
                             </div>

@@ -116,7 +116,7 @@ body
         top: 20%
         left: 50%
         transform: translate(-50%)
-        min-width: 64vw
+        width: 40vw
 
         padding: 2rem
         border-radius: 1rem
@@ -127,6 +127,11 @@ body
         @include tShadow()
 
         animation: modalOn .2s ease-in-out
+
+        @media screen and ( max-width: 768px )
+            width: 80vw
+            top: 10%
+            gap: 1rem
 
         hgroup
             display: flex

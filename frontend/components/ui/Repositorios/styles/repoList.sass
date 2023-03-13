@@ -32,6 +32,11 @@
         transition: $transition2ms
         @include sShadow
 
+        &:hover .iconButton
+            transition: $transition2ms
+            color: $orange600
+            transform: scale(1.2)
+
         .cardTitle
             white-space: nowrap
             overflow: hidden
@@ -60,6 +65,9 @@
             &:hover
                 color: $gray100
                 background-color: $orange600
+            &:hover .iconButton
+                color: $gray100
+
 body
     .modal
         position: fixed
@@ -68,7 +76,7 @@ body
         transform: translate(-50%)
         z-index: 999
 
-        width: 64vw
+        width: 40vw
         padding: 2rem
         border-radius: 1rem
 
@@ -81,6 +89,9 @@ body
         background-color: $gray100
         @include tShadow ()
         animation: showModal .2s ease-in-out
+
+        @media screen and ( max-width: 768px )
+            width: 80vw
 
         .modalTitle
             color: $orange600

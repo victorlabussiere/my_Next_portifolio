@@ -2,7 +2,7 @@ export default class ToastFactory {
     constructor() {
         this.formConfig = {
             position: "bottom-center",
-            autoClose: 1000,
+            autoClose: false,
             hideProgressBar: true,
             closeOnClick: true,
             pauseOnHover: true,
@@ -14,7 +14,7 @@ export default class ToastFactory {
         }
         this.downloadConfig = {
             position: "bottom-center",
-            autoClose: 1000,
+            autoClose: false,
             hideProgressBar: true,
             closeOnClick: true,
             pauseOnHover: true,
