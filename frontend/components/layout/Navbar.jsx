@@ -1,49 +1,48 @@
+import SmoothScroll from "../../lib/SmoothScroll"
+
+import FloatButtonFactory from "../../lib/FloatButtonFactory"
+
 export default function Navbar() {
+    const floatButton = new FloatButtonFactory()
 
-    function scrollSuave(e) {
-        e.preventDefault()
-        if (e.target.tagName === 'A' && e.target.hash) {
-
-            let targetPosition = document.querySelector(e.target.hash).offsetTop
-            if (targetPosition <= 190) targetPosition = 0
-
-            return scrollTo({
-                top: targetPosition,
-                left: 0,
-                behavior: 'smooth'
-            })
-        }
-    }
+    function showButton() { floatButton.getFloatButton() }
+    async function hideButton() { floatButton.hideButton() }
 
     return (
-        <nav    >
-            <h3>
-                <a href='#top' onClick={(e) => scrollSuave(e)} >
-                    Victor
-                </a>
-                &nbsp;
-                <a href='#top' onClick={(e) => scrollSuave(e)} >
-                    Labussiere
-                </a>
-            </h3>
+        <>
+            <nav
+                onMouseOver={showButton}
+                onMouseLeave={hideButton}
+            >
 
-            <ul>
-                <li>
-                    <a href="#services" onClick={(e) => scrollSuave(e)}>serviços</a>
-                </li>
-                <li>
-                    <a href="#habilidades" onClick={(e) => scrollSuave(e)} >habilidades</a>
-                </li>
-                <li>
-                    <a href="#repositorios" onClick={(e) => scrollSuave(e)}>repositorios</a>
-                </li>
-                <li>
-                    <a href="#contato" onClick={(e) => scrollSuave(e)}>contato</a>
-                </li>
-                <li>
-                    <a href="#sobre" onClick={(e) => scrollSuave(e)}>sobre mim</a>
-                </li>
-            </ul>
-        </nav >
+                <h3>
+                    <a href='#top' onClick={(e) => SmoothScroll(e)} >
+                        Victor
+                    </a>
+                    &nbsp;
+                    <a href='#top' onClick={(e) => SmoothScroll(e)} >
+                        Labussiere
+                    </a>
+                </h3>
+
+                <ul>
+                    <li>
+                        <a onClick={(e) => SmoothScroll(e)} href="/#services">serviços</a>
+                    </li>
+                    <li>
+                        <a onClick={(e) => SmoothScroll(e)} href="/#habilidades" >habilidades</a>
+                    </li>
+                    <li>
+                        <a onClick={(e) => SmoothScroll(e)} href="/#repositorios">repositorios</a>
+                    </li>
+                    <li>
+                        <a onClick={(e) => SmoothScroll(e)} href="/#contato">contato</a>
+                    </li>
+                    <li>
+                        <a onClick={(e) => SmoothScroll(e)} href="/#sobre">sobre mim</a>
+                    </li>
+                </ul>
+            </nav >
+        </>
     )
 }

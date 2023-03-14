@@ -2,7 +2,7 @@ import axios from 'axios'
 
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import ToastFactory from '../../Controller/ToastFactory'
+import ToastFactory from '../../../lib/ToastFactory'
 
 export class MailController {
     constructor(mail) {

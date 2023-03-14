@@ -10,28 +10,26 @@
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  z-index: 9999;
 }
 .habilidades_container .skillCardsArea .skillCard {
   width: 30%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 1rem;
+  gap: 1.3rem;
   transition: ease-in-out 0.2s all;
 }
 .habilidades_container .skillCardsArea .skillCard .cardHeader {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 0.8rem;
   width: 100%;
+  box-sizing: border-box;
+  gap: 0.5rem;
 }
 .habilidades_container .skillCardsArea .skillCard .cardHeader .logoIcon {
-  border-radius: 0.5rem;
   transition: ease-in-out 0.2s all;
-  width: calc(25% - 0.4rem);
-  height: 100%;
+  flex: 25% 2 100%;
 }
 .habilidades_container .skillCardsArea .skillCard .cardHeader .logoIcon:hover {
   cursor: default;
@@ -80,6 +78,17 @@
     padding: 0;
     margin: 0;
   }
+  .habilidades_container .skillCardsArea .skillCard hgroup {
+    align-items: center;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .habilidades_container .skillCardsArea .skillCard .logoIcon {
+    margin: 0;
+    padding: 0;
+    width: 56px;
+    height: 56px;
+  }
 }
 @media screen and (max-width: 1024px) {
   .habilidades_container {
@@ -95,14 +104,8 @@
     min-width: 45%;
   }
   .habilidades_container .skillCardsArea .skillCard .logoIcon {
-    width: 40px;
-    height: 40px;
-  }
-}
-@media screen and (max-width: 1440px) {
-  .habilidades_container .skillCardsArea .skillCard .logoIcon {
-    width: 48px;
-    height: 48px;
+    width: 56px;
+    height: 56px;
   }
 }
 body .skillModal {

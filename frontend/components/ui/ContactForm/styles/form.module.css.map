@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["form.sass","../../../../styles/globals/mixins.sass"],"names":[],"mappings":"AASA;EACI;EACA;EACA,kBCGM;EDFN;EACA;EACA;EACA;EAEA;;AAEA;EACI,OCfG;;ADiBP;EACI,OCXE;EDaF;;AAEJ;EACI;EACA;EACA;EACA;EACA;EAEA;EACA;EAEA,YC+BQ;;AD9BR;EACI;EACA;ECsBR;;;ADnBJ;EACI;IACI;IACA;IACA,OCjCE;IDkCF;IACA;;EAEA;IACI,OCnDA;;EDqDA;IACI","file":"form.module.css"}

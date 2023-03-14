@@ -1,38 +1,36 @@
 import styles from '../styles/stylesModules/styles.module.css'
 import Image from "next/image"
+import Link from 'next/link'
 
-import { useState, useEffect } from "react"
 import Habilidades from '../components/ui/Habilidades/Habilidades'
 import RepoList from '../components/ui/Repositorios/RepoList'
 import Form from '../components/ui/ContactForm/Form'
 
-import { HandlerDownload } from '../components/Controller/HandleDownload'
+import { useState, useEffect } from "react"
+import { HandlerDownload } from '../lib/HandleDownload'
+import SmoothScroll from '../lib/SmoothScroll'
 
 export default function Home() {
 
   // Download service API
   const handleDownload = () => new HandlerDownload().download()
 
-  // Starting Frontend Services
+  // GitHub API Services
   const [repos, setRepos] = useState([])
   const [picture, setPicture] = useState()
-
   useEffect(() => {
-
-    // github api avatar request
-    fetch('https://api.github.com/users/victorlabussiere')
+    fetch(process.env.BASE_URL + 'users/' + process.env.BASE_USER)
       .then(res => res.json())
-      .then(dt => setPicture(dt.avatar_url))
+      .then(dt => {
+        setPicture(dt.avatar_url)
+        return fetch(dt.repos_url).then(res => res.json())
+      })
+      .then(data => setRepos(data))
       .catch(err => 'Erro na requisição de avatar do Github.' + err)
 
-    // github api repos request 
-    fetch(process.env.BASE_URL + 'users/' + process.env.BASE_USER + '/repos')
-      .then(res => res.json())
-      .then(data => setRepos(data))
-      .catch(err => console.error('Não foi possível consultar os repositórios através de uma requisição À API do github', err.message))
-
-    // Refresh modalState on Loading
+    // Refresh Local Storage on Loading
     window.localStorage.removeItem('modalState')
+    window.localStorage.removeItem('fbCount')
     return void (0)
 
   }, [])
@@ -54,10 +52,15 @@ export default function Home() {
         </header>
 
         <div className={styles.ctaBtns}>
-          <h3 className='h3S primaryButton'>
+          <Link
+            href='#contato'
+            role='button'
+            className='h3S primaryButton'
+            onClick={(e) => SmoothScroll(e)}
+          >
             <i className='material-icons'>phone</i>
             Trabalhe comigo agora!
-          </h3>
+          </Link>
           <a
             className='tertiaryButton'
             role='button'

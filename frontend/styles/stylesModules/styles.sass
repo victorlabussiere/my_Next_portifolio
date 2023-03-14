@@ -210,7 +210,7 @@
 // Repositorios section
 .repositorios
     background-color: $orange600
-    color: $green700
+    color: $gray100
     .repositorios_container
         width: 100%
         @include pShadow()
@@ -229,6 +229,7 @@
                 flex-direction: column
                 align-items: flex-start
                 gap: 1rem
+                color: $green700
                 h3
                     width: 100%
                     padding-bottom: 1rem
@@ -298,41 +299,6 @@
             h3
                 color: $orange600
 
-        form
-            background-color: $gray100
-            @include flexColumn()
-            @include pShadow()
-            padding: 2rem 1.5rem
-            gap: 2rem
-            justify-content: space-evenly
-            width: 100%
-
-            flex: 0 0 calc( 100% / 2)
-
-            h3
-                color: $green800
-
-            label
-                color: $gray500
-                @include flexColumn()
-                gap: .5rem
-
-            input, textarea
-                display: flex
-                flex-direction: row
-                align-items: center
-                padding: 1rem 1.5rem
-                gap: .5rem
-
-                width: 100%
-                border: 1px solid $gray300
-
-                transition: $transition2ms
-                &:hover
-                    transform: scale(1.005)
-                    cursor: text
-                    @include sShadow ()
-
         .instrucoesArea
             width: 100%
             flex: 0 0 calc( 100% /2 - 4rem)
@@ -378,36 +344,23 @@
                         align-self: center
                         justify-self: center
 
-@media screen and ( max-width: 768px)
-    .contato
-        .contato_container
-            padding: 0
-            flex-direction: column
-            form
+    @media screen and ( max-width: 768px)
+        .contato
+            .contato_container
                 padding: 0
-                background-color: transparent
-                color: $gray100
-                box-shadow: none
-                width: 100%
-
-                h3, label
-                    color: $orange600
-
-                div
-                    width: 100%
-
+                flex-direction: column
                 .instrucoesArea
                     display: flex
                     flex-direction: column
 
-@media screen and ( max-width: 1024px )
-    .contato_container
-        flex-direction: column
-
-@media screen and ( max-width: 1440px )
-    .contato
+    @media screen and ( max-width: 1024px )
         .contato_container
             flex-direction: column
+
+    @media screen and ( max-width: 1440px )
+        .contato
+            .contato_container
+                flex-direction: column
 
 // Sobre section
 .sobre

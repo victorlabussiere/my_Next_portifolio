@@ -9,11 +9,12 @@
 }
 
 body {
+  scroll-behavior: smooth;
   display: flex;
   flex-direction: column;
   width: 100vw;
   height: 100%;
-  background: #f9f9f9;
+  background: #fdfdfd;
   overflow-x: hidden;
 }
 @media screen and (max-width: 768px) {
@@ -48,7 +49,7 @@ nav h3 {
   transition: ease-in-out 0.2s all;
 }
 nav h3 a:nth-child(1) {
-  color: #2d5a3f;
+  color: #114a25;
 }
 nav h3 a:nth-child(2) {
   color: #FA9156;
@@ -80,7 +81,7 @@ nav ul li a {
 }
 nav ul li a:hover {
   transform: scale(1.01);
-  color: #32774d;
+  color: #40875b;
   text-decoration: underline #FA9156;
   cursor: pointer;
 }
@@ -127,11 +128,6 @@ section {
 section hgroup p {
   width: 80%;
 }
-@media screen and (max-width: 500px) {
-  section {
-    padding: 16px;
-  }
-}
 @media screen and (max-width: 1024px) {
   section {
     padding: 8vw;
@@ -154,6 +150,12 @@ section hgroup p {
     padding: 8vw 16vw;
   }
 }
+@media screen and (max-width: 768px) {
+  section {
+    padding: 24vw 8vw;
+    min-height: 100vh;
+  }
+}
 
 footer {
   background-color: #0D0D0D;
@@ -171,7 +173,7 @@ footer a {
   transition: ease-in-out 0.2s all;
 }
 footer a:hover {
-  color: #f9f9f9;
+  color: #fdfdfd;
 }
 footer div {
   display: flex;
@@ -185,7 +187,7 @@ footer div a {
   transition: ease-in-out 0.2s all;
 }
 footer div a:hover {
-  color: #f9f9f9;
+  color: #fdfdfd;
 }
 @media screen and (max-width: 768px) {
   footer {
@@ -233,7 +235,7 @@ h2 {
 }
 h2:hover {
   cursor: default;
-  text-decoration: underline #668F76;
+  text-decoration: underline #3a8255;
 }
 @media screen and (max-width: 768px) {
   h2 {
@@ -316,8 +318,8 @@ a {
   justify-content: center;
   gap: 1rem;
   padding: 1rem 4rem;
-  color: #f9f9f9;
-  background-color: #2B5B3E;
+  color: #fdfdfd;
+  background-color: #21643c;
   border-radius: 0.5rem;
   transition: ease-in-out 0.2s all;
   text-align: center;
@@ -331,13 +333,13 @@ a {
   }
 }
 .primaryButton:hover {
-  background-color: #32774d;
+  background-color: #40875b;
   cursor: pointer;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
   transform: scale(1.02);
 }
 .primaryButton:active {
-  background-color: #2d5a3f;
+  background-color: #114a25;
   transform: scale(1.01);
 }
 
@@ -353,7 +355,7 @@ a {
 }
 .secundaryButton:hover {
   background-color: #FA9156;
-  color: #f9f9f9;
+  color: #fdfdfd;
 }
 .secundaryButton:active {
   background-color: #E85401;
@@ -377,15 +379,45 @@ a {
 .tertiaryButton:hover p {
   cursor: pointer;
   color: #FA9156;
-  text-decoration: underline #668F76;
+  text-decoration: underline #3a8255;
 }
 .tertiaryButton:hover i {
-  color: #32774d;
+  color: #40875b;
 }
 @media screen and (max-width: 425px) {
   .tertiaryButton {
     width: max-content;
     font-size: 16px;
+  }
+}
+
+.floatButton {
+  padding: 1rem;
+  background-color: #fdfdfd;
+  color: #3a8255;
+  animation: show 0.5s;
+  position: fixed;
+  top: 4vw;
+  right: 2%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  gap: 0.5rem;
+  z-index: 9999999;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  vertical-align: baseline;
+  line-height: 150%;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    top: -10%;
+  }
+  100% {
+    opacity: 1;
+    top: 4vw;
   }
 }
 

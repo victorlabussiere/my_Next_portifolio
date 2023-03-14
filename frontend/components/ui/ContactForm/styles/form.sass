@@ -1,0 +1,57 @@
+@import '../../../../styles/globals/mixins'
+
+@mixin  flexColumn()
+    display: flex
+    flex-direction: column
+
+@mixin  flexRow()
+    display: flex
+
+.formContainer
+    display: flex
+    flex-direction: column
+    background-color: $gray100
+    padding: 2rem 1.5rem
+    gap: 2rem
+    justify-content: space-evenly
+    width: 100%
+
+    flex: 0 0 calc( 100% / 2)
+
+    h3
+        color: $green800
+
+    label
+        color: $gray500
+            // @include flexColumn()
+        gap: .5rem
+
+    input, textarea
+        display: flex
+        flex-direction: row
+        align-items: center
+        padding: 1rem 1.5rem
+        gap: .5rem
+
+        width: 100%
+        border: 1px solid $gray300
+
+        transition: $transition2ms
+        &:hover
+            transform: scale(1.005)
+            cursor: text
+            @include sShadow ()
+
+@media screen and ( max-width: 768px)
+    .formContainer
+        padding: 0
+        background-color: transparent
+        color: $gray100
+        box-shadow: none
+        width: 100%
+
+        h3, label
+            color: $orange600
+
+            div
+                width: 100%

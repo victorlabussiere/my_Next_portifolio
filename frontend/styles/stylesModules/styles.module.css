@@ -21,7 +21,7 @@
   cursor: default;
 }
 .heroContainer header h1 {
-  color: #2d5a3f;
+  color: #114a25;
   transition: ease-in-out 0.2s all;
 }
 .heroContainer header h1:hover {
@@ -41,7 +41,7 @@
   color: #FA9156;
 }
 .heroContainer header h3 strong:nth-child(3) {
-  color: #32774d;
+  color: #40875b;
 }
 .heroContainer .ctaBtns {
   display: flex;
@@ -52,8 +52,8 @@
 }
 .heroContainer .ilContainer {
   width: 100vw;
-  background: #f9f9f9;
-  background: linear-gradient(0deg, #FA9156 50%, #f9f9f9 50%);
+  background: #fdfdfd;
+  background: linear-gradient(0deg, #FA9156 50%, #fdfdfd 50%);
   justify-self: flex-end;
   display: flex;
   flex-direction: column;
@@ -68,13 +68,13 @@
   justify-content: center;
 }
 .heroContainer .ilContainer .features li {
-  color: #2d5a3f;
+  color: #114a25;
   transition: ease-in-out 0.2s all;
 }
 .heroContainer .ilContainer .features li:hover {
   transform: scale(1.02);
   cursor: default;
-  color: #668F76;
+  color: #3a8255;
   text-decoration: underline #FA9156;
 }
 .heroContainer .ilContainer .picture {
@@ -137,10 +137,10 @@
 
 .services {
   background-color: #FA9156;
-  color: #f9f9f9;
+  color: #fdfdfd;
 }
 .services hgroup h3 {
-  color: #32774d;
+  color: #40875b;
 }
 .services hgroup p {
   width: 80%;
@@ -164,7 +164,7 @@
   height: 100%;
 }
 .services .services_container aside h3 {
-  color: #32774d;
+  color: #40875b;
 }
 .services .services_container aside p {
   color: #444444;
@@ -189,10 +189,10 @@
     box-shadow: none;
   }
   .services .services_container aside p {
-    color: #f9f9f9;
+    color: #fdfdfd;
   }
   .services .services_container hr {
-    border-color: #f9f9f9;
+    border-color: #fdfdfd;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -208,12 +208,12 @@
   color: #FA9156;
 }
 .habilidades hgroup h3 {
-  color: #32774d;
+  color: #40875b;
 }
 
 .repositorios {
   background-color: #FA9156;
-  color: #32774d;
+  color: #fdfdfd;
 }
 .repositorios .repositorios_container {
   width: 100%;
@@ -225,13 +225,14 @@
   align-items: flex-start;
   padding: 56px;
   gap: 40px;
-  background-color: #f9f9f9;
+  background-color: #fdfdfd;
 }
 .repositorios .repositorios_container .cardsContainer .cardsContainer_title {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 1rem;
+  color: #40875b;
 }
 .repositorios .repositorios_container .cardsContainer .cardsContainer_title h3 {
   width: 100%;
@@ -247,7 +248,7 @@
 }
 .repositorios .repositorios_container .cardsContainer a {
   margin: 0 auto;
-  color: #32774d;
+  color: #40875b;
 }
 @media screen and (max-width: 768px) {
   .repositorios .repositorios_container {
@@ -262,14 +263,14 @@
     flex-direction: column;
   }
   .repositorios .repositorios_container .cardsContainer header {
-    color: #f9f9f9;
+    color: #fdfdfd;
   }
   .repositorios .repositorios_container .cardsContainer header p {
     display: none;
     visibility: hidden;
   }
   .repositorios .repositorios_container .cardsContainer .projDest {
-    color: #f9f9f9;
+    color: #fdfdfd;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -283,7 +284,7 @@
 
 .contato {
   background-color: #444444;
-  color: #f9f9f9;
+  color: #fdfdfd;
 }
 .contato header {
   width: 100%;
@@ -304,41 +305,6 @@
 }
 .contato .contato_container hgroup h3 {
   color: #FA9156;
-}
-.contato .contato_container form {
-  background-color: #f9f9f9;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.4);
-  padding: 2rem 1.5rem;
-  gap: 2rem;
-  justify-content: space-evenly;
-  width: 100%;
-  flex: 0 0 50%;
-}
-.contato .contato_container form h3 {
-  color: #2B5B3E;
-}
-.contato .contato_container form label {
-  color: #444444;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-.contato .contato_container form input, .contato .contato_container form textarea {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 1rem 1.5rem;
-  gap: 0.5rem;
-  width: 100%;
-  border: 1px solid #BEBEBE;
-  transition: ease-in-out 0.2s all;
-}
-.contato .contato_container form input:hover, .contato .contato_container form textarea:hover {
-  transform: scale(1.005);
-  cursor: text;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
 }
 .contato .contato_container .instrucoesArea {
   width: 100%;
@@ -376,7 +342,7 @@
   transition: ease-in-out 0.2s all;
 }
 .contato .contato_container .instrucoesArea .btnArea a:hover {
-  color: #f9f9f9;
+  color: #fdfdfd;
 }
 .contato .contato_container .instrucoesArea .btnArea a:active {
   color: #E85401;
@@ -385,43 +351,30 @@
   align-self: center;
   justify-self: center;
 }
-
 @media screen and (max-width: 768px) {
-  .contato .contato_container {
+  .contato .contato .contato_container {
     padding: 0;
     flex-direction: column;
   }
-  .contato .contato_container form {
-    padding: 0;
-    background-color: transparent;
-    color: #f9f9f9;
-    box-shadow: none;
-    width: 100%;
-  }
-  .contato .contato_container form h3, .contato .contato_container form label {
-    color: #FA9156;
-  }
-  .contato .contato_container form div {
-    width: 100%;
-  }
-  .contato .contato_container form .instrucoesArea {
+  .contato .contato .contato_container .instrucoesArea {
     display: flex;
     flex-direction: column;
   }
 }
 @media screen and (max-width: 1024px) {
-  .contato_container {
-    flex-direction: column;
-  }
-}
-@media screen and (max-width: 1440px) {
   .contato .contato_container {
     flex-direction: column;
   }
 }
+@media screen and (max-width: 1440px) {
+  .contato .contato .contato_container {
+    flex-direction: column;
+  }
+}
+
 .sobre {
   background: #222222;
-  color: #f9f9f9;
+  color: #fdfdfd;
 }
 .sobre .sobre_container {
   display: flex;
@@ -457,7 +410,7 @@
 }
 .sobre .sobre_container .textsArea .profilePic:hover {
   transition: ease-in-out 0.2s all;
-  border-color: #f9f9f9;
+  border-color: #fdfdfd;
 }
 @media screen and (max-width: 768px) {
   .sobre .sobre_container .textsArea .profilePic {
